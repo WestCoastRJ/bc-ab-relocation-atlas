@@ -224,7 +224,11 @@
     }).join("");
     $("legend").innerHTML = "<strong>Match (among towns that pass)</strong>" + rows +
       '<div class="lrow"><span class="sw" style="background:' + FAIL_COLOR + '"></span>Fails a budget check</div>' +
-      '<div class="small muted" style="margin-top:3px">Bigger dot = more people · dashed = under 10k</div>';
+      '<div class="small muted" style="margin-top:3px">' + ($("sizeBy").value === "pop" ? "Bigger dot = more people" : "Bigger dot = better match") + ' · dashed = under 10k</div>' +
+      '<label class="small sizeBy">Dot size: <select id="sizeByMirror"><option value="score">match score</option><option value="pop">population</option></select></label>';
+    var mir = $("sizeByMirror");
+    mir.value = $("sizeBy").value;
+    mir.onchange = function () { $("sizeBy").value = mir.value; localStorage.setItem("atlas-size-by", mir.value); render(); };
   }
 
   // ---- UI: status ---------------------------------------------------------------
@@ -250,7 +254,14 @@
 
   // ---- UI: map, rankings, detail ------------------------------------------------
 
-  function radiusFor(pop) { return Math.max(4, Math.min(16, 1.6 * Math.sqrt(pop / 1000))); }
+  function radiusFor(p, s) {
+    if ($("sizeBy").value === "pop") return Math.max(4, Math.min(16, 1.6 * Math.sqrt(p.pop2021 / 1000)));
+    if (fails(p) || s.score === null) return 4;
+    // size by match: weakest passing town 5 px, best 18 px
+    var lo = state.scoreRange[0], hi = state.scoreRange[1];
+    var t = hi > lo ? (s.score - lo) / (hi - lo) : 1;
+    return 5 + 13 * t;
+  }
 
   function visible(p) {
     if (!$("showSmall").checked && p.pop2021 < 10000) return false;
@@ -315,10 +326,12 @@
     var places = state.data.places.filter(visible);
     state.layer.clearLayers();
 
-    places.slice().sort(function (a, b) { return b.pop2021 - a.pop2021; }).forEach(function (p) {
+    places.slice().sort(function (a, b) {
+      return radiusFor(b, state.scores[b.id]) - radiusFor(a, state.scores[a.id]); // small dots drawn on top
+    }).forEach(function (p) {
       var s = state.scores[p.id], bad = fails(p);
       var m = L.circleMarker([p.lat, p.lon], {
-        radius: radiusFor(p.pop2021), color: "#2b2b2a", weight: 1,
+        radius: radiusFor(p, s), color: "#2b2b2a", weight: 1,
         dashArray: p.pop2021 < 10000 ? "3 3" : null,
         fillColor: bad ? FAIL_COLOR : colorFor(s.score), fillOpacity: p.pop2021 < 10000 ? 0.8 : 0.95
       });
@@ -427,6 +440,8 @@
     renderStatus();
     buildSliders();
     buildSearch();
+    $("sizeBy").value = localStorage.getItem("atlas-size-by") === "pop" ? "pop" : "score";
+    $("sizeBy").addEventListener("change", function (e) { localStorage.setItem("atlas-size-by", e.target.value); render(); });
     ["showSmall", "hideMetroVan", "hideFails"].forEach(function (id) { $(id).addEventListener("change", render); });
     $("reset").addEventListener("click", function () {
       state.weights = defaultWeights();

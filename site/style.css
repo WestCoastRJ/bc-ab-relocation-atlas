@@ -119,3 +119,5 @@ h3.group .gpct { float: right; color: var(--ink-2); font-weight: 400; }
 
 .legend .lrow { display: flex; align-items: center; gap: 6px; margin: 2px 0; }
 .sw { display: inline-block; width: 12px; height: 12px; border-radius: 50%; border: 1px solid rgba(0,0,0,.25); flex: none; vertical-align: -2px; margin-right: 4px; }
+.legend .sizeBy { display: block; margin-top: 4px; }
+.legend select, .field select { font: inherit; font-size: 12px; }
