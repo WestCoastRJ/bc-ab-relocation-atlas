@@ -10,7 +10,15 @@
 (function () {
   "use strict";
 
-  var RAMP = ["#c6dbf3", "#a9c8ee", "#8bb4e8", "#6c9fe0", "#4f89d6", "#3573c8", "#2560b3", "#1a4f9b", "#123f80", "#0b2f63"];
+  // Five clearly different tiers (ColorBrewer RdYlBu: readable with red-green colour blindness).
+  // Tiers are quintiles of the towns that pass the budget checks, so every colour is always in use.
+  var TIERS = [
+    { color: "#d73027", label: "Weakest 20%" },
+    { color: "#fc8d59", label: "Below average" },
+    { color: "#fee090", label: "Middle" },
+    { color: "#91bfdb", label: "Above average" },
+    { color: "#4575b4", label: "Best 20%" }
+  ];
   var FAIL_COLOR = "#c9c8c3";
   var MISSING_RANK = 0.25;
   var STORE_KEY = "atlas-weights-v3";
@@ -136,11 +144,23 @@
     return "+ " + strong.join(", ") + (weak.length ? " · − " + weak[0] : "");
   }
 
+  function computeCuts() {
+    var v = state.data.places.filter(function (p) { return !fails(p) && state.scores[p.id].score !== null; })
+      .map(function (p) { return state.scores[p.id].score; }).sort(function (a, b) { return a - b; });
+    state.cuts = [0.2, 0.4, 0.6, 0.8].map(function (q) { return v.length ? v[Math.floor(q * (v.length - 1))] : 0; });
+    state.scoreRange = v.length ? [v[0], v[v.length - 1]] : [0, 0];
+  }
+
+  function tierFor(s) {
+    if (s === null) return -1;
+    var i = 0;
+    while (i < state.cuts.length && s > state.cuts[i]) i++;
+    return i;
+  }
+
   function colorFor(s) {
-    if (s === null) return FAIL_COLOR;
-    // stretch over the 25-85 range where almost all scores fall, so differences are visible
-    var t = Math.max(0, Math.min(0.999, (s - 0.25) / 0.6));
-    return RAMP[Math.floor(t * RAMP.length)];
+    var t = tierFor(s);
+    return t < 0 ? FAIL_COLOR : TIERS[t].color;
   }
 
   // ---- UI: controls -------------------------------------------------------------
@@ -195,10 +215,16 @@
   }
 
   function buildLegend() {
-    $("legend").innerHTML = "<strong>Preference score</strong>" +
-      '<div class="bar">' + RAMP.map(function (c) { return '<span style="background:' + c + '"></span>'; }).join("") + "</div>" +
-      '<div class="ends"><span>25 or less</span><span>85+</span></div>' +
-      '<div class="small muted" style="margin-top:4px"><span class="dot fail"></span> fails a budget check · dashed = under 10k people</div>';
+    var pct = function (x) { return Math.round(x * 100); };
+    var bounds = [state.scoreRange[0]].concat(state.cuts).concat([state.scoreRange[1]]);
+    var rows = TIERS.slice().reverse().map(function (t, ri) {
+      var i = TIERS.length - 1 - ri;
+      return '<div class="lrow"><span class="sw" style="background:' + t.color + '"></span>' + t.label +
+        ' <span class="muted">' + pct(bounds[i]) + "–" + pct(bounds[i + 1]) + "</span></div>";
+    }).join("");
+    $("legend").innerHTML = "<strong>Match (among towns that pass)</strong>" + rows +
+      '<div class="lrow"><span class="sw" style="background:' + FAIL_COLOR + '"></span>Fails a budget check</div>' +
+      '<div class="small muted" style="margin-top:3px">Bigger dot = more people · dashed = under 10k</div>';
   }
 
   // ---- UI: status ---------------------------------------------------------------
@@ -283,6 +309,8 @@
   function render() {
     state.scores = computeScores();
     state.rankRange = computeRankRange();
+    computeCuts();
+    buildLegend();
     updateGroupPct();
     var places = state.data.places.filter(visible);
     state.layer.clearLayers();
@@ -290,9 +318,9 @@
     places.slice().sort(function (a, b) { return b.pop2021 - a.pop2021; }).forEach(function (p) {
       var s = state.scores[p.id], bad = fails(p);
       var m = L.circleMarker([p.lat, p.lon], {
-        radius: radiusFor(p.pop2021), color: "#ffffff", weight: 1.5,
+        radius: radiusFor(p.pop2021), color: "#2b2b2a", weight: 1,
         dashArray: p.pop2021 < 10000 ? "3 3" : null,
-        fillColor: bad ? FAIL_COLOR : colorFor(s.score), fillOpacity: p.pop2021 < 10000 ? 0.6 : 0.92
+        fillColor: bad ? FAIL_COLOR : colorFor(s.score), fillOpacity: p.pop2021 < 10000 ? 0.8 : 0.95
       });
       m.bindTooltip('<div class="tip"><strong>' + esc(p.name) + "</strong><br>" +
         (bad ? "Fails a budget check" : "Score " + Math.round(s.score * 100) + "/100") +
@@ -314,7 +342,7 @@
     ranked.forEach(function (p) {
       var s = state.scores[p.id], ch = checks(p), rr = state.rankRange[p.id];
       var li = document.createElement("li");
-      li.innerHTML = '<div class="r1">' + (p.pick ? "★ " : "") + esc(p.name) + ' <span class="small muted">' + (p.province === "Alberta" ? "AB" : "BC") +
+      li.innerHTML = '<div class="r1"><span class="sw" style="background:' + colorFor(s.score) + '"></span>' + (p.pick ? "★ " : "") + esc(p.name) + ' <span class="small muted">' + (p.province === "Alberta" ? "AB" : "BC") +
         (p.pop2021 < 10000 ? " · under 10k" : "") + '</span><span class="score">' + Math.round(s.score * 100) + "</span></div>" +
         '<div class="r2">' + badge("Rent", ch.rent) + badge("Land", ch.land) + badge("Airport", ch.airport) +
         (s.coverage < 1 ? '<span class="b unknown" title="Missing: ' + esc(s.missing.join(", ")) + '">data ' + Math.round(s.coverage * 100) + "%</span>" : "") +
@@ -398,7 +426,6 @@
     }).join("");
     renderStatus();
     buildSliders();
-    buildLegend();
     buildSearch();
     ["showSmall", "hideMetroVan", "hideFails"].forEach(function (id) { $(id).addEventListener("change", render); });
     $("reset").addEventListener("click", function () {
