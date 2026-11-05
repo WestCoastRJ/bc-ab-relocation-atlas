@@ -1,0 +1,48 @@
+name: Refresh data and deploy map
+
+on:
+  schedule:
+    - cron: "0 13 * * *"   # ~6 am Pacific
+    - cron: "0 1 * * *"    # ~6 pm Pacific
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Rebuild places.json from live sources
+        run: python pipeline/build.py
+      - name: Commit refreshed data
+        run: |
+          git config user.name "atlas-refresh-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/data/places.json
+          if git diff --cached --quiet; then echo "no data change"; else git commit -m "Refresh atlas data" && git push; fi
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+  deploy:
+    needs: refresh
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
