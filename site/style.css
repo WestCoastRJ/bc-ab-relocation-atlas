@@ -48,7 +48,7 @@ button { font: inherit; font-size: 13px; padding: 4px 10px; border: 1px solid va
 .legend .ends { display: flex; justify-content: space-between; color: var(--ink-2); }
 
 .detail {
-  position: absolute; z-index: 600; top: 12px; right: 12px; width: 380px; max-height: calc(100% - 24px);
+  position: absolute; z-index: 1000; top: 12px; right: 12px; width: min(400px, calc(100% - 24px)); max-height: calc(100% - 24px);
   overflow-y: auto; background: #fff; border: 1px solid var(--line); border-radius: 10px;
   padding: 12px 14px; font-size: 13px; box-shadow: 0 4px 16px rgba(0,0,0,.08);
 }
@@ -60,21 +60,59 @@ button { font: inherit; font-size: 13px; padding: 4px 10px; border: 1px solid va
 
 .tip { font-size: 12px; }
 
-@media (max-width: 760px) {
-  body { flex-direction: column-reverse; }
-  #panel { width: 100%; height: 45%; border-right: none; border-top: 1px solid var(--line); }
-  main { height: 55%; }
-}
+
+
 
 h3.group { font-size: 12px; margin: 14px 0 2px; color: var(--accent); text-transform: uppercase; letter-spacing: .04em; }
+h3.group .gpct { float: right; color: var(--ink-2); font-weight: 400; }
 .extras { margin: 8px 0 0; padding-left: 16px; font-size: 12px; color: var(--ink-2); }
 .extras li { margin: 2px 0; }
 .pickNote { margin-top: 4px; color: #b4441a; font-weight: 600; }
 #sources { padding-left: 16px; }
 #sources li { margin: 3px 0; }
-#sources li.warn { color: #b4441a; }
 .pick { pointer-events: auto; }
 .pick .star { position: absolute; left: -9px; top: -13px; font-size: 20px; color: #e8590c; text-shadow: 0 0 2px #fff, 0 0 2px #fff; cursor: pointer; }
 .pick .lbl { position: absolute; left: 12px; top: -9px; white-space: nowrap; font-size: 12px; font-weight: 600; color: #b4441a;
   background: rgba(255,255,255,.85); padding: 0 4px; border-radius: 3px; }
 .detail td.num { padding-left: 10px; white-space: nowrap; }
+.detail tr.off td { color: #a5a49f; }
+
+.status { font-size: 12px; color: var(--ink-2); margin: 4px 0 8px; }
+.status.warn { color: #8a2c0d; background: #fdecdf; border: 1px solid #f3c3a5; border-radius: 6px; padding: 6px 8px; font-weight: 600; }
+#search { width: 100%; font: inherit; font-size: 14px; padding: 6px 8px; border: 1px solid var(--line); border-radius: 6px; }
+.field { display: block; font-size: 13px; margin: 6px 0; }
+.field input { width: 90px; font: inherit; font-size: 13px; padding: 2px 4px; margin-left: 4px; }
+
+#ranking li { padding: 5px 0; border-bottom: 1px solid var(--line); }
+#ranking .r1 { font-size: 13px; }
+#ranking .r2 { margin: 3px 0 1px; }
+#ranking .r3 { font-size: 11px; }
+.b { display: inline-block; font-size: 10.5px; line-height: 1.5; padding: 0 5px; margin: 0 3px 2px 0; border-radius: 9px; border: 1px solid var(--line); color: var(--ink-2); background: #fff; }
+.b.pass { color: #1d6b35; border-color: #b8dcc3; background: #eef8f1; }
+.b.fail { color: #9b2412; border-color: #f0b8ae; background: #fdf0ed; }
+.b.unknown, .b.unverified { color: #8a5a00; border-color: #eed59a; background: #fdf7e6; }
+.b.na { color: #8b8a85; }
+.checks { margin-top: 6px; }
+.checkText { font-size: 11.5px; color: var(--ink-2); margin-top: 2px; }
+.warnText { color: #8a5a00; }
+.dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #c9c8c3; vertical-align: -1px; }
+
+#tabs { display: none; }
+@media (max-width: 760px) {
+  body { flex-direction: column; }
+  #tabs { display: flex; flex: none; border-bottom: 1px solid var(--line); background: #fff; }
+  #tabs button { flex: 1; border: none; border-radius: 0; padding: 10px 0; font-size: 14px; background: #fff; }
+  #tabs button.on { color: var(--accent); box-shadow: inset 0 -3px 0 var(--accent); font-weight: 600; }
+  #panel { width: 100%; height: auto; flex: 1; border-right: none; }
+  main { flex: 1; height: auto; }
+  body[data-tab="map"] #panel { flex: none; padding: 8px 12px; }
+  body[data-tab="map"] #panel h1, body[data-tab="map"] .pane-rank, body[data-tab="map"] .pane-filters { display: none; }
+  body[data-tab="map"] #panel .status { display: none; }
+  body[data-tab="map"] #panel .status.warn { display: block; }
+  body[data-tab="rank"] main, body[data-tab="filters"] main { display: none; }
+  body[data-tab="rank"] .pane-filters { display: none; }
+  body[data-tab="filters"] .pane-rank { display: none; }
+  .detail { top: auto; bottom: 8px; right: 8px; left: 8px; width: auto; max-height: 60%; }
+  .legend { bottom: 8px; padding: 5px 8px; }
+  .legend .bar { width: 130px; }
+}

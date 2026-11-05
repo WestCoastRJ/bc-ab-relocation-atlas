@@ -37,6 +37,13 @@ AIRPORTS = {
     "Peace River YPE": (56.227, -117.447), "High Level YOJ": (58.621, -117.165),
 }
 
+# Airports with no road link from town: (door-to-terminal hours, note). These times are NOT drive times.
+AIRPORT_NO_ROAD = {
+    # YPR is on Digby Island: scheduled airport shuttle bus + ferry, ~30 min departure-to-terminal plus
+    # waiting for the shuttle, which only runs for scheduled flights (ypr.ca/travellers/digby-island-ferry)
+    "Prince Rupert YPR": (1.0, "Digby Island: scheduled shuttle bus + ferry, tied to flight times"),
+}
+
 # 2020 Land Cover of Canada palette (rendered WMS colours) -> forest classes
 FOREST_RGB = [(0, 60, 0), (91, 116, 42), (19, 139, 4), (147, 155, 111)]
 SKIP_RGB = [(0, 0, 0), (75, 111, 162)]  # no data, water
@@ -162,8 +169,8 @@ def main():
     # nearest airport: pick 3 closest by straight line, then drive time
     for p in places:
         near = sorted(AIRPORTS.items(), key=lambda a: km((p["lat"], p["lon"]), a[1]))[:3]
-        if km((p["lat"], p["lon"]), near[0][1]) < 15:
-            p["airport"], p["airport_h"] = near[0][0], 0.3
+        if near[0][0] in AIRPORT_NO_ROAD and km((p["lat"], p["lon"]), near[0][1]) < 40:
+            p["airport"], (p["airport_h"], p["airport_note"]) = near[0][0], AIRPORT_NO_ROAD[near[0][0]]
             continue
         hs = osrm_durations((p["lat"], p["lon"]), [a for _, a in near])
         best = min((h, n) for h, (n, _) in zip(hs, near) if h is not None)
