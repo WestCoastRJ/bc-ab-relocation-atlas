@@ -1,0 +1,130 @@
+province,name,municipal_type,population_2021,population_2016
+British Columbia,Abbotsford,City,153524,141397
+British Columbia,Burnaby,City,249125,232755
+British Columbia,Campbell River,City,35519,33007
+British Columbia,Castlegar,City,8338,8039
+British Columbia,Chilliwack,City,93203,83788
+British Columbia,Colwood,City,18961,16859
+British Columbia,Coquitlam,City,148625,139284
+British Columbia,Courtenay,City,28420,25639
+British Columbia,Cranbrook,City,20499,20047
+British Columbia,Dawson Creek,City,12323,12178
+British Columbia,Delta,City,108455,102238
+British Columbia,Fort St. John,City,21465,20260
+British Columbia,Kamloops,City,97902,90280
+British Columbia,Kelowna,City,144576,127390
+British Columbia,Kimberley,City,8115,7425
+British Columbia,Langford,City,46584,35342
+British Columbia,Langley,City,28963,25888
+British Columbia,Maple Ridge,City,90990,82256
+British Columbia,Mission,City,41519,38554
+British Columbia,Nanaimo,City,99863,90504
+British Columbia,Nelson,City,11106,10572
+British Columbia,New Westminster,City,78916,70996
+British Columbia,North Vancouver,City,58120,52898
+British Columbia,Parksville,City,13642,12453
+British Columbia,Penticton,City,36885,33761
+British Columbia,Pitt Meadows,City,19146,18573
+British Columbia,Port Alberni,City,18259,17678
+British Columbia,Port Coquitlam,City,61498,58612
+British Columbia,Port Moody,City,33535,33551
+British Columbia,Powell River,City,13943,13157
+British Columbia,Prince George,City,76708,74003
+British Columbia,Prince Rupert,City,12300,12220
+British Columbia,Quesnel,City,9889,9879
+British Columbia,Revelstoke,City,8275,7562
+British Columbia,Richmond,City,209937,198309
+British Columbia,Salmon Arm,City,19432,17706
+British Columbia,Surrey,City,568322,517887
+British Columbia,Terrace,City,12017,11643
+British Columbia,Trail,City,7920,7709
+British Columbia,Vancouver,City,662248,631486
+British Columbia,Vernon,City,44519,40116
+British Columbia,Victoria,City,91867,85792
+British Columbia,West Kelowna,City,36078,32655
+British Columbia,White Rock,City,21939,19952
+British Columbia,Williams Lake,City,10947,10753
+British Columbia,Central Saanich,District municipality,17385,16814
+British Columbia,Coldstream,District municipality,11171,10648
+British Columbia,Esquimalt,District municipality,17533,17655
+British Columbia,Kitimat,District municipality,8236,8131
+British Columbia,Lake Country,District municipality,15817,12922
+British Columbia,Langley,District municipality,132603,117285
+British Columbia,North Cowichan,District municipality,31990,29696
+British Columbia,North Saanich,District municipality,12235,11249
+British Columbia,North Vancouver,District municipality,88168,85649
+British Columbia,Oak Bay,District municipality,17990,18094
+British Columbia,Saanich,District municipality,117735,114148
+British Columbia,Sechelt,District municipality,10847,10216
+British Columbia,Sooke,District municipality,15086,13001
+British Columbia,Squamish,District municipality,23819,19497
+British Columbia,Summerland,District municipality,12042,11615
+British Columbia,West Vancouver,District municipality,44122,42473
+British Columbia,Whistler,Resort municipality,13982,11746
+British Columbia,Comox,Town,14806,14028
+British Columbia,Ladysmith,Town,8990,8537
+British Columbia,Qualicum Beach,Town,9303,8943
+British Columbia,Sidney,Town,12318,11672
+British Columbia,View Royal,Town,11575,10408
+Alberta,Airdrie,City,74100,61581
+Alberta,Beaumont,City,20888,17457
+Alberta,Brooks,City,14924,14451
+Alberta,Calgary,City,1306784,1239220
+Alberta,Camrose,City,18772,18742
+Alberta,Chestermere,City,22163,19887
+Alberta,Cold Lake,City,15661,14976
+Alberta,Edmonton,City,1010899,933088
+Alberta,Fort Saskatchewan,City,27088,24169
+Alberta,Grande Prairie,City,64141,63166
+Alberta,Lacombe,City,13396,13057
+Alberta,Leduc,City,34094,29993
+Alberta,Lethbridge,City,98406,92729
+Alberta,Lloydminster (part),City,19739,19645
+Alberta,Medicine Hat,City,63271,63260
+Alberta,Red Deer,City,100844,100418
+Alberta,Spruce Grove,City,37645,34108
+Alberta,St. Albert,City,68232,65589
+Alberta,Wetaskiwin,City,12594,12655
+Alberta,Banff,Town,8305,7851
+Alberta,Blackfalds,Town,10470,9328
+Alberta,Canmore,Town,15990,13992
+Alberta,Cochrane,Town,32199,25853
+Alberta,Coaldale,Town,8771,8331
+Alberta,Drumheller,Town,7909,7982
+Alberta,Edson,Town,8374,8414
+Alberta,Hinton,Town,9817,9882
+Alberta,High River,Town,14324,13594
+Alberta,Innisfail,Town,7985,7847
+Alberta,Morinville,Town,10385,9848
+Alberta,Okotoks,Town,30405,29016
+Alberta,Olds,Town,9209,9184
+Alberta,Stony Plain,Town,17993,17189
+Alberta,Strathmore,Town,14339,13756
+Alberta,Sylvan Lake,Town,15995,14816
+Alberta,Taber,Town,8862,8428
+Alberta,Whitecourt,Town,9927,10209
+Alberta,Lac La Biche County,Specialized municipality,7673,8330
+Alberta,Mackenzie County,Specialized municipality,12804,11171
+Alberta,Strathcona County,Specialized municipality,99225,98044
+Alberta,"Wood Buffalo, Regional Municipality of",Specialized municipality,72326,71589
+Alberta,MD of Bonnyville No. 87,Municipal district,12912,12745
+Alberta,Camrose County,Municipal district,8504,8660
+Alberta,Clearwater County,Municipal district,12335,12459
+Alberta,Cypress County,Municipal district,7524,7662
+Alberta,Foothills County,Municipal district,23199,22616
+Alberta,County of Grande Prairie No. 1,Municipal district,23769,22502
+Alberta,MD of Greenview No. 16,Municipal district,8584,9154
+Alberta,Lac Ste. Anne County,Municipal district,10832,10899
+Alberta,Lacombe County,Municipal district,10283,10343
+Alberta,Leduc County,Municipal district,14416,13177
+Alberta,Lethbridge County,Municipal district,10120,10237
+Alberta,Mountain View County,Municipal district,12981,13074
+Alberta,Parkland County,Municipal district,32205,32737
+Alberta,Ponoka County,Municipal district,9998,9806
+Alberta,Red Deer County,Municipal district,19933,19531
+Alberta,Rocky View County,Municipal district,41028,39407
+Alberta,Sturgeon County,Municipal district,20061,20495
+Alberta,County of Vermilion River,Municipal district,7994,8453
+Alberta,County of Wetaskiwin No. 10,Municipal district,11212,11176
+Alberta,Wheatland County,Municipal district,8738,8788
+Alberta,Yellowhead County,Municipal district,10426,10995
