@@ -2386,7 +2386,7 @@
 "lat":53.913056,
 "lon":-122.745278,
 "name":"Prince George",
-"pick":null,
+"pick":"Your own top pick",
 "pop2016":74003,
 "pop2021":76708,
 "prov":{
@@ -2456,7 +2456,7 @@
 "lat":54.312778,
 "lon":-130.325278,
 "name":"Prince Rupert",
-"pick":"Your own top pick",
+"pick":null,
 "pop2016":12220,
 "pop2021":12300,
 "prov":{
