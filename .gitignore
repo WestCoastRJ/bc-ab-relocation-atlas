@@ -1,3 +1,4 @@
 pipeline/.census_dl/
 __pycache__/
 site/data/status.json
+pipeline/.extra_dl/

@@ -121,3 +121,18 @@ h3.group .gpct { float: right; color: var(--ink-2); font-weight: 400; }
 .sw { display: inline-block; width: 12px; height: 12px; border-radius: 50%; border: 1px solid rgba(0,0,0,.25); flex: none; vertical-align: -2px; margin-right: 4px; }
 .legend .sizeBy { display: block; margin-top: 4px; }
 .legend select, .field select { font: inherit; font-size: 12px; }
+
+/* where each value comes from, and the rural-areas breakdown */
+.detail .src { font-size: 10.5px; color: #8b8a85; line-height: 1.2; }
+.detail details.rural { margin-top: 8px; font-size: 12px; }
+.detail details.rural summary { cursor: pointer; font-weight: 600; }
+.detail details.rural th { text-align: left; font-weight: 600; font-size: 11px; color: var(--ink-2); padding: 2px 0; vertical-align: bottom; }
+.detail details.rural th.num { text-align: right; padding-left: 8px; }
+.detail details.rural td { font-size: 11px; vertical-align: top; }
+.detail details.rural td.num { padding-left: 8px; }
+.detail details.rural .cnt { display: block; font-size: 10px; }
+.detail details.rural .tablewrap { overflow-x: auto; }
+.detail details.rural tr.unusedRow td { color: #8b8a85; }
+@media (max-width: 760px) {
+  .detail details.rural th.num, .detail details.rural td.num { padding-left: 6px; }
+}

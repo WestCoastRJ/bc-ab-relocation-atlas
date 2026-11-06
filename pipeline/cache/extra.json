@@ -1,0 +1,13575 @@
+{
+"rural_minutes": 60,
+"chsp_table": "46100093",
+"towns": {
+"2021A00055909052": {
+"rural": {
+"areas": [
+[
+"Fraser Valley Area G",
+20,
+93,
+[
+573000,
+455
+],
+[
+null,
+null
+],
+{}
+],
+[
+"Fraser Valley Area F",
+22,
+100,
+[
+554000,
+680
+],
+[
+270000,
+140
+],
+{}
+],
+[
+"Fraser Valley Area H",
+24,
+95,
+[
+1020000,
+1275
+],
+[
+154000,
+70
+],
+{}
+],
+[
+"Fraser Valley Area E",
+33,
+97,
+[
+834000,
+460
+],
+[
+366000,
+50
+],
+{}
+],
+[
+"Fraser Valley Area D",
+34,
+100,
+[
+1140000,
+595
+],
+[
+489000,
+120
+],
+{}
+],
+[
+"Fraser Valley Area C",
+38,
+94,
+[
+799000,
+890
+],
+[
+308000,
+370
+],
+{}
+],
+[
+"Fraser Valley Area B",
+48,
+15,
+[
+456000,
+465
+],
+[
+140000,
+250
+],
+{
+"whole": true,
+"unused": true
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 831000,
+"house_range": [
+554000,
+1140000
+],
+"house_props": 4184,
+"land": 309000,
+"land_range": [
+154000,
+489000
+],
+"land_props": 722,
+"cheapest": [
+554000,
+"Fraser Valley Area F",
+22,
+680,
+100
+],
+"none_within": false,
+"note": "Only a small part of Fraser Valley Area B is within the hour, and census values can't tell what that part is worth, so it is listed but not used."
+},
+"census_rent_2021": 1190.0
+},
+"2021A00055915025": {
+"rural": {
+"areas": [
+[
+"Squamish-Lillooet Area D",
+49,
+83,
+[
+1580000,
+500
+],
+[
+753000,
+185
+],
+{
+"whole": true
+}
+],
+[
+"Fraser Valley Area G",
+53,
+73,
+[
+462000,
+455
+],
+[
+null,
+null
+],
+{
+"raw": 573000,
+"f": 0.81
+}
+],
+[
+"Fraser Valley Area F",
+57,
+27,
+[
+554000,
+680
+],
+[
+270000,
+140
+],
+{
+"whole": true,
+"unused": true
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 978000,
+"house_range": [
+462000,
+1580000
+],
+"house_props": 750,
+"land": 753000,
+"land_range": [
+753000,
+753000
+],
+"land_props": 154,
+"cheapest": [
+462000,
+"Fraser Valley Area G",
+53,
+455,
+73
+],
+"none_within": false,
+"note": "Only a small part of Fraser Valley Area F is within the hour, and census values can't tell what that part is worth, so it is listed but not used."
+},
+"census_rent_2021": 1490.0
+},
+"2021A00055924034": {
+"rural": {
+"areas": [
+[
+"Strathcona D (Oyster Bay - Buttle Lake)",
+12,
+100,
+[
+757000,
+1380
+],
+[
+327000,
+145
+],
+{}
+],
+[
+"Strathcona Area A",
+14,
+63,
+[
+417000,
+330
+],
+[
+209000,
+265
+],
+{
+"whole": true
+}
+],
+[
+"Comox Valley C (Puntledge - Black Creek)",
+23,
+100,
+[
+844000,
+2810
+],
+[
+468000,
+315
+],
+{}
+],
+[
+"Comox Valley B (Lazo North)",
+32,
+100,
+[
+1010000,
+2460
+],
+[
+576000,
+155
+],
+{}
+],
+[
+"Comox Valley Area A",
+36,
+58,
+[
+930000,
+3685
+],
+[
+511000,
+465
+],
+{
+"raw": 879000,
+"f": 1.06
+}
+],
+[
+"Nanaimo Area H",
+54,
+49,
+[
+867000,
+1930
+],
+[
+456000,
+215
+],
+{
+"raw": 875000,
+"f": 0.99
+}
+]
+],
+"ferry_only": [
+"Strathcona Area C"
+],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 881000,
+"house_range": [
+417000,
+1010000
+],
+"house_props": 9929,
+"land": 421000,
+"land_range": [
+209000,
+576000
+],
+"land_props": 1155,
+"cheapest": [
+417000,
+"Strathcona Area A",
+14,
+330,
+63
+],
+"none_within": false
+},
+"census_rent_2021": 1170.0
+},
+"2021A00055903045": {
+"rural": {
+"areas": [
+[
+"Central Kootenay Area J",
+3,
+100,
+[
+565000,
+1235
+],
+[
+119000,
+945
+],
+{}
+],
+[
+"Central Kootenay Area I",
+5,
+88,
+[
+561000,
+865
+],
+[
+210000,
+175
+],
+{}
+],
+[
+"Kootenay Boundary B / Lower Columbia-Old-Glory",
+14,
+100,
+[
+517000,
+550
+],
+[
+154000,
+455
+],
+{}
+],
+[
+"Central Kootenay Area H",
+18,
+81,
+[
+449000,
+1925
+],
+[
+30100,
+2790
+],
+{}
+],
+[
+"Central Kootenay Area G",
+20,
+98,
+[
+406000,
+545
+],
+[
+76000,
+1215
+],
+{}
+],
+[
+"Central Kootenay Area F",
+22,
+81,
+[
+733000,
+1420
+],
+[
+192000,
+320
+],
+{
+"raw": 757000,
+"f": 0.97
+}
+],
+[
+"Central Kootenay Area E",
+27,
+57,
+[
+688000,
+1510
+],
+[
+124000,
+785
+],
+{
+"raw": 679000,
+"f": 1.01
+}
+],
+[
+"Kootenay Boundary Area A",
+29,
+83,
+[
+530000,
+635
+],
+[
+146000,
+170
+],
+{}
+],
+[
+"Kootenay Boundary C / Christina Lake",
+44,
+100,
+[
+643000,
+1120
+],
+[
+160000,
+455
+],
+{}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 565000,
+"house_range": [
+406000,
+733000
+],
+"house_props": 8291,
+"land": 73600,
+"land_range": [
+30100,
+210000
+],
+"land_props": 6310,
+"cheapest": [
+406000,
+"Central Kootenay Area G",
+20,
+545,
+98
+],
+"none_within": false
+},
+"census_rent_2021": 950.0
+},
+"2021A00055909020": {
+"rural": {
+"areas": [
+[
+"Fraser Valley Area D",
+12,
+100,
+[
+1140000,
+595
+],
+[
+489000,
+120
+],
+{}
+],
+[
+"Fraser Valley Area H",
+13,
+100,
+[
+1020000,
+1275
+],
+[
+154000,
+70
+],
+{}
+],
+[
+"Fraser Valley Area E",
+13,
+100,
+[
+834000,
+460
+],
+[
+366000,
+50
+],
+{}
+],
+[
+"Fraser Valley Area B",
+26,
+100,
+[
+456000,
+465
+],
+[
+140000,
+250
+],
+{}
+],
+[
+"Fraser Valley Area G",
+37,
+93,
+[
+573000,
+455
+],
+[
+null,
+null
+],
+{}
+],
+[
+"Fraser Valley Area C",
+40,
+94,
+[
+799000,
+890
+],
+[
+308000,
+370
+],
+{}
+],
+[
+"Fraser Valley Area F",
+40,
+100,
+[
+554000,
+680
+],
+[
+270000,
+140
+],
+{}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 789000,
+"house_range": [
+456000,
+1140000
+],
+"house_props": 4731,
+"land": 252000,
+"land_range": [
+140000,
+489000
+],
+"land_props": 977,
+"cheapest": [
+456000,
+"Fraser Valley Area B",
+26,
+465,
+100
+],
+"none_within": false
+},
+"census_rent_2021": 1180.0
+},
+"2021A00055917041": {
+"rural": {
+"areas": [
+[
+"Juan de Fuca (Part 1)",
+18,
+96,
+[
+1020000,
+1760
+],
+[
+483000,
+385
+],
+{}
+],
+[
+"Cowichan Valley Area A",
+22,
+100,
+[
+1020000,
+1475
+],
+[
+410000,
+195
+],
+{}
+],
+[
+"Cowichan Valley Area B",
+28,
+100,
+[
+963000,
+3090
+],
+[
+568000,
+310
+],
+{}
+],
+[
+"Cowichan Valley Area C",
+33,
+100,
+[
+910000,
+1835
+],
+[
+458000,
+50
+],
+{}
+],
+[
+"Cowichan Valley Area D",
+37,
+100,
+[
+811000,
+1105
+],
+[
+315000,
+90
+],
+{}
+],
+[
+"Cowichan Valley Area E",
+38,
+100,
+[
+717000,
+1260
+],
+[
+64700,
+380
+],
+{}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 921000,
+"house_range": [
+717000,
+1020000
+],
+"house_props": 10453,
+"land": 315000,
+"land_range": [
+64700,
+568000
+],
+"land_props": 1395,
+"cheapest": [
+717000,
+"Cowichan Valley Area E",
+38,
+1260,
+100
+],
+"none_within": false
+},
+"census_rent_2021": 1370.0
+},
+"2021A00055915034": {
+"rural": {
+"areas": [
+[
+"Fraser Valley Area G",
+43,
+93,
+[
+573000,
+455
+],
+[
+null,
+null
+],
+{}
+],
+[
+"Fraser Valley Area F",
+46,
+100,
+[
+554000,
+680
+],
+[
+270000,
+140
+],
+{}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 561000,
+"house_range": [
+554000,
+573000
+],
+"house_props": 1101,
+"land": 270000,
+"land_range": [
+270000,
+270000
+],
+"land_props": 140,
+"cheapest": [
+554000,
+"Fraser Valley Area F",
+46,
+680,
+100
+],
+"none_within": false
+},
+"census_rent_2021": 1530.0
+},
+"2021A00055926010": {
+"rural": {
+"areas": [
+[
+"Comox Valley B (Lazo North)",
+2,
+100,
+[
+1010000,
+2460
+],
+[
+576000,
+155
+],
+{}
+],
+[
+"Comox Valley C (Puntledge - Black Creek)",
+4,
+100,
+[
+844000,
+2810
+],
+[
+468000,
+315
+],
+{}
+],
+[
+"Comox Valley Area A",
+5,
+63,
+[
+926000,
+3685
+],
+[
+511000,
+465
+],
+{
+"raw": 879000,
+"f": 1.05
+}
+],
+[
+"Strathcona D (Oyster Bay - Buttle Lake)",
+21,
+98,
+[
+757000,
+1380
+],
+[
+327000,
+145
+],
+{}
+],
+[
+"Nanaimo Area H",
+30,
+100,
+[
+875000,
+1930
+],
+[
+456000,
+215
+],
+{}
+],
+[
+"Nanaimo Area F",
+37,
+93,
+[
+844000,
+2065
+],
+[
+443000,
+180
+],
+{}
+],
+[
+"Nanaimo Area G",
+42,
+100,
+[
+968000,
+2935
+],
+[
+492000,
+110
+],
+{}
+],
+[
+"Strathcona Area A",
+45,
+19,
+[
+417000,
+330
+],
+[
+209000,
+265
+],
+{
+"whole": true,
+"unused": true
+}
+],
+[
+"Nanaimo Area E",
+50,
+64,
+[
+1167000,
+2675
+],
+[
+546000,
+210
+],
+{
+"raw": 1250000,
+"f": 0.93
+}
+]
+],
+"ferry_only": [
+"Strathcona Area C"
+],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 921000,
+"house_range": [
+757000,
+1167000
+],
+"house_props": 17458,
+"land": 474000,
+"land_range": [
+327000,
+576000
+],
+"land_props": 1534,
+"cheapest": [
+757000,
+"Strathcona D (Oyster Bay - Buttle Lake)",
+21,
+1380,
+98
+],
+"none_within": false,
+"note": "Only a small part of Strathcona Area A is within the hour, and census values can't tell what that part is worth, so it is listed but not used."
+},
+"census_rent_2021": 1230.0
+},
+"2021A00055901022": {
+"rural": {
+"areas": [
+[
+"East Kootenay Area C",
+2,
+100,
+[
+666000,
+2375
+],
+[
+161000,
+1590
+],
+{}
+],
+[
+"East Kootenay Area E",
+17,
+100,
+[
+560000,
+935
+],
+[
+263000,
+995
+],
+{}
+],
+[
+"East Kootenay Area B",
+32,
+89,
+[
+711000,
+1025
+],
+[
+172000,
+2750
+],
+{}
+],
+[
+"Central Kootenay Area B",
+43,
+14,
+[
+414000,
+1375
+],
+[
+148000,
+435
+],
+{
+"raw": 459000,
+"f": 0.9
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 639000,
+"house_range": [
+414000,
+711000
+],
+"house_props": 4407,
+"land": 182000,
+"land_range": [
+148000,
+263000
+],
+"land_props": 5080,
+"cheapest": [
+414000,
+"Central Kootenay Area B",
+43,
+1375,
+14
+],
+"none_within": false
+},
+"census_rent_2021": 980.0
+},
+"2021A00055955014": {
+"rural": {
+"areas": [
+[
+"Peace River Area D",
+4,
+98,
+[
+301000,
+1615
+],
+[
+77300,
+555
+],
+{}
+],
+[
+"Saddle Hills County",
+12,
+56,
+[
+153000,
+935
+],
+[
+16000,
+115
+],
+{
+"raw": 150000,
+"f": 1.02
+}
+],
+[
+"Peace River Area E",
+26,
+35,
+[
+292000,
+840
+],
+[
+62900,
+555
+],
+{
+"raw": 313000,
+"f": 0.93
+}
+],
+[
+"Peace River Area C",
+40,
+70,
+[
+449000,
+1635
+],
+[
+156000,
+235
+],
+{
+"raw": 485000,
+"f": 0.93
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 317000,
+"house_range": [
+153000,
+449000
+],
+"house_props": 3561,
+"land": 77200,
+"land_range": [
+16000,
+156000
+],
+"land_props": 972,
+"cheapest": [
+153000,
+"Saddle Hills County",
+12,
+935,
+56
+],
+"none_within": false
+},
+"census_rent_2021": 1020.0
+},
+"2021A00055915011": {
+"rural": {
+"areas": [],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"nearest_beyond": [
+"Squamish-Lillooet Area D",
+68,
+1580000,
+500
+],
+"none_within": false,
+"note": "Many homes in Squamish-Lillooet Area D, Fraser Valley Area G and Fraser Valley Area F are 61 to 75 min from the town centre, so from other parts of Delta some may be within the hour: left as unknown rather than scored."
+},
+"census_rent_2021": 1400.0
+},
+"2021A00055955034": {
+"rural": {
+"areas": [
+[
+"Peace River Area C",
+4,
+100,
+[
+485000,
+1635
+],
+[
+156000,
+235
+],
+{}
+],
+[
+"Peace River Area B",
+13,
+80,
+[
+287000,
+1085
+],
+[
+97600,
+845
+],
+{
+"raw": 279000,
+"f": 1.03
+}
+],
+[
+"Peace River Area D",
+31,
+57,
+[
+304000,
+1615
+],
+[
+77300,
+555
+],
+{
+"raw": 301000,
+"f": 1.01
+}
+],
+[
+"Peace River Area E",
+40,
+24,
+[
+294000,
+840
+],
+[
+62900,
+555
+],
+{
+"raw": 313000,
+"f": 0.94
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 369000,
+"house_range": [
+287000,
+485000
+],
+"house_props": 3627,
+"land": 95800,
+"land_range": [
+62900,
+156000
+],
+"land_props": 1360,
+"cheapest": [
+287000,
+"Peace River Area B",
+13,
+1085,
+80
+],
+"none_within": false
+},
+"census_rent_2021": 1200.0
+},
+"2021A00055933042": {
+"rural": {
+"areas": [
+[
+"Thompson-Nicola J (Copper Desert Country)",
+14,
+99,
+[
+597000,
+965
+],
+[
+228000,
+335
+],
+{}
+],
+[
+"Thompson-Nicola L (Grasslands)",
+15,
+79,
+[
+576000,
+940
+],
+[
+283000,
+240
+],
+{
+"raw": 569000,
+"f": 1.01
+}
+],
+[
+"Thompson-Nicola P (Rivers and the Peaks)",
+15,
+92,
+[
+688000,
+1505
+],
+[
+152000,
+275
+],
+{}
+],
+[
+"Thompson-Nicola M (Beautiful Nicola Valley - North)",
+31,
+90,
+[
+638000,
+805
+],
+[
+59000,
+380
+],
+{}
+],
+[
+"Thompson-Nicola I (Blue Sky Country)",
+38,
+39,
+[
+365000,
+410
+],
+[
+62200,
+280
+],
+{
+"whole": true,
+"unused": true
+}
+],
+[
+"Thompson-Nicola O (Lower North Thompson)",
+38,
+59,
+[
+455000,
+790
+],
+[
+192000,
+210
+],
+{
+"raw": 464000,
+"f": 0.98
+}
+],
+[
+"Thompson-Nicola N (Beautiful Nicola Valley - South)",
+49,
+38,
+[
+588000,
+335
+],
+[
+126000,
+160
+],
+{
+"whole": true,
+"unused": true
+}
+],
+[
+"Columbia-Shuswap Area C",
+49,
+43,
+[
+678000,
+4130
+],
+[
+166000,
+915
+],
+{
+"raw": 754000,
+"f": 0.9
+}
+],
+[
+"Columbia-Shuswap Area D",
+51,
+26,
+[
+632000,
+1075
+],
+[
+310000,
+95
+],
+{
+"raw": 587000,
+"f": 1.08
+}
+],
+[
+"Columbia-Shuswap Area F",
+53,
+13,
+[
+583000,
+2280
+],
+[
+106000,
+1695
+],
+{
+"whole": true,
+"unused": true
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 631000,
+"house_range": [
+455000,
+688000
+],
+"house_props": 6341,
+"land": 157000,
+"land_range": [
+59000,
+310000
+],
+"land_props": 1661,
+"cheapest": [
+455000,
+"Thompson-Nicola O (Lower North Thompson)",
+38,
+790,
+59
+],
+"none_within": false,
+"note": "Only small parts of Thompson-Nicola I (Blue Sky Country), Thompson-Nicola N (Beautiful Nicola Valley - South) and Columbia-Shuswap Area F are within the hour, and census values can't tell what those parts are worth, so they are listed but not used."
+},
+"census_rent_2021": 1180.0
+},
+"2021A00055935010": {
+"rural": {
+"areas": [
+[
+"Central Okanagan West",
+14,
+100,
+[
+699000,
+1730
+],
+[
+134000,
+1100
+],
+{}
+],
+[
+"Central Okanagan",
+15,
+91,
+[
+875000,
+1300
+],
+[
+592000,
+90
+],
+{}
+],
+[
+"Okanagan-Similkameen Area F",
+29,
+79,
+[
+960000,
+695
+],
+[
+500000,
+100
+],
+{
+"raw": 930000,
+"f": 1.03
+}
+],
+[
+"North Okanagan Area B",
+34,
+100,
+[
+742000,
+925
+],
+[
+321000,
+95
+],
+{}
+],
+[
+"North Okanagan Area C",
+45,
+86,
+[
+843000,
+1365
+],
+[
+405000,
+150
+],
+{}
+],
+[
+"Kootenay Boundary E / West Boundary",
+47,
+42,
+[
+410000,
+1105
+],
+[
+26100,
+2265
+],
+{
+"whole": true,
+"unused": true
+}
+],
+[
+"Okanagan-Similkameen Area I",
+58,
+18,
+[
+822000,
+1040
+],
+[
+192000,
+270
+],
+{
+"raw": 789000,
+"f": 1.04
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 796000,
+"house_range": [
+699000,
+960000
+],
+"house_props": 5745,
+"land": 176000,
+"land_range": [
+134000,
+592000
+],
+"land_props": 1533,
+"cheapest": [
+699000,
+"Central Okanagan West",
+14,
+1730,
+100
+],
+"none_within": false,
+"note": "Only a small part of Kootenay Boundary E / West Boundary is within the hour, and census values can't tell what that part is worth, so it is listed but not used."
+},
+"census_rent_2021": 1440.0
+},
+"2021A00055901028": {
+"rural": {
+"areas": [
+[
+"East Kootenay Area E",
+2,
+100,
+[
+560000,
+935
+],
+[
+263000,
+995
+],
+{}
+],
+[
+"East Kootenay Area C",
+15,
+100,
+[
+666000,
+2375
+],
+[
+161000,
+1590
+],
+{}
+],
+[
+"East Kootenay Area B",
+48,
+46,
+[
+811000,
+1025
+],
+[
+172000,
+2750
+],
+{
+"raw": 711000,
+"f": 1.14
+}
+],
+[
+"East Kootenay Area F",
+52,
+14,
+[
+807000,
+3085
+],
+[
+149000,
+1280
+],
+{
+"whole": true,
+"unused": true
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 654000,
+"house_range": [
+560000,
+811000
+],
+"house_props": 3785,
+"land": 186000,
+"land_range": [
+161000,
+263000
+],
+"land_props": 3860,
+"cheapest": [
+560000,
+"East Kootenay Area E",
+2,
+935,
+100
+],
+"none_within": false,
+"note": "Only a small part of East Kootenay Area F is within the hour, and census values can't tell what that part is worth, so it is listed but not used."
+},
+"census_rent_2021": 990.0
+},
+"2021A00055917044": {
+"rural": {
+"areas": [
+[
+"Juan de Fuca (Part 1)",
+12,
+96,
+[
+1020000,
+1760
+],
+[
+483000,
+385
+],
+{}
+],
+[
+"Cowichan Valley Area A",
+16,
+100,
+[
+1020000,
+1475
+],
+[
+410000,
+195
+],
+{}
+],
+[
+"Cowichan Valley Area B",
+22,
+100,
+[
+963000,
+3090
+],
+[
+568000,
+310
+],
+{}
+],
+[
+"Cowichan Valley Area C",
+26,
+100,
+[
+910000,
+1835
+],
+[
+458000,
+50
+],
+{}
+],
+[
+"Cowichan Valley Area D",
+31,
+100,
+[
+811000,
+1105
+],
+[
+315000,
+90
+],
+{}
+],
+[
+"Cowichan Valley Area E",
+32,
+100,
+[
+717000,
+1260
+],
+[
+64700,
+380
+],
+{}
+],
+[
+"Cowichan Valley Area F",
+53,
+18,
+[
+866000,
+725
+],
+[
+470000,
+200
+],
+{
+"raw": 765000,
+"f": 1.13
+}
+],
+[
+"Cowichan Valley Area G",
+55,
+77,
+[
+814000,
+1285
+],
+[
+262000,
+240
+],
+{
+"raw": 835000,
+"f": 0.97
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 910000,
+"house_range": [
+717000,
+1020000
+],
+"house_props": 11572,
+"land": 310000,
+"land_range": [
+64700,
+568000
+],
+"land_props": 1615,
+"cheapest": [
+717000,
+"Cowichan Valley Area E",
+32,
+1260,
+100
+],
+"none_within": false
+},
+"census_rent_2021": 1600.0
+},
+"2021A00055915002": {
+"rural": {
+"areas": [
+[
+"Fraser Valley Area G",
+41,
+93,
+[
+573000,
+455
+],
+[
+null,
+null
+],
+{}
+],
+[
+"Fraser Valley Area H",
+41,
+52,
+[
+940000,
+1275
+],
+[
+154000,
+70
+],
+{
+"raw": 1020000,
+"f": 0.92
+}
+],
+[
+"Fraser Valley Area F",
+44,
+100,
+[
+554000,
+680
+],
+[
+270000,
+140
+],
+{}
+],
+[
+"Fraser Valley Area E",
+50,
+80,
+[
+834000,
+460
+],
+[
+366000,
+50
+],
+{
+"whole": true
+}
+],
+[
+"Fraser Valley Area D",
+52,
+100,
+[
+1140000,
+595
+],
+[
+489000,
+120
+],
+{}
+],
+[
+"Fraser Valley Area C",
+59,
+12,
+[
+799000,
+890
+],
+[
+308000,
+370
+],
+{
+"whole": true,
+"unused": true
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 786000,
+"house_range": [
+554000,
+1140000
+],
+"house_props": 2735,
+"land": 327000,
+"land_range": [
+154000,
+489000
+],
+"land_props": 337,
+"cheapest": [
+554000,
+"Fraser Valley Area F",
+44,
+680,
+100
+],
+"none_within": false,
+"note": "Only a small part of Fraser Valley Area C is within the hour, and census values can't tell what that part is worth, so it is listed but not used."
+},
+"census_rent_2021": 1280.0
+},
+"2021A00055915075": {
+"rural": {
+"areas": [
+[
+"Fraser Valley Area G",
+28,
+93,
+[
+573000,
+455
+],
+[
+null,
+null
+],
+{}
+],
+[
+"Fraser Valley Area F",
+32,
+100,
+[
+554000,
+680
+],
+[
+270000,
+140
+],
+{}
+],
+[
+"Fraser Valley Area C",
+46,
+94,
+[
+799000,
+890
+],
+[
+308000,
+370
+],
+{}
+],
+[
+"Fraser Valley Area H",
+49,
+44,
+[
+894000,
+1275
+],
+[
+154000,
+70
+],
+{
+"raw": 1020000,
+"f": 0.88
+}
+],
+[
+"Fraser Valley Area E",
+59,
+46,
+[
+834000,
+460
+],
+[
+366000,
+50
+],
+{
+"whole": true,
+"unused": true
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 702000,
+"house_range": [
+554000,
+894000
+],
+"house_props": 2501,
+"land": 286000,
+"land_range": [
+154000,
+308000
+],
+"land_props": 518,
+"cheapest": [
+554000,
+"Fraser Valley Area F",
+32,
+680,
+100
+],
+"none_within": false,
+"note": "Only a small part of Fraser Valley Area E is within the hour, and census values can't tell what that part is worth, so it is listed but not used."
+},
+"census_rent_2021": 1300.0
+},
+"2021A00055909056": {
+"rural": {
+"areas": [
+[
+"Fraser Valley Area F",
+5,
+100,
+[
+554000,
+680
+],
+[
+270000,
+140
+],
+{}
+],
+[
+"Fraser Valley Area G",
+7,
+93,
+[
+573000,
+455
+],
+[
+null,
+null
+],
+{}
+],
+[
+"Fraser Valley Area C",
+25,
+100,
+[
+799000,
+890
+],
+[
+308000,
+370
+],
+{}
+],
+[
+"Fraser Valley Area H",
+35,
+93,
+[
+1020000,
+1275
+],
+[
+154000,
+70
+],
+{}
+],
+[
+"Fraser Valley Area E",
+44,
+97,
+[
+834000,
+460
+],
+[
+366000,
+50
+],
+{}
+],
+[
+"Fraser Valley Area D",
+45,
+100,
+[
+1140000,
+595
+],
+[
+489000,
+120
+],
+{}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 830000,
+"house_range": [
+554000,
+1140000
+],
+"house_props": 4215,
+"land": 309000,
+"land_range": [
+154000,
+489000
+],
+"land_props": 743,
+"cheapest": [
+554000,
+"Fraser Valley Area F",
+5,
+680,
+100
+],
+"none_within": false
+},
+"census_rent_2021": 1150.0
+},
+"2021A00055921007": {
+"rural": {
+"areas": [
+[
+"Nanaimo Area C",
+9,
+100,
+[
+1130000,
+955
+],
+[
+402000,
+245
+],
+{}
+],
+[
+"Nanaimo Area A",
+9,
+100,
+[
+842000,
+2120
+],
+[
+258000,
+270
+],
+{}
+],
+[
+"Cowichan Valley Area H",
+16,
+100,
+[
+856000,
+855
+],
+[
+579000,
+85
+],
+{}
+],
+[
+"Nanaimo Area E",
+19,
+100,
+[
+1250000,
+2675
+],
+[
+546000,
+210
+],
+{}
+],
+[
+"Cowichan Valley Area G",
+23,
+80,
+[
+812000,
+1285
+],
+[
+262000,
+240
+],
+{
+"raw": 835000,
+"f": 0.97
+}
+],
+[
+"Nanaimo Area G",
+29,
+100,
+[
+968000,
+2935
+],
+[
+492000,
+110
+],
+{}
+],
+[
+"Nanaimo Area F",
+30,
+99,
+[
+844000,
+2065
+],
+[
+443000,
+180
+],
+{}
+],
+[
+"Cowichan Valley Area D",
+41,
+100,
+[
+811000,
+1105
+],
+[
+315000,
+90
+],
+{}
+],
+[
+"Cowichan Valley Area E",
+41,
+100,
+[
+717000,
+1260
+],
+[
+64700,
+380
+],
+{}
+],
+[
+"Nanaimo Area H",
+44,
+98,
+[
+875000,
+1930
+],
+[
+456000,
+215
+],
+{}
+],
+[
+"Cowichan Valley Area F",
+46,
+57,
+[
+855000,
+725
+],
+[
+470000,
+200
+],
+{
+"raw": 765000,
+"f": 1.12
+}
+],
+[
+"Cowichan Valley Area C",
+47,
+100,
+[
+910000,
+1835
+],
+[
+458000,
+50
+],
+{}
+],
+[
+"Cowichan Valley Area B",
+48,
+72,
+[
+909000,
+3090
+],
+[
+568000,
+310
+],
+{
+"raw": 963000,
+"f": 0.94
+}
+],
+[
+"Cowichan Valley Area A",
+51,
+85,
+[
+1020000,
+1475
+],
+[
+410000,
+195
+],
+{}
+],
+[
+"Comox Valley Area A",
+52,
+17,
+[
+907000,
+3685
+],
+[
+511000,
+465
+],
+{
+"raw": 879000,
+"f": 1.03
+}
+],
+[
+"Cowichan Valley Area I",
+53,
+23,
+[
+955000,
+1035
+],
+[
+309000,
+185
+],
+{
+"whole": true,
+"unused": true
+}
+]
+],
+"ferry_only": [
+"Nanaimo Area B"
+],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 922000,
+"house_range": [
+717000,
+1250000
+],
+"house_props": 23226,
+"land": 343000,
+"land_range": [
+64700,
+579000
+],
+"land_props": 2603,
+"cheapest": [
+717000,
+"Cowichan Valley Area E",
+41,
+1260,
+100
+],
+"none_within": false,
+"note": "Only a small part of Cowichan Valley Area I is within the hour, and census values can't tell what that part is worth, so it is listed but not used."
+},
+"census_rent_2021": 1250.0
+},
+"2021A00055903015": {
+"rural": {
+"areas": [
+[
+"Central Kootenay Area E",
+3,
+83,
+[
+686000,
+1510
+],
+[
+124000,
+785
+],
+{
+"raw": 679000,
+"f": 1.01
+}
+],
+[
+"Central Kootenay Area F",
+5,
+100,
+[
+757000,
+1420
+],
+[
+192000,
+320
+],
+{}
+],
+[
+"Central Kootenay Area H",
+17,
+83,
+[
+449000,
+1925
+],
+[
+30100,
+2790
+],
+{}
+],
+[
+"Central Kootenay Area I",
+17,
+79,
+[
+564000,
+865
+],
+[
+210000,
+175
+],
+{}
+],
+[
+"Central Kootenay Area G",
+19,
+96,
+[
+406000,
+545
+],
+[
+76000,
+1215
+],
+{}
+],
+[
+"Central Kootenay Area J",
+30,
+100,
+[
+565000,
+1235
+],
+[
+119000,
+945
+],
+{}
+],
+[
+"Kootenay Boundary B / Lower Columbia-Old-Glory",
+42,
+87,
+[
+517000,
+550
+],
+[
+154000,
+455
+],
+{}
+],
+[
+"Central Kootenay Area D",
+42,
+31,
+[
+428000,
+860
+],
+[
+34400,
+2840
+],
+{
+"whole": true,
+"unused": true
+}
+],
+[
+"Kootenay Boundary Area A",
+43,
+73,
+[
+530000,
+635
+],
+[
+146000,
+170
+],
+{}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 568000,
+"house_range": [
+406000,
+757000
+],
+"house_props": 7643,
+"land": 69600,
+"land_range": [
+30100,
+210000
+],
+"land_props": 6047,
+"cheapest": [
+406000,
+"Central Kootenay Area G",
+19,
+545,
+96
+],
+"none_within": false,
+"note": "Only a small part of Central Kootenay Area D is within the hour, and census values can't tell what that part is worth, so it is listed but not used."
+},
+"census_rent_2021": 1130.0
+},
+"2021A00055915029": {
+"rural": {
+"areas": [
+[
+"Fraser Valley Area G",
+53,
+73,
+[
+462000,
+455
+],
+[
+null,
+null
+],
+{
+"raw": 573000,
+"f": 0.81
+}
+],
+[
+"Fraser Valley Area F",
+56,
+27,
+[
+554000,
+680
+],
+[
+270000,
+140
+],
+{
+"whole": true,
+"unused": true
+}
+],
+[
+"Squamish-Lillooet Area D",
+56,
+45,
+[
+1580000,
+500
+],
+[
+753000,
+185
+],
+{
+"whole": true,
+"unused": true
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 462000,
+"house_range": [
+462000,
+462000
+],
+"house_props": 333,
+"cheapest": [
+462000,
+"Fraser Valley Area G",
+53,
+455,
+73
+],
+"none_within": false,
+"note": "Only small parts of Fraser Valley Area F and Squamish-Lillooet Area D are within the hour, and census values can't tell what those parts are worth, so they are listed but not used."
+},
+"census_rent_2021": 1350.0
+},
+"2021A00055915051": {
+"rural": {
+"areas": [
+[
+"Squamish-Lillooet Area D",
+37,
+83,
+[
+1580000,
+500
+],
+[
+753000,
+185
+],
+{
+"whole": true
+}
+]
+],
+"ferry_only": [
+"Sunshine Coast Area F"
+],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 1580000,
+"house_range": [
+1580000,
+1580000
+],
+"house_props": 417,
+"land": 753000,
+"land_range": [
+753000,
+753000
+],
+"land_props": 154,
+"cheapest": [
+1580000,
+"Squamish-Lillooet Area D",
+37,
+500,
+83
+],
+"none_within": false
+},
+"census_rent_2021": 1620.0
+},
+"2021A00055921018": {
+"rural": {
+"areas": [
+[
+"Nanaimo Area G",
+4,
+100,
+[
+968000,
+2935
+],
+[
+492000,
+110
+],
+{}
+],
+[
+"Nanaimo Area F",
+4,
+100,
+[
+844000,
+2065
+],
+[
+443000,
+180
+],
+{}
+],
+[
+"Nanaimo Area E",
+9,
+100,
+[
+1250000,
+2675
+],
+[
+546000,
+210
+],
+{}
+],
+[
+"Nanaimo Area H",
+19,
+100,
+[
+875000,
+1930
+],
+[
+456000,
+215
+],
+{}
+],
+[
+"Nanaimo Area C",
+24,
+85,
+[
+1130000,
+955
+],
+[
+402000,
+245
+],
+{}
+],
+[
+"Comox Valley Area A",
+26,
+62,
+[
+925000,
+3685
+],
+[
+511000,
+465
+],
+{
+"raw": 879000,
+"f": 1.05
+}
+],
+[
+"Alberni-Clayoquot Area F",
+35,
+100,
+[
+617000,
+635
+],
+[
+165000,
+75
+],
+{}
+],
+[
+"Nanaimo Area A",
+35,
+100,
+[
+842000,
+2120
+],
+[
+258000,
+270
+],
+{}
+],
+[
+"Alberni-Clayoquot Area E",
+42,
+100,
+[
+695000,
+940
+],
+[
+303000,
+80
+],
+{}
+],
+[
+"Cowichan Valley Area H",
+42,
+100,
+[
+856000,
+855
+],
+[
+579000,
+85
+],
+{}
+],
+[
+"Comox Valley C (Puntledge - Black Creek)",
+43,
+42,
+[
+876000,
+2810
+],
+[
+468000,
+315
+],
+{
+"raw": 844000,
+"f": 1.04
+}
+],
+[
+"Alberni-Clayoquot Area B",
+45,
+87,
+[
+588000,
+170
+],
+[
+null,
+null
+],
+{}
+],
+[
+"Alberni-Clayoquot Area D",
+46,
+92,
+[
+1250000,
+990
+],
+[
+330000,
+260
+],
+{}
+],
+[
+"Comox Valley B (Lazo North)",
+48,
+89,
+[
+1010000,
+2460
+],
+[
+576000,
+155
+],
+{}
+],
+[
+"Cowichan Valley Area G",
+49,
+80,
+[
+812000,
+1285
+],
+[
+262000,
+240
+],
+{
+"raw": 835000,
+"f": 0.97
+}
+]
+],
+"ferry_only": [
+"Nanaimo Area B"
+],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 934000,
+"house_range": [
+588000,
+1250000
+],
+"house_props": 22715,
+"land": 398000,
+"land_range": [
+165000,
+579000
+],
+"land_props": 2424,
+"cheapest": [
+588000,
+"Alberni-Clayoquot Area B",
+45,
+170,
+87
+],
+"none_within": false
+},
+"census_rent_2021": 1300.0
+},
+"2021A00055907041": {
+"rural": {
+"areas": [
+[
+"Okanagan-Similkameen Area F",
+4,
+100,
+[
+930000,
+695
+],
+[
+500000,
+100
+],
+{}
+],
+[
+"Okanagan-Similkameen Area E",
+12,
+100,
+[
+1050000,
+930
+],
+[
+428000,
+280
+],
+{}
+],
+[
+"Okanagan-Similkameen Area I",
+13,
+100,
+[
+789000,
+1040
+],
+[
+192000,
+270
+],
+{}
+],
+[
+"Okanagan-Similkameen Area D",
+17,
+94,
+[
+856000,
+1315
+],
+[
+328000,
+210
+],
+{}
+],
+[
+"Central Okanagan West",
+24,
+24,
+[
+699000,
+1730
+],
+[
+134000,
+1100
+],
+{
+"whole": true,
+"unused": true
+}
+],
+[
+"Okanagan-Similkameen Area C",
+27,
+93,
+[
+634000,
+910
+],
+[
+124000,
+305
+],
+{}
+],
+[
+"Okanagan-Similkameen Area G",
+31,
+69,
+[
+404000,
+575
+],
+[
+30200,
+640
+],
+{
+"raw": 369000,
+"f": 1.1
+}
+],
+[
+"Okanagan-Similkameen Area B",
+41,
+100,
+[
+420000,
+290
+],
+[
+54700,
+70
+],
+{}
+],
+[
+"Okanagan-Similkameen Area A",
+48,
+68,
+[
+991000,
+800
+],
+[
+337000,
+365
+],
+{
+"raw": 973000,
+"f": 1.02
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 801000,
+"house_range": [
+404000,
+1050000
+],
+"house_props": 5985,
+"land": 170000,
+"land_range": [
+30200,
+500000
+],
+"land_props": 1891,
+"cheapest": [
+404000,
+"Okanagan-Similkameen Area G",
+31,
+575,
+69
+],
+"none_within": false,
+"note": "Only a small part of Central Okanagan West is within the hour, and census values can't tell what that part is worth, so it is listed but not used."
+},
+"census_rent_2021": 1200.0
+},
+"2021A00055915070": {
+"rural": {
+"areas": [
+[
+"Fraser Valley Area G",
+35,
+93,
+[
+573000,
+455
+],
+[
+null,
+null
+],
+{}
+],
+[
+"Fraser Valley Area F",
+38,
+100,
+[
+554000,
+680
+],
+[
+270000,
+140
+],
+{}
+],
+[
+"Fraser Valley Area H",
+46,
+52,
+[
+940000,
+1275
+],
+[
+154000,
+70
+],
+{
+"raw": 1020000,
+"f": 0.92
+}
+],
+[
+"Fraser Valley Area C",
+53,
+27,
+[
+799000,
+890
+],
+[
+308000,
+370
+],
+{
+"whole": true,
+"unused": true
+}
+],
+[
+"Fraser Valley Area E",
+56,
+74,
+[
+834000,
+460
+],
+[
+366000,
+50
+],
+{
+"whole": true
+}
+],
+[
+"Fraser Valley Area D",
+57,
+77,
+[
+1140000,
+595
+],
+[
+489000,
+120
+],
+{
+"whole": true
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 768000,
+"house_range": [
+554000,
+1140000
+],
+"house_props": 2571,
+"land": 315000,
+"land_range": [
+154000,
+489000
+],
+"land_props": 307,
+"cheapest": [
+554000,
+"Fraser Valley Area F",
+38,
+680,
+100
+],
+"none_within": false,
+"note": "Only a small part of Fraser Valley Area C is within the hour, and census values can't tell what that part is worth, so it is listed but not used."
+},
+"census_rent_2021": 1340.0
+},
+"2021A00055923008": {
+"rural": {
+"areas": [
+[
+"Alberni-Clayoquot Area E",
+5,
+100,
+[
+695000,
+940
+],
+[
+303000,
+80
+],
+{}
+],
+[
+"Alberni-Clayoquot Area F",
+6,
+100,
+[
+617000,
+635
+],
+[
+165000,
+75
+],
+{}
+],
+[
+"Alberni-Clayoquot Area B",
+9,
+100,
+[
+588000,
+170
+],
+[
+null,
+null
+],
+{}
+],
+[
+"Alberni-Clayoquot Area D",
+10,
+96,
+[
+1250000,
+990
+],
+[
+330000,
+260
+],
+{}
+],
+[
+"Nanaimo Area F",
+29,
+97,
+[
+844000,
+2065
+],
+[
+443000,
+180
+],
+{}
+],
+[
+"Nanaimo Area G",
+37,
+100,
+[
+968000,
+2935
+],
+[
+492000,
+110
+],
+{}
+],
+[
+"Alberni-Clayoquot Area A",
+40,
+13,
+[
+406000,
+295
+],
+[
+213000,
+145
+],
+{
+"whole": true,
+"unused": true
+}
+],
+[
+"Nanaimo Area E",
+44,
+99,
+[
+1250000,
+2675
+],
+[
+546000,
+210
+],
+{}
+],
+[
+"Nanaimo Area H",
+45,
+96,
+[
+875000,
+1930
+],
+[
+456000,
+215
+],
+{}
+],
+[
+"Comox Valley Area A",
+52,
+16,
+[
+908000,
+3685
+],
+[
+511000,
+465
+],
+{
+"raw": 879000,
+"f": 1.03
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 950000,
+"house_range": [
+588000,
+1250000
+],
+"house_props": 12738,
+"land": 408000,
+"land_range": [
+165000,
+546000
+],
+"land_props": 1180,
+"cheapest": [
+588000,
+"Alberni-Clayoquot Area B",
+9,
+170,
+100
+],
+"none_within": false,
+"note": "Only a small part of Alberni-Clayoquot Area A is within the hour, and census values can't tell what that part is worth, so it is listed but not used."
+},
+"census_rent_2021": 950.0
+},
+"2021A00055915039": {
+"rural": {
+"areas": [
+[
+"Fraser Valley Area G",
+41,
+93,
+[
+573000,
+455
+],
+[
+null,
+null
+],
+{}
+],
+[
+"Fraser Valley Area F",
+44,
+100,
+[
+554000,
+680
+],
+[
+270000,
+140
+],
+{}
+],
+[
+"Fraser Valley Area C",
+59,
+27,
+[
+799000,
+890
+],
+[
+308000,
+370
+],
+{
+"whole": true,
+"unused": true
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 561000,
+"house_range": [
+554000,
+573000
+],
+"house_props": 1101,
+"land": 270000,
+"land_range": [
+270000,
+270000
+],
+"land_props": 140,
+"cheapest": [
+554000,
+"Fraser Valley Area F",
+44,
+680,
+100
+],
+"none_within": false,
+"note": "Only a small part of Fraser Valley Area C is within the hour, and census values can't tell what that part is worth, so it is listed but not used."
+},
+"census_rent_2021": 1450.0
+},
+"2021A00055915043": {
+"rural": {
+"areas": [
+[
+"Fraser Valley Area G",
+45,
+84,
+[
+520000,
+455
+],
+[
+null,
+null
+],
+{
+"raw": 573000,
+"f": 0.91
+}
+],
+[
+"Fraser Valley Area F",
+49,
+67,
+[
+554000,
+680
+],
+[
+270000,
+140
+],
+{
+"whole": true
+}
+],
+[
+"Squamish-Lillooet Area D",
+59,
+26,
+[
+1580000,
+500
+],
+[
+753000,
+185
+],
+{
+"whole": true,
+"unused": true
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 538000,
+"house_range": [
+520000,
+554000
+],
+"house_props": 836,
+"land": 270000,
+"land_range": [
+270000,
+270000
+],
+"land_props": 93,
+"cheapest": [
+520000,
+"Fraser Valley Area G",
+45,
+455,
+84
+],
+"none_within": false,
+"note": "Only a small part of Squamish-Lillooet Area D is within the hour, and census values can't tell what that part is worth, so it is listed but not used."
+},
+"census_rent_2021": 1700.0
+},
+"2021A00055927008": {
+"rural": {
+"areas": [
+[
+"qathet Area B",
+7,
+100,
+[
+742000,
+515
+],
+[
+380000,
+60
+],
+{}
+],
+[
+"qathet Area C",
+11,
+100,
+[
+588000,
+780
+],
+[
+253000,
+90
+],
+{}
+],
+[
+"qathet Area A",
+18,
+80,
+[
+510000,
+1370
+],
+[
+148000,
+775
+],
+{
+"whole": true
+}
+]
+],
+"ferry_only": [
+"qathet Area D"
+],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 578000,
+"house_range": [
+510000,
+742000
+],
+"house_props": 2396,
+"land": 168000,
+"land_range": [
+148000,
+380000
+],
+"land_props": 773,
+"cheapest": [
+510000,
+"qathet Area A",
+18,
+1370,
+80
+],
+"none_within": false
+},
+"census_rent_2021": 960.0
+},
+"2021A00055953023": {
+"rural": {
+"areas": [
+[
+"Fraser-Fort George Area D",
+10,
+100,
+[
+410000,
+1365
+],
+[
+102000,
+220
+],
+{}
+],
+[
+"Fraser-Fort George Area F",
+13,
+84,
+[
+242000,
+550
+],
+[
+24700,
+1985
+],
+{
+"raw": 229000,
+"f": 1.06
+}
+],
+[
+"Fraser-Fort George Area C",
+15,
+100,
+[
+578000,
+1480
+],
+[
+222000,
+935
+],
+{}
+],
+[
+"Fraser-Fort George Area A",
+16,
+100,
+[
+506000,
+1245
+],
+[
+177000,
+865
+],
+{}
+],
+[
+"Fraser-Fort George Area E",
+35,
+100,
+[
+192000,
+190
+],
+[
+26600,
+80
+],
+{}
+],
+[
+"Bulkley-Nechako Area F",
+45,
+31,
+[
+360000,
+1375
+],
+[
+4400,
+4670
+],
+{
+"raw": 328000,
+"f": 1.1
+}
+],
+[
+"Fraser-Fort George Area G",
+48,
+100,
+[
+201000,
+330
+],
+[
+null,
+null
+],
+{}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 430000,
+"house_range": [
+192000,
+578000
+],
+"house_props": 5504,
+"land": 33400,
+"land_range": [
+4400,
+222000
+],
+"land_props": 5235,
+"cheapest": [
+192000,
+"Fraser-Fort George Area E",
+35,
+190,
+100
+],
+"none_within": false
+},
+"census_rent_2021": 1020.0
+},
+"2021A00055947012": {
+"rural": {
+"areas": [],
+"ferry_only": [
+"North Coast Area A"
+],
+"no_data": [],
+"too_few": [],
+"nearest_beyond": [
+"Kitimat-Stikine Area E",
+87,
+432000,
+835
+],
+"none_within": true
+},
+"census_rent_2021": 1080.0
+},
+"2021A00055941013": {
+"rural": {
+"areas": [
+[
+"Cariboo Area B",
+3,
+100,
+[
+379000,
+1320
+],
+[
+67900,
+595
+],
+{}
+],
+[
+"Cariboo Area A",
+5,
+100,
+[
+419000,
+1755
+],
+[
+64200,
+300
+],
+{}
+],
+[
+"Cariboo Area C",
+7,
+100,
+[
+351000,
+440
+],
+[
+65000,
+505
+],
+{}
+],
+[
+"Cariboo Area I",
+7,
+89,
+[
+275000,
+625
+],
+[
+80000,
+1195
+],
+{}
+],
+[
+"Fraser-Fort George Area E",
+39,
+100,
+[
+192000,
+190
+],
+[
+26600,
+80
+],
+{}
+],
+[
+"Cariboo Area D",
+45,
+17,
+[
+408000,
+865
+],
+[
+73800,
+440
+],
+{
+"raw": 415000,
+"f": 0.98
+}
+],
+[
+"Fraser-Fort George Area D",
+56,
+13,
+[
+317000,
+1365
+],
+[
+102000,
+220
+],
+{
+"raw": 410000,
+"f": 0.77
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 367000,
+"house_range": [
+192000,
+419000
+],
+"house_props": 4581,
+"land": 70300,
+"land_range": [
+26600,
+102000
+],
+"land_props": 2652,
+"cheapest": [
+192000,
+"Fraser-Fort George Area E",
+39,
+190,
+100
+],
+"none_within": false
+},
+"census_rent_2021": 840.0
+},
+"2021A00055939019": {
+"rural": {
+"areas": [
+[
+"Columbia-Shuswap Area B",
+8,
+100,
+[
+579000,
+375
+],
+[
+20000,
+3445
+],
+{}
+],
+[
+"Columbia-Shuswap Area E",
+33,
+91,
+[
+553000,
+820
+],
+[
+237000,
+240
+],
+{}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 562000,
+"house_range": [
+553000,
+579000
+],
+"house_props": 1122,
+"land": 21500,
+"land_range": [
+20000,
+237000
+],
+"land_props": 3664,
+"cheapest": [
+553000,
+"Columbia-Shuswap Area E",
+33,
+820,
+91
+],
+"none_within": false
+},
+"census_rent_2021": 1300.0
+},
+"2021A00055915015": {
+"rural": {
+"areas": [],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"nearest_beyond": [
+"Squamish-Lillooet Area D",
+61,
+1580000,
+500
+],
+"none_within": false,
+"note": "Many homes in Squamish-Lillooet Area D are 61 to 75 min from the town centre, so from other parts of Richmond some may be within the hour: left as unknown rather than scored."
+},
+"census_rent_2021": 1640.0
+},
+"2021A00055939032": {
+"rural": {
+"areas": [
+[
+"Columbia-Shuswap Area D",
+9,
+100,
+[
+587000,
+1075
+],
+[
+310000,
+95
+],
+{}
+],
+[
+"Columbia-Shuswap Area C",
+10,
+98,
+[
+754000,
+4130
+],
+[
+166000,
+915
+],
+{}
+],
+[
+"North Okanagan Area F",
+12,
+83,
+[
+620000,
+1570
+],
+[
+244000,
+415
+],
+{
+"raw": 614000,
+"f": 1.01
+}
+],
+[
+"Columbia-Shuswap Area E",
+28,
+97,
+[
+553000,
+820
+],
+[
+237000,
+240
+],
+{}
+],
+[
+"North Okanagan Area B",
+37,
+95,
+[
+742000,
+925
+],
+[
+321000,
+95
+],
+{}
+],
+[
+"Thompson-Nicola L (Grasslands)",
+38,
+34,
+[
+597000,
+940
+],
+[
+283000,
+240
+],
+{
+"raw": 569000,
+"f": 1.05
+}
+],
+[
+"Columbia-Shuswap Area F",
+39,
+56,
+[
+576000,
+2280
+],
+[
+106000,
+1695
+],
+{
+"raw": 583000,
+"f": 0.99
+}
+],
+[
+"North Okanagan Area C",
+41,
+86,
+[
+843000,
+1365
+],
+[
+405000,
+150
+],
+{}
+],
+[
+"Thompson-Nicola P (Rivers and the Peaks)",
+52,
+14,
+[
+461000,
+1505
+],
+[
+152000,
+275
+],
+{
+"raw": 688000,
+"f": 0.67,
+"cap": true
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 678000,
+"house_range": [
+461000,
+843000
+],
+"house_props": 11074,
+"land": 169000,
+"land_range": [
+106000,
+405000
+],
+"land_props": 2854,
+"cheapest": [
+461000,
+"Thompson-Nicola P (Rivers and the Peaks)",
+52,
+1505,
+14
+],
+"none_within": false
+},
+"census_rent_2021": 1010.0
+},
+"2021A00055915004": {
+"rural": {
+"areas": [
+[
+"Fraser Valley Area G",
+52,
+73,
+[
+462000,
+455
+],
+[
+null,
+null
+],
+{
+"raw": 573000,
+"f": 0.81
+}
+],
+[
+"Fraser Valley Area H",
+52,
+14,
+[
+1037000,
+1275
+],
+[
+154000,
+70
+],
+{
+"raw": 1020000,
+"f": 1.02
+}
+],
+[
+"Fraser Valley Area F",
+55,
+27,
+[
+554000,
+680
+],
+[
+270000,
+140
+],
+{
+"whole": true,
+"unused": true
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 590000,
+"house_range": [
+462000,
+1037000
+],
+"house_props": 510,
+"land": 154000,
+"land_range": [
+154000,
+154000
+],
+"land_props": 10,
+"cheapest": [
+462000,
+"Fraser Valley Area G",
+52,
+455,
+73
+],
+"none_within": false,
+"note": "Only a small part of Fraser Valley Area F is within the hour, and census values can't tell what that part is worth, so it is listed but not used."
+},
+"census_rent_2021": 1300.0
+},
+"2021A00055949011": {
+"rural": {
+"areas": [
+[
+"Kitimat-Stikine Area E",
+3,
+100,
+[
+432000,
+835
+],
+[
+122000,
+125
+],
+{}
+],
+[
+"Kitimat-Stikine Area C (Part 1)",
+5,
+100,
+[
+535000,
+1115
+],
+[
+99600,
+765
+],
+{}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 488000,
+"house_range": [
+432000,
+535000
+],
+"house_props": 1950,
+"land": 102000,
+"land_range": [
+99600,
+122000
+],
+"land_props": 890,
+"cheapest": [
+432000,
+"Kitimat-Stikine Area E",
+3,
+835,
+100
+],
+"none_within": false
+},
+"census_rent_2021": 1000.0
+},
+"2021A00055905014": {
+"rural": {
+"areas": [
+[
+"Kootenay Boundary B / Lower Columbia-Old-Glory",
+4,
+100,
+[
+517000,
+550
+],
+[
+154000,
+455
+],
+{}
+],
+[
+"Kootenay Boundary Area A",
+10,
+100,
+[
+531000,
+635
+],
+[
+146000,
+170
+],
+{}
+],
+[
+"Central Kootenay Area J",
+18,
+100,
+[
+565000,
+1235
+],
+[
+119000,
+945
+],
+{}
+],
+[
+"Central Kootenay Area G",
+26,
+98,
+[
+406000,
+545
+],
+[
+76000,
+1215
+],
+{}
+],
+[
+"Central Kootenay Area I",
+27,
+79,
+[
+564000,
+865
+],
+[
+210000,
+175
+],
+{}
+],
+[
+"Central Kootenay Area H",
+37,
+66,
+[
+446000,
+1925
+],
+[
+30100,
+2790
+],
+{
+"raw": 451000,
+"f": 0.99
+}
+],
+[
+"Central Kootenay Area F",
+40,
+39,
+[
+803000,
+1420
+],
+[
+192000,
+320
+],
+{
+"raw": 757000,
+"f": 1.06
+}
+],
+[
+"Central Kootenay Area E",
+46,
+39,
+[
+646000,
+1510
+],
+[
+124000,
+785
+],
+{
+"raw": 679000,
+"f": 0.95
+}
+],
+[
+"Kootenay Boundary C / Christina Lake",
+53,
+52,
+[
+663000,
+1120
+],
+[
+160000,
+455
+],
+{
+"raw": 643000,
+"f": 1.03
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 548000,
+"house_range": [
+406000,
+803000
+],
+"house_props": 6639,
+"land": 73800,
+"land_range": [
+30100,
+210000
+],
+"land_props": 5407,
+"cheapest": [
+406000,
+"Central Kootenay Area G",
+26,
+545,
+98
+],
+"none_within": false
+},
+"census_rent_2021": 870.0
+},
+"2021A00055915022": {
+"rural": {
+"areas": [
+[
+"Squamish-Lillooet Area D",
+45,
+83,
+[
+1580000,
+500
+],
+[
+753000,
+185
+],
+{
+"whole": true
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 1580000,
+"house_range": [
+1580000,
+1580000
+],
+"house_props": 417,
+"land": 753000,
+"land_range": [
+753000,
+753000
+],
+"land_props": 154,
+"cheapest": [
+1580000,
+"Squamish-Lillooet Area D",
+45,
+500,
+83
+],
+"none_within": false
+},
+"census_rent_2021": 1570.0
+},
+"2021A00055937014": {
+"rural": {
+"areas": [
+[
+"North Okanagan Area B",
+4,
+100,
+[
+742000,
+925
+],
+[
+321000,
+95
+],
+{}
+],
+[
+"North Okanagan Area C",
+4,
+100,
+[
+843000,
+1365
+],
+[
+405000,
+150
+],
+{}
+],
+[
+"Columbia-Shuswap Area D",
+22,
+100,
+[
+587000,
+1075
+],
+[
+310000,
+95
+],
+{}
+],
+[
+"North Okanagan Area D",
+23,
+63,
+[
+665000,
+855
+],
+[
+339000,
+150
+],
+{
+"raw": 620000,
+"f": 1.07
+}
+],
+[
+"North Okanagan Area F",
+29,
+80,
+[
+624000,
+1570
+],
+[
+244000,
+415
+],
+{
+"raw": 614000,
+"f": 1.02
+}
+],
+[
+"Central Okanagan",
+30,
+89,
+[
+875000,
+1300
+],
+[
+592000,
+90
+],
+{}
+],
+[
+"Central Okanagan West",
+36,
+88,
+[
+699000,
+1730
+],
+[
+134000,
+1100
+],
+{}
+],
+[
+"North Okanagan Area E",
+36,
+100,
+[
+494000,
+325
+],
+[
+281000,
+170
+],
+{}
+],
+[
+"Thompson-Nicola L (Grasslands)",
+42,
+14,
+[
+411000,
+940
+],
+[
+283000,
+240
+],
+{
+"raw": 569000,
+"f": 0.72
+}
+],
+[
+"Columbia-Shuswap Area E",
+50,
+24,
+[
+553000,
+820
+],
+[
+237000,
+240
+],
+{
+"whole": true,
+"unused": true
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 703000,
+"house_range": [
+411000,
+875000
+],
+"house_props": 8300,
+"land": 206000,
+"land_range": [
+134000,
+592000
+],
+"land_props": 2019,
+"cheapest": [
+411000,
+"Thompson-Nicola L (Grasslands)",
+42,
+940,
+14
+],
+"none_within": false,
+"note": "Only a small part of Columbia-Shuswap Area E is within the hour, and census values can't tell what that part is worth, so it is listed but not used."
+},
+"census_rent_2021": 1170.0
+},
+"2021A00055917034": {
+"rural": {
+"areas": [
+[
+"Juan de Fuca (Part 1)",
+23,
+84,
+[
+1027000,
+1760
+],
+[
+483000,
+385
+],
+{
+"raw": 1020000,
+"f": 1.01
+}
+],
+[
+"Cowichan Valley Area A",
+26,
+100,
+[
+1020000,
+1475
+],
+[
+410000,
+195
+],
+{}
+],
+[
+"Cowichan Valley Area B",
+32,
+100,
+[
+963000,
+3090
+],
+[
+568000,
+310
+],
+{}
+],
+[
+"Cowichan Valley Area C",
+37,
+100,
+[
+910000,
+1835
+],
+[
+458000,
+50
+],
+{}
+],
+[
+"Cowichan Valley Area D",
+41,
+100,
+[
+811000,
+1105
+],
+[
+315000,
+90
+],
+{}
+],
+[
+"Cowichan Valley Area E",
+42,
+88,
+[
+717000,
+1260
+],
+[
+64700,
+380
+],
+{}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 923000,
+"house_range": [
+717000,
+1027000
+],
+"house_props": 10097,
+"land": 324000,
+"land_range": [
+64700,
+568000
+],
+"land_props": 1305,
+"cheapest": [
+717000,
+"Cowichan Valley Area E",
+42,
+1260,
+88
+],
+"none_within": false
+},
+"census_rent_2021": 1300.0
+},
+"2021A00055935029": {
+"rural": {
+"areas": [
+[
+"Central Okanagan West",
+8,
+100,
+[
+699000,
+1730
+],
+[
+134000,
+1100
+],
+{}
+],
+[
+"Okanagan-Similkameen Area F",
+17,
+100,
+[
+930000,
+695
+],
+[
+500000,
+100
+],
+{}
+],
+[
+"Central Okanagan",
+26,
+91,
+[
+875000,
+1300
+],
+[
+592000,
+90
+],
+{}
+],
+[
+"Okanagan-Similkameen Area I",
+45,
+68,
+[
+810000,
+1040
+],
+[
+192000,
+270
+],
+{
+"raw": 789000,
+"f": 1.03
+}
+],
+[
+"North Okanagan Area B",
+46,
+20,
+[
+846000,
+925
+],
+[
+321000,
+95
+],
+{
+"raw": 742000,
+"f": 1.14
+}
+],
+[
+"Okanagan-Similkameen Area E",
+48,
+100,
+[
+1050000,
+930
+],
+[
+428000,
+280
+],
+{}
+],
+[
+"Okanagan-Similkameen Area D",
+49,
+93,
+[
+856000,
+1315
+],
+[
+328000,
+210
+],
+{}
+],
+[
+"North Okanagan Area C",
+57,
+19,
+[
+780000,
+1365
+],
+[
+405000,
+150
+],
+{
+"raw": 843000,
+"f": 0.93
+}
+],
+[
+"Okanagan-Similkameen Area C",
+59,
+23,
+[
+634000,
+910
+],
+[
+124000,
+305
+],
+{
+"whole": true,
+"unused": true
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 839000,
+"house_range": [
+699000,
+1050000
+],
+"house_props": 6918,
+"land": 203000,
+"land_range": [
+134000,
+592000
+],
+"land_props": 1989,
+"cheapest": [
+699000,
+"Central Okanagan West",
+8,
+1730,
+100
+],
+"none_within": false,
+"note": "Only a small part of Okanagan-Similkameen Area C is within the hour, and census values can't tell what that part is worth, so it is listed but not used."
+},
+"census_rent_2021": 1600.0
+},
+"2021A00055915007": {
+"rural": {
+"areas": [
+[
+"Fraser Valley Area G",
+58,
+12,
+[
+860000,
+455
+],
+[
+null,
+null
+],
+{
+"raw": 573000,
+"f": 1.5,
+"cap": true
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 860000,
+"house_range": [
+860000,
+860000
+],
+"house_props": 53,
+"cheapest": [
+860000,
+"Fraser Valley Area G",
+58,
+455,
+12
+],
+"none_within": false,
+"note": "The house figure rests on only about 53 properties' worth of rural homes within the hour, so treat it as rough."
+},
+"census_rent_2021": 1360.0
+},
+"2021A00055941009": {
+"rural": {
+"areas": [
+[
+"Cariboo Area D",
+5,
+100,
+[
+415000,
+865
+],
+[
+73800,
+440
+],
+{}
+],
+[
+"Cariboo Area F",
+5,
+81,
+[
+421000,
+2005
+],
+[
+125000,
+1170
+],
+{
+"raw": 414000,
+"f": 1.02
+}
+],
+[
+"Cariboo Area E",
+6,
+100,
+[
+452000,
+1230
+],
+[
+358000,
+415
+],
+{}
+],
+[
+"Cariboo Area G",
+28,
+83,
+[
+469000,
+2435
+],
+[
+122000,
+790
+],
+{
+"raw": 458000,
+"f": 1.03
+}
+],
+[
+"Cariboo Area K",
+33,
+15,
+[
+172000,
+265
+],
+[
+225000,
+615
+],
+{
+"whole": true,
+"unused": true
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 443000,
+"house_range": [
+415000,
+469000
+],
+"house_props": 5744,
+"land": 132000,
+"land_range": [
+73800,
+358000
+],
+"land_props": 2460,
+"cheapest": [
+415000,
+"Cariboo Area D",
+5,
+865,
+100
+],
+"none_within": false,
+"note": "Only a small part of Cariboo Area K is within the hour, and census values can't tell what that part is worth, so it is listed but not used."
+},
+"census_rent_2021": 930.0
+},
+"2021A00055917015": {
+"rural": {
+"areas": [
+[
+"Juan de Fuca (Part 1)",
+17,
+63,
+[
+1085000,
+1760
+],
+[
+483000,
+385
+],
+{
+"raw": 1020000,
+"f": 1.06
+}
+],
+[
+"Cowichan Valley Area A",
+36,
+97,
+[
+1020000,
+1475
+],
+[
+410000,
+195
+],
+{}
+],
+[
+"Cowichan Valley Area B",
+42,
+88,
+[
+963000,
+3090
+],
+[
+568000,
+310
+],
+{}
+],
+[
+"Cowichan Valley Area C",
+46,
+100,
+[
+910000,
+1835
+],
+[
+458000,
+50
+],
+{}
+],
+[
+"Cowichan Valley Area D",
+51,
+100,
+[
+811000,
+1105
+],
+[
+315000,
+90
+],
+{}
+],
+[
+"Cowichan Valley Area E",
+51,
+48,
+[
+629000,
+1260
+],
+[
+64700,
+380
+],
+{
+"raw": 717000,
+"f": 0.88
+}
+]
+],
+"ferry_only": [
+"Saltspring Island",
+"Southern Gulf Islands"
+],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 929000,
+"house_range": [
+629000,
+1085000
+],
+"house_props": 8809,
+"land": 369000,
+"land_range": [
+64700,
+568000
+],
+"land_props": 1028,
+"cheapest": [
+629000,
+"Cowichan Valley Area E",
+51,
+1260,
+48
+],
+"none_within": false
+},
+"census_rent_2021": 1390.0
+},
+"2021A00055937010": {
+"rural": {
+"areas": [
+[
+"North Okanagan Area C",
+6,
+100,
+[
+843000,
+1365
+],
+[
+405000,
+150
+],
+{}
+],
+[
+"North Okanagan Area B",
+9,
+100,
+[
+742000,
+925
+],
+[
+321000,
+95
+],
+{}
+],
+[
+"North Okanagan Area D",
+19,
+68,
+[
+664000,
+855
+],
+[
+339000,
+150
+],
+{
+"raw": 620000,
+"f": 1.07
+}
+],
+[
+"Columbia-Shuswap Area D",
+28,
+100,
+[
+587000,
+1075
+],
+[
+310000,
+95
+],
+{}
+],
+[
+"Central Okanagan",
+31,
+89,
+[
+875000,
+1300
+],
+[
+592000,
+90
+],
+{}
+],
+[
+"North Okanagan Area E",
+32,
+100,
+[
+494000,
+325
+],
+[
+281000,
+170
+],
+{}
+],
+[
+"North Okanagan Area F",
+35,
+74,
+[
+615000,
+1570
+],
+[
+244000,
+415
+],
+{}
+],
+[
+"Central Okanagan West",
+42,
+84,
+[
+662000,
+1730
+],
+[
+134000,
+1100
+],
+{
+"raw": 699000,
+"f": 0.95
+}
+],
+[
+"Columbia-Shuswap Area E",
+56,
+24,
+[
+553000,
+820
+],
+[
+237000,
+240
+],
+{
+"whole": true,
+"unused": true
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 700000,
+"house_range": [
+494000,
+875000
+],
+"house_props": 8036,
+"land": 207000,
+"land_range": [
+134000,
+592000
+],
+"land_props": 1920,
+"cheapest": [
+494000,
+"North Okanagan Area E",
+32,
+325,
+100
+],
+"none_within": false,
+"note": "Only a small part of Columbia-Shuswap Area E is within the hour, and census values can't tell what that part is worth, so it is listed but not used."
+},
+"census_rent_2021": 1340.0
+},
+"2021A00055917040": {
+"rural": {
+"areas": [
+[
+"Juan de Fuca (Part 1)",
+23,
+84,
+[
+1027000,
+1760
+],
+[
+483000,
+385
+],
+{
+"raw": 1020000,
+"f": 1.01
+}
+],
+[
+"Cowichan Valley Area A",
+26,
+100,
+[
+1020000,
+1475
+],
+[
+410000,
+195
+],
+{}
+],
+[
+"Cowichan Valley Area B",
+32,
+100,
+[
+963000,
+3090
+],
+[
+568000,
+310
+],
+{}
+],
+[
+"Cowichan Valley Area C",
+37,
+100,
+[
+910000,
+1835
+],
+[
+458000,
+50
+],
+{}
+],
+[
+"Cowichan Valley Area D",
+41,
+100,
+[
+811000,
+1105
+],
+[
+315000,
+90
+],
+{}
+],
+[
+"Cowichan Valley Area E",
+42,
+86,
+[
+717000,
+1260
+],
+[
+64700,
+380
+],
+{}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 924000,
+"house_range": [
+717000,
+1027000
+],
+"house_props": 10071,
+"land": 327000,
+"land_range": [
+64700,
+568000
+],
+"land_props": 1297,
+"cheapest": [
+717000,
+"Cowichan Valley Area E",
+42,
+1260,
+86
+],
+"none_within": false
+},
+"census_rent_2021": 1230.0
+},
+"2021A00055949005": {
+"rural": {
+"areas": [
+[
+"Kitimat-Stikine Area C (Part 1)",
+32,
+67,
+[
+533000,
+1115
+],
+[
+99600,
+765
+],
+{}
+],
+[
+"Kitimat-Stikine Area E",
+39,
+100,
+[
+432000,
+835
+],
+[
+122000,
+125
+],
+{}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 477000,
+"house_range": [
+432000,
+533000
+],
+"house_props": 1580,
+"land": 104000,
+"land_range": [
+99600,
+122000
+],
+"land_props": 636,
+"cheapest": [
+432000,
+"Kitimat-Stikine Area E",
+39,
+835,
+100
+],
+"none_within": false
+},
+"census_rent_2021": 1250.0
+},
+"2021A00055935016": {
+"rural": {
+"areas": [
+[
+"Central Okanagan",
+8,
+91,
+[
+875000,
+1300
+],
+[
+592000,
+90
+],
+{}
+],
+[
+"North Okanagan Area B",
+14,
+99,
+[
+742000,
+925
+],
+[
+321000,
+95
+],
+{}
+],
+[
+"North Okanagan Area C",
+26,
+100,
+[
+843000,
+1365
+],
+[
+405000,
+150
+],
+{}
+],
+[
+"Central Okanagan West",
+32,
+71,
+[
+749000,
+1730
+],
+[
+134000,
+1100
+],
+{
+"raw": 699000,
+"f": 1.07
+}
+],
+[
+"North Okanagan Area D",
+43,
+41,
+[
+652000,
+855
+],
+[
+339000,
+150
+],
+{
+"raw": 620000,
+"f": 1.05
+}
+],
+[
+"Columbia-Shuswap Area D",
+45,
+56,
+[
+636000,
+1075
+],
+[
+310000,
+95
+],
+{
+"raw": 587000,
+"f": 1.08
+}
+],
+[
+"North Okanagan Area F",
+51,
+40,
+[
+602000,
+1570
+],
+[
+244000,
+415
+],
+{
+"raw": 614000,
+"f": 0.98
+}
+],
+[
+"Kootenay Boundary E / West Boundary",
+52,
+42,
+[
+410000,
+1105
+],
+[
+26100,
+2265
+],
+{
+"whole": true,
+"unused": true
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 756000,
+"house_range": [
+602000,
+875000
+],
+"house_props": 6285,
+"land": 199000,
+"land_range": [
+134000,
+592000
+],
+"land_props": 1389,
+"cheapest": [
+602000,
+"North Okanagan Area F",
+51,
+1570,
+40
+],
+"none_within": false,
+"note": "Only a small part of Kootenay Boundary E / West Boundary is within the hour, and census values can't tell what that part is worth, so it is listed but not used."
+},
+"census_rent_2021": 1400.0
+},
+"2021A00055915001": {
+"rural": {
+"areas": [
+[
+"Fraser Valley Area G",
+41,
+93,
+[
+573000,
+455
+],
+[
+null,
+null
+],
+{}
+],
+[
+"Fraser Valley Area H",
+41,
+52,
+[
+940000,
+1275
+],
+[
+154000,
+70
+],
+{
+"raw": 1020000,
+"f": 0.92
+}
+],
+[
+"Fraser Valley Area F",
+44,
+100,
+[
+554000,
+680
+],
+[
+270000,
+140
+],
+{}
+],
+[
+"Fraser Valley Area E",
+50,
+80,
+[
+834000,
+460
+],
+[
+366000,
+50
+],
+{
+"whole": true
+}
+],
+[
+"Fraser Valley Area D",
+52,
+100,
+[
+1140000,
+595
+],
+[
+489000,
+120
+],
+{}
+],
+[
+"Fraser Valley Area C",
+59,
+12,
+[
+799000,
+890
+],
+[
+308000,
+370
+],
+{
+"whole": true,
+"unused": true
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 786000,
+"house_range": [
+554000,
+1140000
+],
+"house_props": 2735,
+"land": 327000,
+"land_range": [
+154000,
+489000
+],
+"land_props": 337,
+"cheapest": [
+554000,
+"Fraser Valley Area F",
+44,
+680,
+100
+],
+"none_within": false,
+"note": "Only a small part of Fraser Valley Area C is within the hour, and census values can't tell what that part is worth, so it is listed but not used."
+},
+"census_rent_2021": 1500.0
+},
+"2021A00055919008": {
+"rural": {
+"areas": [
+[
+"Cowichan Valley Area D",
+8,
+100,
+[
+811000,
+1105
+],
+[
+315000,
+90
+],
+{}
+],
+[
+"Cowichan Valley Area E",
+8,
+100,
+[
+717000,
+1260
+],
+[
+64700,
+380
+],
+{}
+],
+[
+"Cowichan Valley Area F",
+13,
+100,
+[
+765000,
+725
+],
+[
+470000,
+200
+],
+{}
+],
+[
+"Cowichan Valley Area C",
+13,
+100,
+[
+910000,
+1835
+],
+[
+458000,
+50
+],
+{}
+],
+[
+"Cowichan Valley Area B",
+14,
+100,
+[
+963000,
+3090
+],
+[
+568000,
+310
+],
+{}
+],
+[
+"Cowichan Valley Area G",
+15,
+80,
+[
+812000,
+1285
+],
+[
+262000,
+240
+],
+{
+"raw": 835000,
+"f": 0.97
+}
+],
+[
+"Cowichan Valley Area A",
+18,
+100,
+[
+1020000,
+1475
+],
+[
+410000,
+195
+],
+{}
+],
+[
+"Cowichan Valley Area I",
+20,
+100,
+[
+955000,
+1035
+],
+[
+309000,
+185
+],
+{}
+],
+[
+"Cowichan Valley Area H",
+20,
+100,
+[
+856000,
+855
+],
+[
+579000,
+85
+],
+{}
+],
+[
+"Nanaimo Area A",
+24,
+100,
+[
+842000,
+2120
+],
+[
+258000,
+270
+],
+{}
+],
+[
+"Nanaimo Area C",
+30,
+85,
+[
+1130000,
+955
+],
+[
+402000,
+245
+],
+{}
+],
+[
+"Nanaimo Area E",
+50,
+92,
+[
+1250000,
+2675
+],
+[
+546000,
+210
+],
+{}
+]
+],
+"ferry_only": [
+"Nanaimo Area B",
+"Saltspring Island"
+],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 933000,
+"house_range": [
+717000,
+1250000
+],
+"house_props": 17794,
+"land": 320000,
+"land_range": [
+64700,
+579000
+],
+"land_props": 2357,
+"cheapest": [
+717000,
+"Cowichan Valley Area E",
+8,
+1260,
+100
+],
+"none_within": false
+},
+"census_rent_2021": 1070.0
+},
+"2021A00055917005": {
+"rural": {
+"areas": [
+[
+"Juan de Fuca (Part 1)",
+26,
+52,
+[
+1105000,
+1760
+],
+[
+483000,
+385
+],
+{
+"raw": 1020000,
+"f": 1.08
+}
+],
+[
+"Cowichan Valley Area A",
+42,
+97,
+[
+1020000,
+1475
+],
+[
+410000,
+195
+],
+{}
+],
+[
+"Cowichan Valley Area B",
+47,
+74,
+[
+916000,
+3090
+],
+[
+568000,
+310
+],
+{
+"raw": 963000,
+"f": 0.95
+}
+],
+[
+"Cowichan Valley Area C",
+52,
+100,
+[
+910000,
+1835
+],
+[
+458000,
+50
+],
+{}
+],
+[
+"Cowichan Valley Area D",
+56,
+88,
+[
+811000,
+1105
+],
+[
+315000,
+90
+],
+{}
+],
+[
+"Cowichan Valley Area E",
+57,
+12,
+[
+717000,
+1260
+],
+[
+64700,
+380
+],
+{
+"whole": true,
+"unused": true
+}
+]
+],
+"ferry_only": [
+"Saltspring Island",
+"Southern Gulf Islands"
+],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 940000,
+"house_range": [
+811000,
+1105000
+],
+"house_props": 7453,
+"land": 464000,
+"land_range": [
+315000,
+568000
+],
+"land_props": 750,
+"cheapest": [
+811000,
+"Cowichan Valley Area D",
+56,
+1105,
+88
+],
+"none_within": false,
+"note": "Only a small part of Cowichan Valley Area E is within the hour, and census values can't tell what that part is worth, so it is listed but not used."
+},
+"census_rent_2021": 1210.0
+},
+"2021A00055915046": {
+"rural": {
+"areas": [
+[
+"Squamish-Lillooet Area D",
+37,
+83,
+[
+1580000,
+500
+],
+[
+753000,
+185
+],
+{
+"whole": true
+}
+]
+],
+"ferry_only": [
+"Sunshine Coast Area F"
+],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 1580000,
+"house_range": [
+1580000,
+1580000
+],
+"house_props": 417,
+"land": 753000,
+"land_range": [
+753000,
+753000
+],
+"land_props": 154,
+"cheapest": [
+1580000,
+"Squamish-Lillooet Area D",
+37,
+500,
+83
+],
+"none_within": false
+},
+"census_rent_2021": 1880.0
+},
+"2021A00055917030": {
+"rural": {
+"areas": [
+[
+"Juan de Fuca (Part 1)",
+28,
+73,
+[
+1040000,
+1760
+],
+[
+483000,
+385
+],
+{
+"raw": 1020000,
+"f": 1.02
+}
+],
+[
+"Cowichan Valley Area A",
+32,
+100,
+[
+1020000,
+1475
+],
+[
+410000,
+195
+],
+{}
+],
+[
+"Cowichan Valley Area B",
+38,
+88,
+[
+963000,
+3090
+],
+[
+568000,
+310
+],
+{}
+],
+[
+"Cowichan Valley Area C",
+42,
+100,
+[
+910000,
+1835
+],
+[
+458000,
+50
+],
+{}
+],
+[
+"Cowichan Valley Area D",
+47,
+100,
+[
+811000,
+1105
+],
+[
+315000,
+90
+],
+{}
+],
+[
+"Cowichan Valley Area E",
+48,
+63,
+[
+681000,
+1260
+],
+[
+64700,
+380
+],
+{
+"raw": 717000,
+"f": 0.95
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 925000,
+"house_range": [
+681000,
+1040000
+],
+"house_props": 9219,
+"land": 349000,
+"land_range": [
+64700,
+568000
+],
+"land_props": 1130,
+"cheapest": [
+681000,
+"Cowichan Valley Area E",
+48,
+1260,
+63
+],
+"none_within": false
+},
+"census_rent_2021": 1300.0
+},
+"2021A00055917021": {
+"rural": {
+"areas": [
+[
+"Juan de Fuca (Part 1)",
+20,
+88,
+[
+1020000,
+1760
+],
+[
+483000,
+385
+],
+{}
+],
+[
+"Cowichan Valley Area A",
+23,
+100,
+[
+1020000,
+1475
+],
+[
+410000,
+195
+],
+{}
+],
+[
+"Cowichan Valley Area B",
+29,
+100,
+[
+963000,
+3090
+],
+[
+568000,
+310
+],
+{}
+],
+[
+"Cowichan Valley Area C",
+34,
+100,
+[
+910000,
+1835
+],
+[
+458000,
+50
+],
+{}
+],
+[
+"Cowichan Valley Area D",
+38,
+100,
+[
+811000,
+1105
+],
+[
+315000,
+90
+],
+{}
+],
+[
+"Cowichan Valley Area E",
+39,
+97,
+[
+717000,
+1260
+],
+[
+64700,
+380
+],
+{}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 920000,
+"house_range": [
+717000,
+1020000
+],
+"house_props": 10261,
+"land": 315000,
+"land_range": [
+64700,
+568000
+],
+"land_props": 1349,
+"cheapest": [
+717000,
+"Cowichan Valley Area E",
+39,
+1260,
+97
+],
+"none_within": false
+},
+"census_rent_2021": 1400.0
+},
+"2021A00055929011": {
+"rural": {
+"areas": [
+[
+"Sunshine Coast Area B",
+9,
+100,
+[
+1080000,
+1530
+],
+[
+451000,
+255
+],
+{}
+],
+[
+"Sunshine Coast Area D",
+12,
+100,
+[
+1210000,
+1270
+],
+[
+675000,
+80
+],
+{}
+],
+[
+"Sunshine Coast Area E",
+19,
+100,
+[
+982000,
+1225
+],
+[
+470000,
+120
+],
+{}
+],
+[
+"Sunshine Coast Area A",
+21,
+100,
+[
+930000,
+2230
+],
+[
+322000,
+675
+],
+{}
+],
+[
+"Sunshine Coast Area F",
+22,
+87,
+[
+889000,
+1665
+],
+[
+273000,
+490
+],
+{}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 1000000,
+"house_range": [
+889000,
+1210000
+],
+"house_props": 7698,
+"land": 347000,
+"land_range": [
+273000,
+675000
+],
+"land_props": 1555,
+"cheapest": [
+889000,
+"Sunshine Coast Area F",
+22,
+1665,
+87
+],
+"none_within": false
+},
+"census_rent_2021": 1350.0
+},
+"2021A00055917052": {
+"rural": {
+"areas": [
+[
+"Juan de Fuca (Part 1)",
+8,
+100,
+[
+1020000,
+1760
+],
+[
+483000,
+385
+],
+{}
+],
+[
+"Cowichan Valley Area A",
+37,
+97,
+[
+1020000,
+1475
+],
+[
+410000,
+195
+],
+{}
+],
+[
+"Juan de Fuca (Part 2)",
+39,
+18,
+[
+614000,
+260
+],
+[
+370000,
+105
+],
+{
+"whole": true,
+"unused": true
+}
+],
+[
+"Cowichan Valley Area B",
+43,
+88,
+[
+963000,
+3090
+],
+[
+568000,
+310
+],
+{}
+],
+[
+"Cowichan Valley Area C",
+48,
+100,
+[
+910000,
+1835
+],
+[
+458000,
+50
+],
+{}
+],
+[
+"Cowichan Valley Area D",
+52,
+100,
+[
+811000,
+1105
+],
+[
+315000,
+90
+],
+{}
+],
+[
+"Cowichan Valley Area E",
+53,
+48,
+[
+629000,
+1260
+],
+[
+64700,
+380
+],
+{
+"raw": 717000,
+"f": 0.88
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 929000,
+"house_range": [
+629000,
+1020000
+],
+"house_props": 9465,
+"land": 383000,
+"land_range": [
+64700,
+568000
+],
+"land_props": 1172,
+"cheapest": [
+629000,
+"Cowichan Valley Area E",
+53,
+1260,
+48
+],
+"none_within": false,
+"note": "Only a small part of Juan de Fuca (Part 2) is within the hour, and census values can't tell what that part is worth, so it is listed but not used."
+},
+"census_rent_2021": 1400.0
+},
+"2021A00055931006": {
+"rural": {
+"areas": [
+[
+"Squamish-Lillooet Area D",
+13,
+100,
+[
+1580000,
+500
+],
+[
+753000,
+185
+],
+{}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 1580000,
+"house_range": [
+1580000,
+1580000
+],
+"house_props": 500,
+"land": 753000,
+"land_range": [
+753000,
+753000
+],
+"land_props": 185,
+"cheapest": [
+1580000,
+"Squamish-Lillooet Area D",
+13,
+500,
+100
+],
+"none_within": false
+},
+"census_rent_2021": 1840.0
+},
+"2021A00055907035": {
+"rural": {
+"areas": [
+[
+"Okanagan-Similkameen Area F",
+7,
+100,
+[
+930000,
+695
+],
+[
+500000,
+100
+],
+{}
+],
+[
+"Central Okanagan West",
+12,
+27,
+[
+948000,
+1730
+],
+[
+134000,
+1100
+],
+{
+"raw": 699000,
+"f": 1.36
+}
+],
+[
+"Okanagan-Similkameen Area I",
+24,
+100,
+[
+789000,
+1040
+],
+[
+192000,
+270
+],
+{}
+],
+[
+"Okanagan-Similkameen Area E",
+26,
+100,
+[
+1050000,
+930
+],
+[
+428000,
+280
+],
+{}
+],
+[
+"Okanagan-Similkameen Area D",
+28,
+94,
+[
+856000,
+1315
+],
+[
+328000,
+210
+],
+{}
+],
+[
+"Okanagan-Similkameen Area C",
+38,
+90,
+[
+634000,
+910
+],
+[
+124000,
+305
+],
+{}
+],
+[
+"Okanagan-Similkameen Area G",
+42,
+66,
+[
+409000,
+575
+],
+[
+30200,
+640
+],
+{
+"raw": 369000,
+"f": 1.11
+}
+],
+[
+"Central Okanagan",
+51,
+49,
+[
+762000,
+1300
+],
+[
+592000,
+90
+],
+{
+"raw": 875000,
+"f": 0.87
+}
+],
+[
+"Okanagan-Similkameen Area B",
+52,
+92,
+[
+420000,
+290
+],
+[
+54700,
+70
+],
+{}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 795000,
+"house_range": [
+409000,
+1050000
+],
+"house_props": 6473,
+"land": 150000,
+"land_range": [
+30200,
+592000
+],
+"land_props": 1950,
+"cheapest": [
+409000,
+"Okanagan-Similkameen Area G",
+42,
+575,
+66
+],
+"none_within": false
+},
+"census_rent_2021": 1270.0
+},
+"2021A00055915055": {
+"rural": {
+"areas": [
+[
+"Squamish-Lillooet Area D",
+31,
+83,
+[
+1580000,
+500
+],
+[
+753000,
+185
+],
+{
+"whole": true
+}
+]
+],
+"ferry_only": [
+"Sunshine Coast Area D",
+"Sunshine Coast Area E",
+"Sunshine Coast Area F"
+],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 1580000,
+"house_range": [
+1580000,
+1580000
+],
+"house_props": 417,
+"land": 753000,
+"land_range": [
+753000,
+753000
+],
+"land_props": 154,
+"cheapest": [
+1580000,
+"Squamish-Lillooet Area D",
+31,
+500,
+83
+],
+"none_within": false
+},
+"census_rent_2021": 2060.0
+},
+"2021A00055931020": {
+"rural": {
+"areas": [
+[
+"Squamish-Lillooet Area D",
+20,
+74,
+[
+1580000,
+500
+],
+[
+753000,
+185
+],
+{
+"whole": true
+}
+],
+[
+"Squamish-Lillooet Area C",
+31,
+70,
+[
+643000,
+820
+],
+[
+479000,
+225
+],
+{}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 881000,
+"house_range": [
+643000,
+1580000
+],
+"house_props": 947,
+"land": 591000,
+"land_range": [
+479000,
+753000
+],
+"land_props": 295,
+"cheapest": [
+643000,
+"Squamish-Lillooet Area C",
+31,
+820,
+70
+],
+"none_within": false
+},
+"census_rent_2021": 1780.0
+},
+"2021A00055926005": {
+"rural": {
+"areas": [
+[
+"Comox Valley B (Lazo North)",
+3,
+100,
+[
+1010000,
+2460
+],
+[
+576000,
+155
+],
+{}
+],
+[
+"Comox Valley Area A",
+11,
+63,
+[
+926000,
+3685
+],
+[
+511000,
+465
+],
+{
+"raw": 879000,
+"f": 1.05
+}
+],
+[
+"Comox Valley C (Puntledge - Black Creek)",
+11,
+100,
+[
+844000,
+2810
+],
+[
+468000,
+315
+],
+{}
+],
+[
+"Strathcona D (Oyster Bay - Buttle Lake)",
+27,
+98,
+[
+757000,
+1380
+],
+[
+327000,
+145
+],
+{}
+],
+[
+"Nanaimo Area H",
+35,
+100,
+[
+875000,
+1930
+],
+[
+456000,
+215
+],
+{}
+],
+[
+"Nanaimo Area F",
+42,
+83,
+[
+821000,
+2065
+],
+[
+443000,
+180
+],
+{
+"raw": 844000,
+"f": 0.97
+}
+],
+[
+"Nanaimo Area G",
+48,
+100,
+[
+968000,
+2935
+],
+[
+492000,
+110
+],
+{}
+],
+[
+"Strathcona Area A",
+52,
+19,
+[
+417000,
+330
+],
+[
+209000,
+265
+],
+{
+"whole": true,
+"unused": true
+}
+],
+[
+"Nanaimo Area E",
+56,
+26,
+[
+1077000,
+2675
+],
+[
+546000,
+210
+],
+{
+"raw": 1250000,
+"f": 0.86
+}
+]
+],
+"ferry_only": [
+"Strathcona Area C"
+],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 904000,
+"house_range": [
+757000,
+1077000
+],
+"house_props": 16221,
+"land": 471000,
+"land_range": [
+327000,
+576000
+],
+"land_props": 1435,
+"cheapest": [
+757000,
+"Strathcona D (Oyster Bay - Buttle Lake)",
+27,
+1380,
+98
+],
+"none_within": false,
+"note": "Only a small part of Strathcona Area A is within the hour, and census values can't tell what that part is worth, so it is listed but not used."
+},
+"census_rent_2021": 1200.0
+},
+"2021A00055919021": {
+"rural": {
+"areas": [
+[
+"Cowichan Valley Area H",
+3,
+100,
+[
+856000,
+855
+],
+[
+579000,
+85
+],
+{}
+],
+[
+"Cowichan Valley Area G",
+5,
+80,
+[
+812000,
+1285
+],
+[
+262000,
+240
+],
+{
+"raw": 835000,
+"f": 0.97
+}
+],
+[
+"Nanaimo Area A",
+6,
+100,
+[
+842000,
+2120
+],
+[
+258000,
+270
+],
+{}
+],
+[
+"Nanaimo Area C",
+12,
+100,
+[
+1130000,
+955
+],
+[
+402000,
+245
+],
+{}
+],
+[
+"Cowichan Valley Area D",
+23,
+100,
+[
+811000,
+1105
+],
+[
+315000,
+90
+],
+{}
+],
+[
+"Cowichan Valley Area E",
+23,
+100,
+[
+717000,
+1260
+],
+[
+64700,
+380
+],
+{}
+],
+[
+"Cowichan Valley Area F",
+28,
+100,
+[
+765000,
+725
+],
+[
+470000,
+200
+],
+{}
+],
+[
+"Cowichan Valley Area C",
+29,
+100,
+[
+910000,
+1835
+],
+[
+458000,
+50
+],
+{}
+],
+[
+"Cowichan Valley Area B",
+30,
+96,
+[
+963000,
+3090
+],
+[
+568000,
+310
+],
+{}
+],
+[
+"Nanaimo Area E",
+32,
+99,
+[
+1250000,
+2675
+],
+[
+546000,
+210
+],
+{}
+],
+[
+"Cowichan Valley Area A",
+33,
+100,
+[
+1020000,
+1475
+],
+[
+410000,
+195
+],
+{}
+],
+[
+"Cowichan Valley Area I",
+35,
+96,
+[
+955000,
+1035
+],
+[
+309000,
+185
+],
+{}
+],
+[
+"Nanaimo Area G",
+42,
+100,
+[
+968000,
+2935
+],
+[
+492000,
+110
+],
+{}
+],
+[
+"Nanaimo Area F",
+43,
+83,
+[
+851000,
+2065
+],
+[
+443000,
+180
+],
+{
+"raw": 844000,
+"f": 1.01
+}
+],
+[
+"Nanaimo Area H",
+57,
+22,
+[
+909000,
+1930
+],
+[
+456000,
+215
+],
+{
+"raw": 875000,
+"f": 1.04
+}
+]
+],
+"ferry_only": [
+"Nanaimo Area B",
+"Saltspring Island"
+],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 933000,
+"house_range": [
+717000,
+1250000
+],
+"house_props": 23047,
+"land": 338000,
+"land_range": [
+64700,
+579000
+],
+"land_props": 2697,
+"cheapest": [
+717000,
+"Cowichan Valley Area E",
+23,
+1260,
+100
+],
+"none_within": false
+},
+"census_rent_2021": 1120.0
+},
+"2021A00055921023": {
+"rural": {
+"areas": [
+[
+"Nanaimo Area G",
+4,
+100,
+[
+968000,
+2935
+],
+[
+492000,
+110
+],
+{}
+],
+[
+"Nanaimo Area F",
+7,
+100,
+[
+844000,
+2065
+],
+[
+443000,
+180
+],
+{}
+],
+[
+"Nanaimo Area H",
+11,
+100,
+[
+875000,
+1930
+],
+[
+456000,
+215
+],
+{}
+],
+[
+"Nanaimo Area E",
+14,
+100,
+[
+1250000,
+2675
+],
+[
+546000,
+210
+],
+{}
+],
+[
+"Comox Valley Area A",
+22,
+62,
+[
+925000,
+3685
+],
+[
+511000,
+465
+],
+{
+"raw": 879000,
+"f": 1.05
+}
+],
+[
+"Alberni-Clayoquot Area F",
+29,
+100,
+[
+617000,
+635
+],
+[
+165000,
+75
+],
+{}
+],
+[
+"Nanaimo Area C",
+30,
+85,
+[
+1130000,
+955
+],
+[
+402000,
+245
+],
+{}
+],
+[
+"Alberni-Clayoquot Area E",
+36,
+100,
+[
+695000,
+940
+],
+[
+303000,
+80
+],
+{}
+],
+[
+"Alberni-Clayoquot Area B",
+39,
+100,
+[
+588000,
+170
+],
+[
+null,
+null
+],
+{}
+],
+[
+"Comox Valley C (Puntledge - Black Creek)",
+39,
+79,
+[
+841000,
+2810
+],
+[
+468000,
+315
+],
+{}
+],
+[
+"Alberni-Clayoquot Area D",
+40,
+92,
+[
+1250000,
+990
+],
+[
+330000,
+260
+],
+{}
+],
+[
+"Nanaimo Area A",
+40,
+100,
+[
+842000,
+2120
+],
+[
+258000,
+270
+],
+{}
+],
+[
+"Comox Valley B (Lazo North)",
+44,
+100,
+[
+1010000,
+2460
+],
+[
+576000,
+155
+],
+{}
+],
+[
+"Cowichan Valley Area H",
+47,
+100,
+[
+856000,
+855
+],
+[
+579000,
+85
+],
+{}
+],
+[
+"Cowichan Valley Area G",
+54,
+80,
+[
+812000,
+1285
+],
+[
+262000,
+240
+],
+{
+"raw": 835000,
+"f": 0.97
+}
+],
+[
+"Strathcona D (Oyster Bay - Buttle Lake)",
+57,
+13,
+[
+915000,
+1380
+],
+[
+327000,
+145
+],
+{
+"raw": 757000,
+"f": 1.21
+}
+]
+],
+"ferry_only": [
+"Nanaimo Area B"
+],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 928000,
+"house_range": [
+588000,
+1250000
+],
+"house_props": 24226,
+"land": 401000,
+"land_range": [
+165000,
+579000
+],
+"land_props": 2577,
+"cheapest": [
+588000,
+"Alberni-Clayoquot Area B",
+39,
+170,
+100
+],
+"none_within": false
+},
+"census_rent_2021": 1360.0
+},
+"2021A00055917010": {
+"rural": {
+"areas": [
+[
+"Juan de Fuca (Part 1)",
+24,
+61,
+[
+1089000,
+1760
+],
+[
+483000,
+385
+],
+{
+"raw": 1020000,
+"f": 1.07
+}
+],
+[
+"Cowichan Valley Area A",
+40,
+97,
+[
+1020000,
+1475
+],
+[
+410000,
+195
+],
+{}
+],
+[
+"Cowichan Valley Area B",
+46,
+84,
+[
+947000,
+3090
+],
+[
+568000,
+310
+],
+{
+"raw": 963000,
+"f": 0.98
+}
+],
+[
+"Cowichan Valley Area C",
+50,
+100,
+[
+910000,
+1835
+],
+[
+458000,
+50
+],
+{}
+],
+[
+"Cowichan Valley Area D",
+55,
+100,
+[
+811000,
+1105
+],
+[
+315000,
+90
+],
+{}
+],
+[
+"Cowichan Valley Area E",
+56,
+14,
+[
+613000,
+1260
+],
+[
+64700,
+380
+],
+{
+"raw": 717000,
+"f": 0.85
+}
+]
+],
+"ferry_only": [
+"Saltspring Island",
+"Southern Gulf Islands"
+],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 941000,
+"house_range": [
+613000,
+1089000
+],
+"house_props": 8234,
+"land": 435000,
+"land_range": [
+64700,
+568000
+],
+"land_props": 879,
+"cheapest": [
+613000,
+"Cowichan Valley Area E",
+56,
+1260,
+14
+],
+"none_within": false
+},
+"census_rent_2021": 1500.0
+},
+"2021A00055917047": {
+"rural": {
+"areas": [
+[
+"Juan de Fuca (Part 1)",
+18,
+88,
+[
+1020000,
+1760
+],
+[
+483000,
+385
+],
+{}
+],
+[
+"Cowichan Valley Area A",
+21,
+100,
+[
+1020000,
+1475
+],
+[
+410000,
+195
+],
+{}
+],
+[
+"Cowichan Valley Area B",
+27,
+100,
+[
+963000,
+3090
+],
+[
+568000,
+310
+],
+{}
+],
+[
+"Cowichan Valley Area C",
+32,
+100,
+[
+910000,
+1835
+],
+[
+458000,
+50
+],
+{}
+],
+[
+"Cowichan Valley Area D",
+36,
+100,
+[
+811000,
+1105
+],
+[
+315000,
+90
+],
+{}
+],
+[
+"Cowichan Valley Area E",
+37,
+100,
+[
+717000,
+1260
+],
+[
+64700,
+380
+],
+{}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 919000,
+"house_range": [
+717000,
+1020000
+],
+"house_props": 10304,
+"land": 311000,
+"land_range": [
+64700,
+568000
+],
+"land_props": 1362,
+"cheapest": [
+717000,
+"Cowichan Valley Area E",
+37,
+1260,
+100
+],
+"none_within": false
+},
+"census_rent_2021": 1560.0
+},
+"2021A00054806021": {
+"rural": {
+"areas": [
+[
+"Rocky View County",
+7,
+99,
+[
+987000,
+13600
+],
+[
+304000,
+1715
+],
+{}
+],
+[
+"Mountain View County",
+18,
+71,
+[
+598000,
+3650
+],
+[
+192000,
+230
+],
+{
+"raw": 586000,
+"f": 1.02
+}
+],
+[
+"Foothills County",
+36,
+77,
+[
+990000,
+8405
+],
+[
+281000,
+515
+],
+{
+"raw": 924000,
+"f": 1.07
+}
+],
+[
+"Wheatland County",
+38,
+54,
+[
+495000,
+2345
+],
+[
+22400,
+515
+],
+{
+"raw": 461000,
+"f": 1.07
+}
+],
+[
+"Red Deer County",
+40,
+11,
+[
+547000,
+5780
+],
+[
+137000,
+520
+],
+{
+"raw": 507000,
+"f": 1.08
+}
+],
+[
+"MD of Bighorn No. 8",
+44,
+19,
+[
+797000,
+700
+],
+[
+416000,
+85
+],
+{
+"whole": true,
+"unused": true
+}
+],
+[
+"Kneehill County",
+45,
+54,
+[
+302000,
+1536
+],
+[
+null,
+null
+],
+{
+"est": true,
+"census": 315788,
+"ratio": 0.96
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 886000,
+"house_range": [
+302000,
+990000
+],
+"house_props": 25164,
+"land": 249000,
+"land_range": [
+22400,
+304000
+],
+"land_props": 2582,
+"house_est_pct": 3,
+"house_est_areas": [
+"Kneehill County"
+],
+"house_no_est": 904000,
+"cheapest": [
+495000,
+"Wheatland County",
+38,
+2345,
+54
+],
+"none_within": false,
+"note": "Only a small part of MD of Bighorn No. 8 is within the hour, and census values can't tell what that part is worth, so it is listed but not used."
+}
+},
+"2021A00054811013": {
+"rural": {
+"areas": [
+[
+"Leduc County",
+4,
+98,
+[
+532000,
+4670
+],
+[
+209000,
+750
+],
+{}
+],
+[
+"Strathcona County outside Sherwood Park",
+12,
+100,
+[
+592000,
+7778
+],
+[
+null,
+null
+],
+{
+"est": true,
+"census": 618021,
+"ratio": 0.96
+}
+],
+[
+"Camrose County",
+24,
+64,
+[
+357000,
+3155
+],
+[
+61500,
+770
+],
+{
+"raw": 348000,
+"f": 1.03
+}
+],
+[
+"Beaver County",
+24,
+71,
+[
+341000,
+1945
+],
+[
+55500,
+340
+],
+{
+"raw": 293000,
+"f": 1.16
+}
+],
+[
+"Parkland County",
+25,
+78,
+[
+560000,
+11000
+],
+[
+112000,
+2530
+],
+{
+"raw": 520000,
+"f": 1.08
+}
+],
+[
+"Wetaskiwin County No. 10",
+25,
+76,
+[
+384000,
+4365
+],
+[
+90100,
+1565
+],
+{
+"raw": 368000,
+"f": 1.04
+}
+],
+[
+"Sturgeon County",
+36,
+89,
+[
+571000,
+6160
+],
+[
+143000,
+595
+],
+{}
+],
+[
+"Lamont County",
+49,
+27,
+[
+312000,
+535
+],
+[
+17300,
+125
+],
+{
+"raw": 277000,
+"f": 1.13
+}
+],
+[
+"Ponoka County",
+50,
+23,
+[
+413000,
+3275
+],
+[
+102000,
+640
+],
+{
+"raw": 410000,
+"f": 1.01
+}
+],
+[
+"Lac Ste. Anne County",
+55,
+17,
+[
+397000,
+4170
+],
+[
+71900,
+1025
+],
+{
+"raw": 312000,
+"f": 1.27
+}
+],
+[
+"Thorhild County",
+55,
+11,
+[
+187000,
+1445
+],
+[
+41200,
+420
+],
+{
+"whole": true,
+"unused": true
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 516000,
+"house_range": [
+312000,
+592000
+],
+"house_props": 34774,
+"land": 106000,
+"land_range": [
+17300,
+209000
+],
+"land_props": 5522,
+"house_est_pct": 22,
+"house_est_areas": [
+"Strathcona County outside Sherwood Park"
+],
+"house_no_est": 494000,
+"cheapest": [
+312000,
+"Lamont County",
+49,
+535,
+27
+],
+"none_within": false,
+"note": "Only a small part of Thorhild County is within the hour, and census values can't tell what that part is worth, so it is listed but not used. StatCan's one figure for Strathcona County is mostly Sherwood Park itself, so the rest of it (acreages and hamlets) is estimated from 2021 census home values."
+}
+},
+"2021A00054802034": {
+"rural": {
+"areas": [
+[
+"Newell County",
+4,
+99,
+[
+359000,
+2120
+],
+[
+21700,
+490
+],
+{}
+],
+[
+"MD of Taber",
+38,
+41,
+[
+330000,
+1600
+],
+[
+46800,
+200
+],
+{
+"raw": 379000,
+"f": 0.87
+}
+],
+[
+"Special Area No. 2",
+49,
+25,
+[
+193000,
+510
+],
+[
+5700,
+180
+],
+{
+"raw": 196000,
+"f": 0.98
+}
+],
+[
+"Wheatland County",
+51,
+12,
+[
+309000,
+2345
+],
+[
+22400,
+515
+],
+{
+"raw": 461000,
+"f": 0.67,
+"cap": true
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 341000,
+"house_range": [
+193000,
+359000
+],
+"house_props": 3164,
+"land": 22200,
+"land_range": [
+5700,
+46800
+],
+"land_props": 674,
+"cheapest": [
+193000,
+"Special Area No. 2",
+49,
+510,
+25
+],
+"none_within": false
+}
+},
+"2021A00054806016": {
+"rural": {
+"areas": [
+[
+"Rocky View County",
+14,
+99,
+[
+987000,
+13600
+],
+[
+304000,
+1715
+],
+{}
+],
+[
+"Foothills County",
+21,
+97,
+[
+924000,
+8405
+],
+[
+281000,
+515
+],
+{}
+],
+[
+"Wheatland County",
+29,
+73,
+[
+473000,
+2345
+],
+[
+22400,
+515
+],
+{
+"raw": 461000,
+"f": 1.03
+}
+],
+[
+"MD of Bighorn No. 8",
+35,
+68,
+[
+795000,
+700
+],
+[
+416000,
+85
+],
+{}
+],
+[
+"Mountain View County",
+36,
+46,
+[
+610000,
+3650
+],
+[
+192000,
+230
+],
+{
+"raw": 586000,
+"f": 1.04
+}
+],
+[
+"Vulcan County",
+57,
+15,
+[
+392000,
+905
+],
+[
+54500,
+140
+],
+{
+"whole": true,
+"unused": true
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 900000,
+"house_range": [
+473000,
+987000
+],
+"house_props": 25447,
+"land": 247000,
+"land_range": [
+22400,
+416000
+],
+"land_props": 2730,
+"cheapest": [
+473000,
+"Wheatland County",
+29,
+2345,
+73
+],
+"none_within": false,
+"note": "Only a small part of Vulcan County is within the hour, and census values can't tell what that part is worth, so it is listed but not used."
+}
+},
+"2021A00054810011": {
+"rural": {
+"areas": [
+[
+"Camrose County",
+3,
+100,
+[
+348000,
+3155
+],
+[
+61500,
+770
+],
+{}
+],
+[
+"Wetaskiwin County No. 10",
+21,
+55,
+[
+389000,
+4365
+],
+[
+90100,
+1565
+],
+{
+"raw": 368000,
+"f": 1.06
+}
+],
+[
+"Flagstaff County",
+27,
+47,
+[
+267000,
+1255
+],
+[
+8600,
+135
+],
+{}
+],
+[
+"Leduc County",
+33,
+66,
+[
+600000,
+4670
+],
+[
+209000,
+750
+],
+{
+"raw": 532000,
+"f": 1.13
+}
+],
+[
+"Beaver County",
+34,
+98,
+[
+293000,
+1945
+],
+[
+55500,
+340
+],
+{}
+],
+[
+"Ponoka County",
+38,
+18,
+[
+393000,
+3275
+],
+[
+102000,
+640
+],
+{
+"raw": 410000,
+"f": 0.96
+}
+],
+[
+"Strathcona County outside Sherwood Park",
+39,
+81,
+[
+606000,
+7778
+],
+[
+null,
+null
+],
+{
+"est": true,
+"census": 633400,
+"ratio": 0.96
+}
+],
+[
+"Lacombe County",
+50,
+17,
+[
+318000,
+3095
+],
+[
+94700,
+860
+],
+{
+"raw": 469000,
+"f": 0.68
+}
+],
+[
+"Stettler County No. 6",
+50,
+32,
+[
+368000,
+1645
+],
+[
+34600,
+460
+],
+{
+"raw": 330000,
+"f": 1.11
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 455000,
+"house_range": [
+267000,
+606000
+],
+"house_props": 19056,
+"land": 81800,
+"land_range": [
+8600,
+209000
+],
+"land_props": 2929,
+"house_est_pct": 33,
+"house_est_areas": [
+"Strathcona County outside Sherwood Park"
+],
+"house_no_est": 388000,
+"cheapest": [
+267000,
+"Flagstaff County",
+27,
+1255,
+47
+],
+"none_within": false,
+"note": "StatCan's one figure for Strathcona County is mostly Sherwood Park itself, so the rest of it (acreages and hamlets) is estimated from 2021 census home values."
+}
+},
+"2021A00054806017": {
+"rural": {
+"areas": [
+[
+"Rocky View County",
+6,
+95,
+[
+987000,
+13600
+],
+[
+304000,
+1715
+],
+{}
+],
+[
+"Wheatland County",
+16,
+87,
+[
+461000,
+2345
+],
+[
+22400,
+515
+],
+{}
+],
+[
+"Foothills County",
+25,
+96,
+[
+924000,
+8405
+],
+[
+281000,
+515
+],
+{}
+],
+[
+"Mountain View County",
+44,
+19,
+[
+608000,
+3650
+],
+[
+192000,
+230
+],
+{
+"raw": 586000,
+"f": 1.04
+}
+],
+[
+"Vulcan County",
+47,
+19,
+[
+443000,
+905
+],
+[
+54500,
+140
+],
+{
+"raw": 392000,
+"f": 1.13
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 904000,
+"house_range": [
+443000,
+987000
+],
+"house_props": 23850,
+"land": 232000,
+"land_range": [
+22400,
+304000
+],
+"land_props": 2640,
+"cheapest": [
+443000,
+"Vulcan County",
+47,
+905,
+19
+],
+"none_within": false
+}
+},
+"2021A00054812002": {
+"rural": {
+"areas": [
+[
+"MD of Bonnyville No. 87",
+5,
+94,
+[
+354000,
+3710
+],
+[
+88200,
+1065
+],
+{}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 354000,
+"house_range": [
+354000,
+354000
+],
+"house_props": 3476,
+"land": 88200,
+"land_range": [
+88200,
+88200
+],
+"land_props": 998,
+"cheapest": [
+354000,
+"MD of Bonnyville No. 87",
+5,
+3710,
+94
+],
+"none_within": false
+}
+},
+"2021A00054811061": {
+"rural": {
+"areas": [
+[
+"Strathcona County outside Sherwood Park",
+15,
+100,
+[
+592000,
+7778
+],
+[
+null,
+null
+],
+{
+"est": true,
+"census": 618021,
+"ratio": 0.96
+}
+],
+[
+"Parkland County",
+20,
+89,
+[
+520000,
+11000
+],
+[
+112000,
+2530
+],
+{}
+],
+[
+"Sturgeon County",
+21,
+100,
+[
+571000,
+6160
+],
+[
+143000,
+595
+],
+{}
+],
+[
+"Leduc County",
+22,
+89,
+[
+532000,
+4670
+],
+[
+209000,
+750
+],
+{}
+],
+[
+"Beaver County",
+35,
+60,
+[
+350000,
+1945
+],
+[
+55500,
+340
+],
+{
+"raw": 293000,
+"f": 1.19
+}
+],
+[
+"Wetaskiwin County No. 10",
+37,
+60,
+[
+395000,
+4365
+],
+[
+90100,
+1565
+],
+{
+"raw": 368000,
+"f": 1.07
+}
+],
+[
+"Lac Ste. Anne County",
+41,
+51,
+[
+354000,
+4170
+],
+[
+71900,
+1025
+],
+{
+"raw": 312000,
+"f": 1.13
+}
+],
+[
+"Lamont County",
+41,
+68,
+[
+282000,
+535
+],
+[
+17300,
+125
+],
+{
+"raw": 277000,
+"f": 1.02
+}
+],
+[
+"Camrose County",
+43,
+23,
+[
+402000,
+3155
+],
+[
+61500,
+770
+],
+{
+"raw": 348000,
+"f": 1.16
+}
+],
+[
+"Thorhild County",
+45,
+41,
+[
+224000,
+1445
+],
+[
+41200,
+420
+],
+{
+"raw": 187000,
+"f": 1.2
+}
+],
+[
+"Westlock County",
+52,
+32,
+[
+293000,
+2357
+],
+[
+null,
+null
+],
+{
+"est": true,
+"census": 306468,
+"ratio": 0.96
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 502000,
+"house_range": [
+224000,
+592000
+],
+"house_props": 36319,
+"land": 104000,
+"land_range": [
+17300,
+209000
+],
+"land_props": 5636,
+"house_est_pct": 23,
+"house_est_areas": [
+"Strathcona County outside Sherwood Park",
+"Westlock County"
+],
+"house_no_est": 484000,
+"cheapest": [
+224000,
+"Thorhild County",
+45,
+1445,
+41
+],
+"none_within": false,
+"note": "StatCan's one figure for Strathcona County is mostly Sherwood Park itself, so the rest of it (acreages and hamlets) is estimated from 2021 census home values."
+}
+},
+"2021A00054811056": {
+"rural": {
+"areas": [
+[
+"Sturgeon County",
+4,
+100,
+[
+571000,
+6160
+],
+[
+143000,
+595
+],
+{}
+],
+[
+"Strathcona County outside Sherwood Park",
+10,
+100,
+[
+592000,
+7778
+],
+[
+null,
+null
+],
+{
+"est": true,
+"census": 618021,
+"ratio": 0.96
+}
+],
+[
+"Lamont County",
+21,
+100,
+[
+277000,
+535
+],
+[
+17300,
+125
+],
+{}
+],
+[
+"Thorhild County",
+25,
+84,
+[
+183000,
+1445
+],
+[
+41200,
+420
+],
+{
+"raw": 187000,
+"f": 0.98
+}
+],
+[
+"Parkland County",
+30,
+78,
+[
+548000,
+11000
+],
+[
+112000,
+2530
+],
+{
+"raw": 520000,
+"f": 1.05
+}
+],
+[
+"Leduc County",
+31,
+70,
+[
+587000,
+4670
+],
+[
+209000,
+750
+],
+{
+"raw": 532000,
+"f": 1.1
+}
+],
+[
+"Beaver County",
+37,
+58,
+[
+350000,
+1945
+],
+[
+55500,
+340
+],
+{
+"raw": 293000,
+"f": 1.2
+}
+],
+[
+"Lac Ste. Anne County",
+40,
+41,
+[
+363000,
+4170
+],
+[
+71900,
+1025
+],
+{
+"raw": 312000,
+"f": 1.16
+}
+],
+[
+"Smoky Lake County",
+42,
+22,
+[
+290000,
+1425
+],
+[
+69400,
+460
+],
+{
+"raw": 193000,
+"f": 1.5,
+"cap": true
+}
+],
+[
+"Westlock County",
+45,
+46,
+[
+307000,
+2357
+],
+[
+null,
+null
+],
+{
+"est": true,
+"census": 321177,
+"ratio": 0.96
+}
+],
+[
+"Camrose County",
+45,
+23,
+[
+402000,
+3155
+],
+[
+61500,
+770
+],
+{
+"raw": 348000,
+"f": 1.16
+}
+],
+[
+"Minburn County No. 27",
+52,
+15,
+[
+244000,
+1145
+],
+[
+19100,
+185
+],
+{
+"raw": 224000,
+"f": 1.09
+}
+],
+[
+"Two Hills County No. 21",
+54,
+21,
+[
+139000,
+1335
+],
+[
+11600,
+445
+],
+{
+"raw": 200000,
+"f": 0.7
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 512000,
+"house_range": [
+139000,
+592000
+],
+"house_props": 32923,
+"land": 96900,
+"land_range": [
+11600,
+209000
+],
+"land_props": 4586,
+"house_est_pct": 27,
+"house_est_areas": [
+"Strathcona County outside Sherwood Park",
+"Westlock County"
+],
+"house_no_est": 496000,
+"cheapest": [
+139000,
+"Two Hills County No. 21",
+54,
+1335,
+21
+],
+"none_within": false,
+"note": "StatCan's one figure for Strathcona County is mostly Sherwood Park itself, so the rest of it (acreages and hamlets) is estimated from 2021 census home values."
+}
+},
+"2021A00054819012": {
+"rural": {
+"areas": [
+[
+"Grande Prairie County No. 1",
+6,
+99,
+[
+492000,
+7585
+],
+[
+113000,
+1365
+],
+{}
+],
+[
+"MD of Greenview No. 16",
+16,
+29,
+[
+312000,
+2810
+],
+[
+82900,
+490
+],
+{
+"raw": 254000,
+"f": 1.23
+}
+],
+[
+"Saddle Hills County",
+38,
+16,
+[
+150000,
+935
+],
+[
+16000,
+115
+],
+{
+"whole": true,
+"unused": true
+}
+],
+[
+"MD of Spirit River No. 133",
+45,
+100,
+[
+343000,
+240
+],
+[
+null,
+null
+],
+{
+"est": true,
+"census": 358690,
+"ratio": 0.96
+}
+],
+[
+"Birch Hills County",
+57,
+66,
+[
+103000,
+455
+],
+[
+4000,
+200
+],
+{
+"raw": 99600,
+"f": 1.03
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 460000,
+"house_range": [
+103000,
+492000
+],
+"house_props": 8887,
+"land": 99400,
+"land_range": [
+4000,
+113000
+],
+"land_props": 1630,
+"house_est_pct": 3,
+"house_est_areas": [
+"MD of Spirit River No. 133"
+],
+"house_no_est": 464000,
+"cheapest": [
+103000,
+"Birch Hills County",
+57,
+455,
+66
+],
+"none_within": false,
+"note": "Only a small part of Saddle Hills County is within the hour, and census values can't tell what that part is worth, so it is listed but not used."
+}
+},
+"2021A00054808031": {
+"rural": {
+"areas": [
+[
+"Lacombe County",
+2,
+100,
+[
+469000,
+3095
+],
+[
+94700,
+860
+],
+{}
+],
+[
+"Ponoka County",
+13,
+98,
+[
+410000,
+3275
+],
+[
+102000,
+640
+],
+{}
+],
+[
+"Red Deer County",
+14,
+94,
+[
+507000,
+5780
+],
+[
+137000,
+520
+],
+{}
+],
+[
+"Wetaskiwin County No. 10",
+30,
+77,
+[
+370000,
+4365
+],
+[
+90100,
+1565
+],
+{
+"raw": 368000,
+"f": 1.01
+}
+],
+[
+"Stettler County No. 6",
+35,
+52,
+[
+374000,
+1645
+],
+[
+34600,
+460
+],
+{
+"raw": 330000,
+"f": 1.13
+}
+],
+[
+"Camrose County",
+37,
+24,
+[
+274000,
+3155
+],
+[
+61500,
+770
+],
+{
+"raw": 348000,
+"f": 0.79
+}
+],
+[
+"Clearwater County",
+40,
+31,
+[
+367000,
+3380
+],
+[
+126000,
+635
+],
+{
+"raw": 397000,
+"f": 0.93
+}
+],
+[
+"Leduc County",
+44,
+19,
+[
+550000,
+4670
+],
+[
+209000,
+750
+],
+{
+"raw": 532000,
+"f": 1.03
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 433000,
+"house_range": [
+274000,
+550000
+],
+"house_props": 18680,
+"land": 95800,
+"land_range": [
+34600,
+209000
+],
+"land_props": 3952,
+"cheapest": [
+274000,
+"Camrose County",
+37,
+3155,
+24
+],
+"none_within": false
+}
+},
+"2021A00054811016": {
+"rural": {
+"areas": [
+[
+"Leduc County",
+6,
+100,
+[
+532000,
+4670
+],
+[
+209000,
+750
+],
+{}
+],
+[
+"Wetaskiwin County No. 10",
+14,
+86,
+[
+368000,
+4365
+],
+[
+90100,
+1565
+],
+{}
+],
+[
+"Parkland County",
+22,
+80,
+[
+560000,
+11000
+],
+[
+112000,
+2530
+],
+{
+"raw": 520000,
+"f": 1.08
+}
+],
+[
+"Strathcona County outside Sherwood Park",
+23,
+99,
+[
+592000,
+7778
+],
+[
+null,
+null
+],
+{
+"est": true,
+"census": 618774,
+"ratio": 0.96
+}
+],
+[
+"Camrose County",
+28,
+59,
+[
+358000,
+3155
+],
+[
+61500,
+770
+],
+{
+"raw": 348000,
+"f": 1.03
+}
+],
+[
+"Beaver County",
+36,
+55,
+[
+351000,
+1945
+],
+[
+55500,
+340
+],
+{
+"raw": 293000,
+"f": 1.2
+}
+],
+[
+"Ponoka County",
+38,
+51,
+[
+420000,
+3275
+],
+[
+102000,
+640
+],
+{
+"raw": 410000,
+"f": 1.02
+}
+],
+[
+"Sturgeon County",
+39,
+86,
+[
+571000,
+6160
+],
+[
+143000,
+595
+],
+{}
+],
+[
+"Brazeau County",
+44,
+12,
+[
+355000,
+2195
+],
+[
+73700,
+400
+],
+{
+"whole": true,
+"unused": true
+}
+],
+[
+"Lacombe County",
+47,
+20,
+[
+568000,
+3095
+],
+[
+94700,
+860
+],
+{
+"raw": 469000,
+"f": 1.21
+}
+],
+[
+"Lac Ste. Anne County",
+55,
+17,
+[
+397000,
+4170
+],
+[
+71900,
+1025
+],
+{
+"raw": 312000,
+"f": 1.27
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 514000,
+"house_range": [
+351000,
+592000
+],
+"house_props": 36124,
+"land": 107000,
+"land_range": [
+55500,
+209000
+],
+"land_props": 5946,
+"house_est_pct": 21,
+"house_est_areas": [
+"Strathcona County outside Sherwood Park"
+],
+"house_no_est": 493000,
+"cheapest": [
+351000,
+"Beaver County",
+36,
+1945,
+55
+],
+"none_within": false,
+"note": "Only a small part of Brazeau County is within the hour, and census values can't tell what that part is worth, so it is listed but not used. StatCan's one figure for Strathcona County is mostly Sherwood Park itself, so the rest of it (acreages and hamlets) is estimated from 2021 census home values."
+}
+},
+"2021A00054802012": {
+"rural": {
+"areas": [
+[
+"Lethbridge County",
+6,
+100,
+[
+408000,
+2415
+],
+[
+71300,
+155
+],
+{}
+],
+[
+"Cardston County",
+17,
+42,
+[
+347000,
+910
+],
+[
+104000,
+280
+],
+{
+"raw": 357000,
+"f": 0.97
+}
+],
+[
+"MD of Taber",
+23,
+72,
+[
+411000,
+1600
+],
+[
+46800,
+200
+],
+{
+"raw": 379000,
+"f": 1.08
+}
+],
+[
+"MD of Willow Creek No. 26",
+25,
+62,
+[
+398000,
+1375
+],
+[
+42700,
+85
+],
+{
+"raw": 414000,
+"f": 0.96
+}
+],
+[
+"Warner County No. 5",
+25,
+79,
+[
+334000,
+790
+],
+[
+10700,
+160
+],
+{
+"raw": 315000,
+"f": 1.06
+}
+],
+[
+"Vulcan County",
+42,
+24,
+[
+356000,
+905
+],
+[
+54500,
+140
+],
+{
+"raw": 392000,
+"f": 0.91
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 392000,
+"house_range": [
+334000,
+411000
+],
+"house_props": 5636,
+"land": 48700,
+"land_range": [
+10700,
+104000
+],
+"land_props": 628,
+"cheapest": [
+334000,
+"Warner County No. 5",
+25,
+790,
+79
+],
+"none_within": false
+}
+},
+"2021A00054810039": {
+"rural": {
+"areas": [
+[
+"Vermilion River County",
+8,
+100,
+[
+356000,
+2685
+],
+[
+25300,
+280
+],
+{}
+],
+[
+"Minburn County No. 27",
+50,
+24,
+[
+198000,
+1145
+],
+[
+19100,
+185
+],
+{
+"raw": 224000,
+"f": 0.88
+}
+],
+[
+"MD of Wainwright No. 61",
+50,
+18,
+[
+334000,
+1140
+],
+[
+70400,
+195
+],
+{
+"raw": 336000,
+"f": 0.99
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 340000,
+"house_range": [
+198000,
+356000
+],
+"house_props": 3174,
+"land": 26600,
+"land_range": [
+19100,
+70400
+],
+"land_props": 361,
+"cheapest": [
+198000,
+"Minburn County No. 27",
+50,
+1145,
+24
+],
+"none_within": false,
+"note": "Only the Alberta side is covered: Saskatchewan rural municipalities next to Lloydminster are not included."
+}
+},
+"2021A00054801006": {
+"rural": {
+"areas": [
+[
+"Cypress County",
+6,
+100,
+[
+443000,
+2885
+],
+[
+25700,
+420
+],
+{}
+],
+[
+"Forty Mile County No. 8",
+25,
+44,
+[
+258000,
+860
+],
+[
+19400,
+350
+],
+{
+"raw": 229000,
+"f": 1.13
+}
+],
+[
+"MD of Taber",
+56,
+25,
+[
+283000,
+1600
+],
+[
+46800,
+200
+],
+{
+"raw": 379000,
+"f": 0.75
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 403000,
+"house_range": [
+258000,
+443000
+],
+"house_props": 3662,
+"land": 25100,
+"land_range": [
+19400,
+46800
+],
+"land_props": 624,
+"cheapest": [
+258000,
+"Forty Mile County No. 8",
+25,
+860,
+44
+],
+"none_within": false
+}
+},
+"2021A00054808011": {
+"rural": {
+"areas": [
+[
+"Red Deer County",
+7,
+99,
+[
+507000,
+5780
+],
+[
+137000,
+520
+],
+{}
+],
+[
+"Lacombe County",
+12,
+100,
+[
+469000,
+3095
+],
+[
+94700,
+860
+],
+{}
+],
+[
+"Ponoka County",
+29,
+89,
+[
+410000,
+3275
+],
+[
+102000,
+640
+],
+{}
+],
+[
+"Clearwater County",
+37,
+65,
+[
+409000,
+3380
+],
+[
+126000,
+635
+],
+{
+"raw": 397000,
+"f": 1.03
+}
+],
+[
+"Mountain View County",
+37,
+45,
+[
+572000,
+3650
+],
+[
+192000,
+230
+],
+{
+"raw": 586000,
+"f": 0.98
+}
+],
+[
+"Stettler County No. 6",
+42,
+31,
+[
+369000,
+1645
+],
+[
+34600,
+460
+],
+{
+"raw": 330000,
+"f": 1.12
+}
+],
+[
+"Kneehill County",
+43,
+37,
+[
+265000,
+1536
+],
+[
+null,
+null
+],
+{
+"est": true,
+"census": 276445,
+"ratio": 0.96
+}
+],
+[
+"Wetaskiwin County No. 10",
+46,
+11,
+[
+345000,
+4365
+],
+[
+90100,
+1565
+],
+{
+"raw": 368000,
+"f": 0.94
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 457000,
+"house_range": [
+265000,
+572000
+],
+"house_props": 17164,
+"land": 105000,
+"land_range": [
+34600,
+192000
+],
+"land_props": 2781,
+"house_est_pct": 3,
+"house_est_areas": [
+"Kneehill County"
+],
+"house_no_est": 464000,
+"cheapest": [
+345000,
+"Wetaskiwin County No. 10",
+46,
+4365,
+11
+],
+"none_within": false
+}
+},
+"2021A00054811049": {
+"rural": {
+"areas": [
+[
+"Parkland County",
+7,
+100,
+[
+520000,
+11000
+],
+[
+112000,
+2530
+],
+{}
+],
+[
+"Sturgeon County",
+10,
+98,
+[
+571000,
+6160
+],
+[
+143000,
+595
+],
+{}
+],
+[
+"Lac Ste. Anne County",
+20,
+81,
+[
+319000,
+4170
+],
+[
+71900,
+1025
+],
+{
+"raw": 312000,
+"f": 1.02
+}
+],
+[
+"Leduc County",
+26,
+94,
+[
+532000,
+4670
+],
+[
+209000,
+750
+],
+{}
+],
+[
+"Strathcona County outside Sherwood Park",
+34,
+99,
+[
+592000,
+7778
+],
+[
+null,
+null
+],
+{
+"est": true,
+"census": 618774,
+"ratio": 0.96
+}
+],
+[
+"Westlock County",
+38,
+59,
+[
+321000,
+2357
+],
+[
+null,
+null
+],
+{
+"est": true,
+"census": 334939,
+"ratio": 0.96
+}
+],
+[
+"Barrhead County No. 11",
+41,
+29,
+[
+263000,
+2115
+],
+[
+52200,
+555
+],
+{
+"raw": 282000,
+"f": 0.93
+}
+],
+[
+"Yellowhead County",
+47,
+23,
+[
+218000,
+3715
+],
+[
+73800,
+780
+],
+{
+"raw": 321000,
+"f": 0.68
+}
+],
+[
+"Brazeau County",
+50,
+12,
+[
+355000,
+2195
+],
+[
+73700,
+400
+],
+{
+"whole": true,
+"unused": true
+}
+],
+[
+"Wetaskiwin County No. 10",
+50,
+16,
+[
+405000,
+4365
+],
+[
+90100,
+1565
+],
+{
+"raw": 368000,
+"f": 1.1
+}
+],
+[
+"Beaver County",
+53,
+22,
+[
+354000,
+1945
+],
+[
+55500,
+340
+],
+{
+"raw": 293000,
+"f": 1.21
+}
+],
+[
+"Thorhild County",
+57,
+11,
+[
+187000,
+1445
+],
+[
+41200,
+420
+],
+{
+"whole": true,
+"unused": true
+}
+],
+[
+"Lamont County",
+58,
+20,
+[
+332000,
+535
+],
+[
+17300,
+125
+],
+{
+"raw": 277000,
+"f": 1.2
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 499000,
+"house_range": [
+218000,
+592000
+],
+"house_props": 36633,
+"land": 109000,
+"land_range": [
+17300,
+209000
+],
+"land_props": 5346,
+"house_est_pct": 25,
+"house_est_areas": [
+"Strathcona County outside Sherwood Park",
+"Westlock County"
+],
+"house_no_est": 483000,
+"cheapest": [
+218000,
+"Yellowhead County",
+47,
+3715,
+23
+],
+"none_within": false,
+"note": "Only small parts of Brazeau County and Thorhild County are within the hour, and census values can't tell what those parts are worth, so they are listed but not used. StatCan's one figure for Strathcona County is mostly Sherwood Park itself, so the rest of it (acreages and hamlets) is estimated from 2021 census home values."
+}
+},
+"2021A00054811062": {
+"rural": {
+"areas": [
+[
+"Sturgeon County",
+7,
+100,
+[
+571000,
+6160
+],
+[
+143000,
+595
+],
+{}
+],
+[
+"Parkland County",
+12,
+94,
+[
+520000,
+11000
+],
+[
+112000,
+2530
+],
+{}
+],
+[
+"Strathcona County outside Sherwood Park",
+23,
+100,
+[
+592000,
+7778
+],
+[
+null,
+null
+],
+{
+"est": true,
+"census": 618021,
+"ratio": 0.96
+}
+],
+[
+"Lac Ste. Anne County",
+27,
+69,
+[
+342000,
+4170
+],
+[
+71900,
+1025
+],
+{
+"raw": 312000,
+"f": 1.09
+}
+],
+[
+"Leduc County",
+31,
+83,
+[
+564000,
+4670
+],
+[
+209000,
+750
+],
+{
+"raw": 532000,
+"f": 1.06
+}
+],
+[
+"Westlock County",
+35,
+73,
+[
+316000,
+2357
+],
+[
+null,
+null
+],
+{
+"est": true,
+"census": 330236,
+"ratio": 0.96
+}
+],
+[
+"Thorhild County",
+42,
+73,
+[
+191000,
+1445
+],
+[
+41200,
+420
+],
+{
+"raw": 187000,
+"f": 1.02
+}
+],
+[
+"Barrhead County No. 11",
+43,
+19,
+[
+242000,
+2115
+],
+[
+52200,
+555
+],
+{
+"raw": 282000,
+"f": 0.86
+}
+],
+[
+"Lamont County",
+46,
+43,
+[
+301000,
+535
+],
+[
+17300,
+125
+],
+{
+"raw": 277000,
+"f": 1.09
+}
+],
+[
+"Wetaskiwin County No. 10",
+46,
+25,
+[
+419000,
+4365
+],
+[
+90100,
+1565
+],
+{
+"raw": 368000,
+"f": 1.14
+}
+],
+[
+"Beaver County",
+46,
+50,
+[
+355000,
+1945
+],
+[
+55500,
+340
+],
+{
+"raw": 293000,
+"f": 1.21
+}
+],
+[
+"Camrose County",
+54,
+15,
+[
+389000,
+3155
+],
+[
+61500,
+770
+],
+{
+"raw": 348000,
+"f": 1.12
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 498000,
+"house_range": [
+191000,
+592000
+],
+"house_props": 36980,
+"land": 102000,
+"land_range": [
+17300,
+209000
+],
+"land_props": 5444,
+"house_est_pct": 26,
+"house_est_areas": [
+"Strathcona County outside Sherwood Park",
+"Westlock County"
+],
+"house_no_est": 485000,
+"cheapest": [
+191000,
+"Thorhild County",
+42,
+1445,
+73
+],
+"none_within": false,
+"note": "StatCan's one figure for Strathcona County is mostly Sherwood Park itself, so the rest of it (acreages and hamlets) is estimated from 2021 census home values."
+}
+},
+"2021A00054811002": {
+"rural": {
+"areas": [
+[
+"Wetaskiwin County No. 10",
+3,
+86,
+[
+368000,
+4365
+],
+[
+90100,
+1565
+],
+{}
+],
+[
+"Ponoka County",
+14,
+79,
+[
+421000,
+3275
+],
+[
+102000,
+640
+],
+{
+"raw": 410000,
+"f": 1.03
+}
+],
+[
+"Leduc County",
+14,
+97,
+[
+532000,
+4670
+],
+[
+209000,
+750
+],
+{}
+],
+[
+"Camrose County",
+20,
+94,
+[
+348000,
+3155
+],
+[
+61500,
+770
+],
+{}
+],
+[
+"Lacombe County",
+36,
+69,
+[
+460000,
+3095
+],
+[
+94700,
+860
+],
+{
+"raw": 469000,
+"f": 0.98
+}
+],
+[
+"Parkland County",
+46,
+24,
+[
+732000,
+11000
+],
+[
+112000,
+2530
+],
+{
+"raw": 520000,
+"f": 1.41
+}
+],
+[
+"Strathcona County outside Sherwood Park",
+46,
+45,
+[
+663000,
+7778
+],
+[
+null,
+null
+],
+{
+"est": true,
+"census": 692503,
+"ratio": 0.96
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 486000,
+"house_range": [
+348000,
+732000
+],
+"house_props": 22165,
+"land": 101000,
+"land_range": [
+61500,
+209000
+],
+"land_props": 4509,
+"house_est_pct": 16,
+"house_est_areas": [
+"Strathcona County outside Sherwood Park"
+],
+"house_no_est": 457000,
+"cheapest": [
+348000,
+"Camrose County",
+20,
+3155,
+94
+],
+"none_within": false,
+"note": "StatCan's one figure for Strathcona County is mostly Sherwood Park itself, so the rest of it (acreages and hamlets) is estimated from 2021 census home values."
+}
+},
+"2021A00054815035": {
+"rural": {
+"areas": [
+[
+"MD of Bighorn No. 8",
+17,
+84,
+[
+796000,
+700
+],
+[
+416000,
+85
+],
+{}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 796000,
+"house_range": [
+796000,
+796000
+],
+"house_props": 589,
+"land": 416000,
+"land_range": [
+416000,
+416000
+],
+"land_props": 72,
+"cheapest": [
+796000,
+"MD of Bighorn No. 8",
+17,
+700,
+84
+],
+"none_within": false
+},
+"rent_ab": {
+"bed2": 2091,
+"bed1": 1636,
+"vacancy": 0.0,
+"period": "May-Aug 2025"
+}
+},
+"2021A00054808029": {
+"rural": {
+"areas": [
+[
+"Lacombe County",
+3,
+100,
+[
+469000,
+3095
+],
+[
+94700,
+860
+],
+{}
+],
+[
+"Red Deer County",
+5,
+98,
+[
+507000,
+5780
+],
+[
+137000,
+520
+],
+{}
+],
+[
+"Ponoka County",
+21,
+98,
+[
+410000,
+3275
+],
+[
+102000,
+640
+],
+{}
+],
+[
+"Clearwater County",
+37,
+46,
+[
+394000,
+3380
+],
+[
+126000,
+635
+],
+{
+"raw": 397000,
+"f": 0.99
+}
+],
+[
+"Wetaskiwin County No. 10",
+38,
+43,
+[
+380000,
+4365
+],
+[
+90100,
+1565
+],
+{
+"raw": 368000,
+"f": 1.03
+}
+],
+[
+"Stettler County No. 6",
+39,
+31,
+[
+369000,
+1645
+],
+[
+34600,
+460
+],
+{
+"raw": 330000,
+"f": 1.12
+}
+],
+[
+"Mountain View County",
+44,
+30,
+[
+574000,
+3650
+],
+[
+192000,
+230
+],
+{
+"raw": 586000,
+"f": 0.98
+}
+],
+[
+"Camrose County",
+45,
+10,
+[
+333000,
+3155
+],
+[
+61500,
+770
+],
+{
+"raw": 348000,
+"f": 0.96
+}
+],
+[
+"Kneehill County",
+51,
+30,
+[
+245000,
+1536
+],
+[
+null,
+null
+],
+{
+"est": true,
+"census": 255608,
+"ratio": 0.96
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 446000,
+"house_range": [
+245000,
+574000
+],
+"house_props": 17841,
+"land": 100000,
+"land_range": [
+34600,
+192000
+],
+"land_props": 3260,
+"house_est_pct": 3,
+"house_est_areas": [
+"Kneehill County"
+],
+"house_no_est": 451000,
+"cheapest": [
+333000,
+"Camrose County",
+45,
+3155,
+10
+],
+"none_within": false
+}
+},
+"2021A00054815023": {
+"rural": {
+"areas": [
+[
+"MD of Bighorn No. 8",
+9,
+84,
+[
+796000,
+700
+],
+[
+416000,
+85
+],
+{}
+],
+[
+"Rocky View County",
+43,
+29,
+[
+1240000,
+13600
+],
+[
+304000,
+1715
+],
+{
+"raw": 987000,
+"f": 1.26
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 1178000,
+"house_range": [
+796000,
+1240000
+],
+"house_props": 4545,
+"land": 316000,
+"land_range": [
+304000,
+416000
+],
+"land_props": 570,
+"cheapest": [
+796000,
+"MD of Bighorn No. 8",
+9,
+700,
+84
+],
+"none_within": false
+}
+},
+"2021A00054806019": {
+"rural": {
+"areas": [
+[
+"Rocky View County",
+6,
+98,
+[
+987000,
+13600
+],
+[
+304000,
+1715
+],
+{}
+],
+[
+"MD of Bighorn No. 8",
+18,
+100,
+[
+797000,
+700
+],
+[
+416000,
+85
+],
+{}
+],
+[
+"Mountain View County",
+25,
+69,
+[
+601000,
+3650
+],
+[
+192000,
+230
+],
+{
+"raw": 586000,
+"f": 1.03
+}
+],
+[
+"Foothills County",
+38,
+64,
+[
+1011000,
+8405
+],
+[
+281000,
+515
+],
+{
+"raw": 924000,
+"f": 1.09
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 939000,
+"house_range": [
+601000,
+1011000
+],
+"house_props": 21965,
+"land": 295000,
+"land_range": [
+192000,
+416000
+],
+"land_props": 2256,
+"cheapest": [
+601000,
+"Mountain View County",
+25,
+3650,
+69
+],
+"none_within": false
+}
+},
+"2021A00054802019": {
+"rural": {
+"areas": [
+[
+"Lethbridge County",
+3,
+100,
+[
+408000,
+2415
+],
+[
+71300,
+155
+],
+{}
+],
+[
+"MD of Taber",
+10,
+98,
+[
+379000,
+1600
+],
+[
+46800,
+200
+],
+{}
+],
+[
+"Warner County No. 5",
+24,
+79,
+[
+334000,
+790
+],
+[
+10700,
+160
+],
+{
+"raw": 315000,
+"f": 1.06
+}
+],
+[
+"Cardston County",
+25,
+34,
+[
+355000,
+910
+],
+[
+104000,
+280
+],
+{
+"raw": 357000,
+"f": 0.99
+}
+],
+[
+"MD of Willow Creek No. 26",
+35,
+51,
+[
+403000,
+1375
+],
+[
+42700,
+85
+],
+{
+"raw": 414000,
+"f": 0.97
+}
+],
+[
+"Forty Mile County No. 8",
+51,
+27,
+[
+229000,
+860
+],
+[
+19400,
+350
+],
+{
+"whole": true,
+"unused": true
+}
+],
+[
+"Vulcan County",
+52,
+30,
+[
+359000,
+905
+],
+[
+54500,
+140
+],
+{
+"raw": 392000,
+"f": 0.92
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 386000,
+"house_range": [
+334000,
+408000
+],
+"house_props": 5897,
+"land": 47300,
+"land_range": [
+10700,
+104000
+],
+"land_props": 659,
+"cheapest": [
+334000,
+"Warner County No. 5",
+24,
+790,
+79
+],
+"none_within": false,
+"note": "Only a small part of Forty Mile County No. 8 is within the hour, and census values can't tell what that part is worth, so it is listed but not used."
+}
+},
+"2021A00054805026": {
+"rural": {
+"areas": [
+[
+"Starland County",
+14,
+93,
+[
+198000,
+505
+],
+[
+3200,
+140
+],
+{}
+],
+[
+"Kneehill County",
+14,
+76,
+[
+307000,
+1536
+],
+[
+null,
+null
+],
+{
+"est": true,
+"census": 320282,
+"ratio": 0.96
+}
+],
+[
+"Wheatland County",
+22,
+37,
+[
+466000,
+2345
+],
+[
+22400,
+515
+],
+{
+"raw": 461000,
+"f": 1.01
+}
+],
+[
+"Special Area No. 2",
+27,
+29,
+[
+225000,
+510
+],
+[
+5700,
+180
+],
+{
+"raw": 196000,
+"f": 1.15
+}
+],
+[
+"Stettler County No. 6",
+51,
+14,
+[
+344000,
+1645
+],
+[
+34600,
+460
+],
+{
+"raw": 330000,
+"f": 1.04
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 323000,
+"house_range": [
+198000,
+466000
+],
+"house_props": 2877,
+"land": 12200,
+"land_range": [
+3200,
+34600
+],
+"land_props": 437,
+"house_est_pct": 41,
+"house_est_areas": [
+"Kneehill County"
+],
+"house_no_est": 339000,
+"cheapest": [
+198000,
+"Starland County",
+14,
+505,
+93
+],
+"none_within": false
+},
+"rent_ab": {
+"bed2": 1111,
+"bed1": 995,
+"vacancy": 1.4,
+"period": "May-Aug 2025"
+}
+},
+"2021A00054814024": {
+"rural": {
+"areas": [
+[
+"Yellowhead County",
+4,
+89,
+[
+321000,
+3715
+],
+[
+73800,
+780
+],
+{}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 321000,
+"house_range": [
+321000,
+321000
+],
+"house_props": 3291,
+"land": 73800,
+"land_range": [
+73800,
+73800
+],
+"land_props": 691,
+"cheapest": [
+321000,
+"Yellowhead County",
+4,
+3715,
+89
+],
+"none_within": false
+},
+"rent_ab": {
+"bed2": 1142,
+"bed1": 968,
+"vacancy": 5.9,
+"period": "May-Aug 2025"
+}
+},
+"2021A00054814019": {
+"rural": {
+"areas": [
+[
+"Yellowhead County",
+4,
+27,
+[
+414000,
+3715
+],
+[
+73800,
+780
+],
+{
+"raw": 321000,
+"f": 1.29
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 414000,
+"house_range": [
+414000,
+414000
+],
+"house_props": 988,
+"land": 73800,
+"land_range": [
+73800,
+73800
+],
+"land_props": 207,
+"cheapest": [
+414000,
+"Yellowhead County",
+4,
+3715,
+27
+],
+"none_within": false
+},
+"rent_ab": {
+"bed2": 1493,
+"bed1": 1340,
+"vacancy": 2.1,
+"period": "May-Aug 2025"
+}
+},
+"2021A00054806006": {
+"rural": {
+"areas": [
+[
+"Foothills County",
+4,
+100,
+[
+924000,
+8405
+],
+[
+281000,
+515
+],
+{}
+],
+[
+"MD of Willow Creek No. 26",
+19,
+59,
+[
+387000,
+1375
+],
+[
+42700,
+85
+],
+{
+"raw": 414000,
+"f": 0.93
+}
+],
+[
+"Vulcan County",
+26,
+62,
+[
+391000,
+905
+],
+[
+54500,
+140
+],
+{}
+],
+[
+"Rocky View County",
+36,
+70,
+[
+1007000,
+13600
+],
+[
+304000,
+1715
+],
+{
+"raw": 987000,
+"f": 1.02
+}
+],
+[
+"Wheatland County",
+44,
+31,
+[
+466000,
+2345
+],
+[
+22400,
+515
+],
+{
+"raw": 461000,
+"f": 1.01
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [
+"MD of Ranchland No. 66"
+],
+"year": "2024",
+"house": 911000,
+"house_range": [
+387000,
+1007000
+],
+"house_props": 20032,
+"land": 247000,
+"land_range": [
+22400,
+304000
+],
+"land_props": 2013,
+"cheapest": [
+387000,
+"MD of Willow Creek No. 26",
+19,
+1375,
+59
+],
+"none_within": false
+}
+},
+"2021A00054808008": {
+"rural": {
+"areas": [
+[
+"Red Deer County",
+5,
+100,
+[
+507000,
+5780
+],
+[
+137000,
+520
+],
+{}
+],
+[
+"Mountain View County",
+19,
+81,
+[
+576000,
+3650
+],
+[
+192000,
+230
+],
+{
+"raw": 586000,
+"f": 0.98
+}
+],
+[
+"Kneehill County",
+28,
+66,
+[
+292000,
+1536
+],
+[
+null,
+null
+],
+{
+"est": true,
+"census": 304743,
+"ratio": 0.96
+}
+],
+[
+"Lacombe County",
+28,
+83,
+[
+512000,
+3095
+],
+[
+94700,
+860
+],
+{
+"raw": 469000,
+"f": 1.09
+}
+],
+[
+"Clearwater County",
+38,
+54,
+[
+382000,
+3380
+],
+[
+126000,
+635
+],
+{
+"raw": 397000,
+"f": 0.96
+}
+],
+[
+"Ponoka County",
+44,
+46,
+[
+444000,
+3275
+],
+[
+102000,
+640
+],
+{
+"raw": 410000,
+"f": 1.08
+}
+],
+[
+"Stettler County No. 6",
+50,
+12,
+[
+361000,
+1645
+],
+[
+34600,
+460
+],
+{
+"raw": 330000,
+"f": 1.1
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 481000,
+"house_range": [
+292000,
+576000
+],
+"house_props": 15850,
+"land": 114000,
+"land_range": [
+34600,
+192000
+],
+"land_props": 2114,
+"house_est_pct": 6,
+"house_est_areas": [
+"Kneehill County"
+],
+"house_no_est": 495000,
+"cheapest": [
+361000,
+"Stettler County No. 6",
+50,
+1645,
+12
+],
+"none_within": false
+},
+"rent_ab": {
+"bed2": 1066,
+"bed1": 904,
+"vacancy": 0.9,
+"period": "May-Aug 2025"
+}
+},
+"2021A00054811068": {
+"rural": {
+"areas": [
+[
+"Sturgeon County",
+3,
+100,
+[
+571000,
+6160
+],
+[
+143000,
+595
+],
+{}
+],
+[
+"Westlock County",
+22,
+86,
+[
+314000,
+2357
+],
+[
+null,
+null
+],
+{
+"est": true,
+"census": 327887,
+"ratio": 0.96
+}
+],
+[
+"Lac Ste. Anne County",
+27,
+67,
+[
+341000,
+4170
+],
+[
+71900,
+1025
+],
+{
+"raw": 312000,
+"f": 1.09
+}
+],
+[
+"Parkland County",
+27,
+86,
+[
+520000,
+11000
+],
+[
+112000,
+2530
+],
+{}
+],
+[
+"Thorhild County",
+30,
+77,
+[
+188000,
+1445
+],
+[
+41200,
+420
+],
+{
+"raw": 187000,
+"f": 1.01
+}
+],
+[
+"Barrhead County No. 11",
+30,
+39,
+[
+273000,
+2115
+],
+[
+52200,
+555
+],
+{
+"raw": 282000,
+"f": 0.97
+}
+],
+[
+"Strathcona County outside Sherwood Park",
+34,
+98,
+[
+593000,
+7778
+],
+[
+null,
+null
+],
+{
+"est": true,
+"census": 619584,
+"ratio": 0.96
+}
+],
+[
+"Lamont County",
+43,
+44,
+[
+306000,
+535
+],
+[
+17300,
+125
+],
+{
+"raw": 277000,
+"f": 1.11
+}
+],
+[
+"Leduc County",
+47,
+60,
+[
+594000,
+4670
+],
+[
+209000,
+750
+],
+{
+"raw": 532000,
+"f": 1.12
+}
+],
+[
+"Athabasca County",
+47,
+12,
+[
+324000,
+2491
+],
+[
+null,
+null
+],
+{
+"est": true,
+"census": 338860,
+"ratio": 0.96
+}
+],
+[
+"Smoky Lake County",
+52,
+15,
+[
+290000,
+1425
+],
+[
+69400,
+460
+],
+{
+"raw": 193000,
+"f": 1.5,
+"cap": true
+}
+],
+[
+"Beaver County",
+57,
+22,
+[
+354000,
+1945
+],
+[
+55500,
+340
+],
+{
+"raw": 293000,
+"f": 1.21
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 496000,
+"house_range": [
+188000,
+594000
+],
+"house_props": 33898,
+"land": 101000,
+"land_range": [
+17300,
+209000
+],
+"land_props": 4630,
+"house_est_pct": 29,
+"house_est_areas": [
+"Westlock County",
+"Strathcona County outside Sherwood Park",
+"Athabasca County"
+],
+"house_no_est": 486000,
+"cheapest": [
+188000,
+"Thorhild County",
+30,
+1445,
+77
+],
+"none_within": false,
+"note": "StatCan's one figure for Strathcona County is mostly Sherwood Park itself, so the rest of it (acreages and hamlets) is estimated from 2021 census home values."
+}
+},
+"2021A00054806012": {
+"rural": {
+"areas": [
+[
+"Foothills County",
+5,
+100,
+[
+924000,
+8405
+],
+[
+281000,
+515
+],
+{}
+],
+[
+"Rocky View County",
+24,
+86,
+[
+987000,
+13600
+],
+[
+304000,
+1715
+],
+{}
+],
+[
+"MD of Willow Creek No. 26",
+33,
+35,
+[
+448000,
+1375
+],
+[
+42700,
+85
+],
+{
+"raw": 414000,
+"f": 1.08
+}
+],
+[
+"Vulcan County",
+35,
+39,
+[
+398000,
+905
+],
+[
+54500,
+140
+],
+{
+"raw": 392000,
+"f": 1.02
+}
+],
+[
+"Wheatland County",
+36,
+50,
+[
+448000,
+2345
+],
+[
+22400,
+515
+],
+{
+"raw": 461000,
+"f": 0.97
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [
+"MD of Ranchland No. 66"
+],
+"year": "2024",
+"house": 914000,
+"house_range": [
+398000,
+987000
+],
+"house_props": 22044,
+"land": 247000,
+"land_range": [
+22400,
+304000
+],
+"land_props": 2322,
+"cheapest": [
+398000,
+"Vulcan County",
+35,
+905,
+39
+],
+"none_within": false
+}
+},
+"2021A00054806034": {
+"rural": {
+"areas": [
+[
+"Mountain View County",
+5,
+100,
+[
+586000,
+3650
+],
+[
+192000,
+230
+],
+{}
+],
+[
+"Red Deer County",
+12,
+96,
+[
+507000,
+5780
+],
+[
+137000,
+520
+],
+{}
+],
+[
+"Kneehill County",
+24,
+79,
+[
+293000,
+1536
+],
+[
+null,
+null
+],
+{
+"est": true,
+"census": 306324,
+"ratio": 0.96
+}
+],
+[
+"Rocky View County",
+32,
+33,
+[
+988000,
+13600
+],
+[
+304000,
+1715
+],
+{}
+],
+[
+"Clearwater County",
+39,
+12,
+[
+387000,
+3380
+],
+[
+126000,
+635
+],
+{
+"raw": 397000,
+"f": 0.97
+}
+],
+[
+"Lacombe County",
+46,
+30,
+[
+538000,
+3095
+],
+[
+94700,
+860
+],
+{
+"raw": 469000,
+"f": 1.15
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 598000,
+"house_range": [
+293000,
+988000
+],
+"house_props": 16175,
+"land": 177000,
+"land_range": [
+94700,
+304000
+],
+"land_props": 1623,
+"house_est_pct": 7,
+"house_est_areas": [
+"Kneehill County"
+],
+"house_no_est": 628000,
+"cheapest": [
+387000,
+"Clearwater County",
+39,
+3380,
+12
+],
+"none_within": false
+},
+"rent_ab": {
+"bed2": 1071,
+"bed1": 1015,
+"vacancy": 1.1,
+"period": "May-Aug 2025"
+}
+},
+"2021A00054811048": {
+"rural": {
+"areas": [
+[
+"Parkland County",
+4,
+100,
+[
+520000,
+11000
+],
+[
+112000,
+2530
+],
+{}
+],
+[
+"Sturgeon County",
+15,
+94,
+[
+571000,
+6160
+],
+[
+143000,
+595
+],
+{}
+],
+[
+"Lac Ste. Anne County",
+17,
+85,
+[
+312000,
+4170
+],
+[
+71900,
+1025
+],
+{}
+],
+[
+"Leduc County",
+27,
+96,
+[
+532000,
+4670
+],
+[
+209000,
+750
+],
+{}
+],
+[
+"Barrhead County No. 11",
+38,
+35,
+[
+275000,
+2115
+],
+[
+52200,
+555
+],
+{
+"raw": 282000,
+"f": 0.98
+}
+],
+[
+"Strathcona County outside Sherwood Park",
+39,
+94,
+[
+596000,
+7778
+],
+[
+null,
+null
+],
+{
+"est": true,
+"census": 623117,
+"ratio": 0.96
+}
+],
+[
+"Westlock County",
+43,
+33,
+[
+297000,
+2357
+],
+[
+null,
+null
+],
+{
+"est": true,
+"census": 310724,
+"ratio": 0.96
+}
+],
+[
+"Brazeau County",
+44,
+12,
+[
+355000,
+2195
+],
+[
+73700,
+400
+],
+{
+"whole": true,
+"unused": true
+}
+],
+[
+"Yellowhead County",
+44,
+25,
+[
+223000,
+3715
+],
+[
+73800,
+780
+],
+{
+"raw": 321000,
+"f": 0.69
+}
+],
+[
+"Wetaskiwin County No. 10",
+52,
+13,
+[
+374000,
+4365
+],
+[
+90100,
+1565
+],
+{
+"raw": 368000,
+"f": 1.02
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 501000,
+"house_range": [
+223000,
+596000
+],
+"house_props": 35135,
+"land": 110000,
+"land_range": [
+52200,
+209000
+],
+"land_props": 5268,
+"house_est_pct": 23,
+"house_est_areas": [
+"Strathcona County outside Sherwood Park",
+"Westlock County"
+],
+"house_no_est": 482000,
+"cheapest": [
+223000,
+"Yellowhead County",
+44,
+3715,
+25
+],
+"none_within": false,
+"note": "Only a small part of Brazeau County is within the hour, and census values can't tell what that part is worth, so it is listed but not used. StatCan's one figure for Strathcona County is mostly Sherwood Park itself, so the rest of it (acreages and hamlets) is estimated from 2021 census home values."
+}
+},
+"2021A00054805018": {
+"rural": {
+"areas": [
+[
+"Wheatland County",
+4,
+97,
+[
+461000,
+2345
+],
+[
+22400,
+515
+],
+{}
+],
+[
+"Rocky View County",
+12,
+82,
+[
+1001000,
+13600
+],
+[
+304000,
+1715
+],
+{
+"raw": 987000,
+"f": 1.01
+}
+],
+[
+"Vulcan County",
+30,
+31,
+[
+413000,
+905
+],
+[
+54500,
+140
+],
+{
+"raw": 392000,
+"f": 1.05
+}
+],
+[
+"Foothills County",
+39,
+70,
+[
+957000,
+8405
+],
+[
+281000,
+515
+],
+{
+"raw": 924000,
+"f": 1.04
+}
+],
+[
+"Kneehill County",
+46,
+39,
+[
+317000,
+1536
+],
+[
+null,
+null
+],
+{
+"est": true,
+"census": 331499,
+"ratio": 0.96
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 900000,
+"house_range": [
+317000,
+1001000
+],
+"house_props": 20223,
+"land": 213000,
+"land_range": [
+22400,
+304000
+],
+"land_props": 2312,
+"house_est_pct": 3,
+"house_est_areas": [
+"Kneehill County"
+],
+"house_no_est": 917000,
+"cheapest": [
+413000,
+"Vulcan County",
+30,
+905,
+31
+],
+"none_within": false
+}
+},
+"2021A00054808012": {
+"rural": {
+"areas": [
+[
+"Red Deer County",
+5,
+100,
+[
+507000,
+5780
+],
+[
+137000,
+520
+],
+{}
+],
+[
+"Lacombe County",
+13,
+98,
+[
+469000,
+3095
+],
+[
+94700,
+860
+],
+{}
+],
+[
+"Clearwater County",
+23,
+89,
+[
+397000,
+3380
+],
+[
+126000,
+635
+],
+{}
+],
+[
+"Ponoka County",
+23,
+92,
+[
+410000,
+3275
+],
+[
+102000,
+640
+],
+{}
+],
+[
+"Mountain View County",
+43,
+34,
+[
+568000,
+3650
+],
+[
+192000,
+230
+],
+{
+"raw": 586000,
+"f": 0.97
+}
+],
+[
+"Wetaskiwin County No. 10",
+52,
+14,
+[
+312000,
+4365
+],
+[
+90100,
+1565
+],
+{
+"raw": 368000,
+"f": 0.85
+}
+],
+[
+"Kneehill County",
+55,
+21,
+[
+260000,
+1536
+],
+[
+null,
+null
+],
+{
+"est": true,
+"census": 271128,
+"ratio": 0.96
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 453000,
+"house_range": [
+260000,
+568000
+],
+"house_props": 17048,
+"land": 111000,
+"land_range": [
+90100,
+192000
+],
+"land_props": 2823,
+"house_est_pct": 2,
+"house_est_areas": [
+"Kneehill County"
+],
+"house_no_est": 457000,
+"cheapest": [
+312000,
+"Wetaskiwin County No. 10",
+52,
+4365,
+14
+],
+"none_within": false
+}
+},
+"2021A00054802022": {
+"rural": {
+"areas": [
+[
+"MD of Taber",
+3,
+100,
+[
+379000,
+1600
+],
+[
+46800,
+200
+],
+{}
+],
+[
+"Lethbridge County",
+15,
+91,
+[
+408000,
+2415
+],
+[
+71300,
+155
+],
+{}
+],
+[
+"Warner County No. 5",
+20,
+79,
+[
+337000,
+790
+],
+[
+10700,
+160
+],
+{
+"raw": 315000,
+"f": 1.07
+}
+],
+[
+"Forty Mile County No. 8",
+31,
+50,
+[
+271000,
+860
+],
+[
+19400,
+350
+],
+{
+"raw": 229000,
+"f": 1.19
+}
+],
+[
+"Newell County",
+39,
+20,
+[
+316000,
+2120
+],
+[
+21700,
+490
+],
+{
+"raw": 359000,
+"f": 0.88
+}
+],
+[
+"Cardston County",
+46,
+16,
+[
+357000,
+910
+],
+[
+104000,
+280
+],
+{
+"whole": true,
+"unused": true
+}
+],
+[
+"Cypress County",
+59,
+12,
+[
+443000,
+2885
+],
+[
+25700,
+420
+],
+{
+"whole": true,
+"unused": true
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 370000,
+"house_range": [
+271000,
+408000
+],
+"house_props": 5272,
+"land": 28900,
+"land_range": [
+10700,
+71300
+],
+"land_props": 742,
+"cheapest": [
+271000,
+"Forty Mile County No. 8",
+31,
+860,
+50
+],
+"none_within": false,
+"note": "Only small parts of Cardston County and Cypress County are within the hour, and census values can't tell what those parts are worth, so they are listed but not used."
+},
+"rent_ab": {
+"bed2": 1173,
+"bed1": 917,
+"vacancy": 5.0,
+"period": "May-Aug 2025"
+}
+},
+"2021A00054813030": {
+"rural": {
+"areas": [
+[
+"Woodlands County",
+5,
+77,
+[
+421000,
+1530
+],
+[
+109000,
+480
+],
+{
+"raw": 411000,
+"f": 1.02
+}
+],
+[
+"Lac Ste. Anne County",
+20,
+41,
+[
+268000,
+4170
+],
+[
+71900,
+1025
+],
+{
+"raw": 312000,
+"f": 0.86
+}
+],
+[
+"Yellowhead County",
+33,
+57,
+[
+268000,
+3715
+],
+[
+73800,
+780
+],
+{
+"raw": 321000,
+"f": 0.84
+}
+],
+[
+"Barrhead County No. 11",
+47,
+22,
+[
+290000,
+2115
+],
+[
+52200,
+555
+],
+{
+"raw": 282000,
+"f": 1.03
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 295000,
+"house_range": [
+268000,
+421000
+],
+"house_props": 5472,
+"land": 78800,
+"land_range": [
+52200,
+109000
+],
+"land_props": 1357,
+"cheapest": [
+268000,
+"Lac Ste. Anne County",
+20,
+4170,
+41
+],
+"none_within": false
+},
+"rent_ab": {
+"bed2": 1225,
+"bed1": 950,
+"vacancy": 2.0,
+"period": "May-Aug 2025"
+}
+},
+"2021A00054811052": {
+"rural": {
+"areas": [
+[
+"Strathcona County outside Sherwood Park",
+5,
+100,
+[
+592000,
+7778
+],
+[
+null,
+null
+],
+{
+"est": true,
+"census": 618021,
+"ratio": 0.96
+}
+],
+[
+"Sturgeon County",
+19,
+100,
+[
+571000,
+6160
+],
+[
+143000,
+595
+],
+{}
+],
+[
+"Leduc County",
+19,
+80,
+[
+570000,
+4670
+],
+[
+209000,
+750
+],
+{
+"raw": 532000,
+"f": 1.07
+}
+],
+[
+"Beaver County",
+27,
+67,
+[
+344000,
+1945
+],
+[
+55500,
+340
+],
+{
+"raw": 293000,
+"f": 1.18
+}
+],
+[
+"Parkland County",
+29,
+81,
+[
+544000,
+11000
+],
+[
+112000,
+2530
+],
+{
+"raw": 520000,
+"f": 1.05
+}
+],
+[
+"Lamont County",
+30,
+81,
+[
+282000,
+535
+],
+[
+17300,
+125
+],
+{
+"raw": 277000,
+"f": 1.02
+}
+],
+[
+"Camrose County",
+34,
+48,
+[
+364000,
+3155
+],
+[
+61500,
+770
+],
+{
+"raw": 348000,
+"f": 1.05
+}
+],
+[
+"Thorhild County",
+40,
+73,
+[
+191000,
+1445
+],
+[
+41200,
+420
+],
+{
+"raw": 187000,
+"f": 1.02
+}
+],
+[
+"Wetaskiwin County No. 10",
+42,
+36,
+[
+405000,
+4365
+],
+[
+90100,
+1565
+],
+{
+"raw": 368000,
+"f": 1.1
+}
+],
+[
+"Minburn County No. 27",
+46,
+30,
+[
+244000,
+1145
+],
+[
+19100,
+185
+],
+{
+"raw": 224000,
+"f": 1.09
+}
+],
+[
+"Lac Ste. Anne County",
+46,
+32,
+[
+373000,
+4170
+],
+[
+71900,
+1025
+],
+{
+"raw": 312000,
+"f": 1.19
+}
+],
+[
+"Westlock County",
+54,
+30,
+[
+294000,
+2357
+],
+[
+null,
+null
+],
+{
+"est": true,
+"census": 307011,
+"ratio": 0.96
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 509000,
+"house_range": [
+191000,
+592000
+],
+"house_props": 34883,
+"land": 99500,
+"land_range": [
+17300,
+209000
+],
+"land_props": 5208,
+"house_est_pct": 24,
+"house_est_areas": [
+"Strathcona County outside Sherwood Park",
+"Westlock County"
+],
+"house_no_est": 491000,
+"cheapest": [
+191000,
+"Thorhild County",
+40,
+1445,
+73
+],
+"none_within": false,
+"note": "StatCan's one figure for Strathcona County is mostly Sherwood Park itself, so the rest of it (acreages and hamlets) is estimated from 2021 census home values."
+}
+},
+"2021A00054816037": {
+"rural": {
+"areas": [
+[
+"Wood Buffalo outside Fort McMurray",
+10,
+63,
+[
+480000,
+1163
+],
+[
+null,
+null
+],
+{
+"est": true,
+"census": 501715,
+"ratio": 0.96
+}
+]
+],
+"ferry_only": [],
+"no_data": [],
+"too_few": [],
+"year": "2024",
+"house": 480000,
+"house_range": [
+480000,
+480000
+],
+"house_props": 732,
+"house_est_pct": 100,
+"house_est_areas": [
+"Wood Buffalo outside Fort McMurray"
+],
+"none_within": false,
+"note": "StatCan's one figure for Wood Buffalo is mostly Fort McMurray itself, so the rest of it (acreages and hamlets) is estimated from 2021 census home values."
+}
+}
+}
+}
