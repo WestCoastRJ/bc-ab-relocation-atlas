@@ -1,6 +1,7 @@
 """Twice-daily refresh: builds site/data/places.json and site/data/status.json.
 
-Static inputs (rebuilt rarely):  pipeline/cache/census.json, pipeline/cache/geo.json
+Static inputs (rebuilt rarely):  pipeline/cache/census.json, pipeline/cache/geo.json, pipeline/cache/extra.json
+  (extra.json: rural property assessments, Alberta's rural rent survey, BC census renter costs; see extra_extract.py)
 Live inputs (checked every run; the publishers only release new data once or twice a year):
   * CMHC Rental Market Survey: average rent, reliability grade and vacancy rate by centre (October survey)
   * Statistics Canada Canadian Business Counts by census subdivision (June / December releases)
@@ -12,7 +13,7 @@ provenance, and status.json marks the run as degraded (the workflow then fails s
 places.json only changes when the data changes. status.json (not committed) carries
 last_checked / last_successful_fetch / reference period for each source.
 """
-import csv, io, json, math, os, re, sys, time, urllib.request, zipfile, datetime
+import csv, io, json, math, os, re, statistics, sys, time, urllib.request, zipfile, datetime
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -44,13 +45,19 @@ AI_RESIST = {
 # Default weights follow the audit's split: RJC 25%, backup work 15%, rent 15%, land 15%, forest 10%,
 # resilience/AI 10%, social 10% (20 points in total, 1 point = 5%).
 CRITERIA = [
-    ("rent", "Rent (2-bed, CMHC average)", "$", "low", 3,
-     "CMHC October survey average of occupied + vacant units. Not today's asking rents.", "Rent"),
+    ("rent", "Rent (2-bed average)", "$", "low", 3,
+     "CMHC October survey average of occupied + vacant units; Alberta's own survey for 8 small Alberta towns; "
+     "a census-based estimate for 4 BC towns with no survey (marked est.). Not today's asking rents.", "Rent"),
     ("vacancy", "Rental vacancy", "%", "high", 0,
-     "CMHC vacancy rate, all unit sizes: how easy it is to find a place as a newcomer", "Rent"),
-    ("rural_u300", "Rural homes under $300k (proxy)", "%", "high", 3,
-     "UNVERIFIED PROXY: 2021 owner-estimated values of existing rural houses in the census division. "
-     "Not vacant land, not current listings, not limited to a 20-60 min drive.", "Land (unverified)"),
+     "Vacancy rate, all unit sizes (CMHC, or Alberta's survey): how easy it is to find a place as a newcomer", "Rent"),
+    ("rural_house", "Typical rural house within 1 h (assessed)", "$", "low", 3,
+     "2024 median assessed value of single-detached houses in the rural areas around town (StatCan, from BC "
+     "Assessment / Alberta municipal rolls), weighted by how many of each area's homes you can reach within an "
+     "hour by road (in BC, no ferries), adjusted to the part of each area within the hour. Assessed values trail "
+     "sale prices; not listings.", "Land (unverified)"),
+    ("rural_land", "Typical vacant rural lot within 1 h (assessed)", "$", "low", 0,
+     "Same, for vacant land parcels. Includes tiny, remote and odd parcels, so it can look very cheap.",
+     "Land (unverified)"),
     ("forest", "Forest within 60 km", "%", "high", 2,
      "Share of land within 60 km that is forest (NRCan land cover 2020). Not proof of buyable wooded land.", "Forest"),
     ("clients", "Commercial market size", "businesses", "high", 2,
@@ -89,6 +96,29 @@ CRITERIA = [
 OSRM_CALIBRATION = 0.81
 FAR_FROM_VANCOUVER_H = 8.0
 HEALTH_MIN = {"cmhc_centres": 25, "biz_coverage": 0.95}
+LAND_BUDGET = 300000
+
+# Rent cross-checks for the 4 BC towns no rent survey covers (shown on the town card, not scored)
+RENT_NOTES = {
+    "Revelstoke": "Local survey (Revelstoke Community Housing Society, 2022): 2-bed median $1,800 incl. utilities. "
+                  "The few 2-beds on listing sites in 2025-26 asked about $2,500.",
+    "Sechelt": "Sunshine Coast Alliance for Affordable Housing, Sept 2023 (quoted in Vital Signs 2024): 2-bed average "
+               "$2,234 across the whole coast. Listing sites show only a handful of Sechelt rentals, mostly higher.",
+    "Whistler": "Much of Whistler's rentals are price-restricted staff housing (Whistler Housing Authority), which pulls "
+                "the census figure down. Open-market 2-beds on listing sites ask roughly $2,300 to $4,400.",
+    "Kitimat": "CMHC last published Kitimat rents in 2011 (2-bed average $691). The few 2-bed listings seen (Zumper, 2024) "
+               "asked about $1,800 to $2,500.",
+}
+# Why each of those towns has no surveyed rent (CMHC Rental Market Survey tables, checked for 2019-2025)
+RENT_WHY = {
+    "Revelstoke": "No rent survey covers Revelstoke: CMHC doesn't list it.",
+    "Kitimat": "No rent survey covers Kitimat: CMHC hasn't listed it since 2011.",
+    "Sechelt": "CMHC surveys Sechelt but suppresses its figures every year (too few rental units, or unreliable).",
+    "Whistler": "CMHC lists Whistler but suppresses its figures (too few rental units, or unreliable).",
+}
+# 2021 census metropolitan areas in BC: their CMHC figure covers several municipalities, so they don't
+# calibrate the small-town rent estimate
+BC_CMA_CORES = {"vancouver", "victoria", "kelowna", "abbotsford", "mission", "nanaimo", "kamloops", "chilliwack"}
 
 
 def now():
@@ -255,15 +285,16 @@ def main():
         biz, biz_period = None, None
         src_status("business_counts", False, error=e)
 
-    rural = {}
-    for g, v in census.items():
-        if v.get("csd_type") in ("RDA", "MD", "SM") and v.get("sd_median_value") and v.get("sd_households"):
-            rural.setdefault(v["csd_code"][:4], []).append(v)
+    # committed with the repo; without it the build would silently drop rural values and survey rents,
+    # so stop instead (the live site keeps its last good data)
+    xtra_doc = json.load(open(os.path.join(HERE, "cache", "extra.json")))
+    xtra = xtra_doc["towns"]
 
     centre_pts = {norm(p["name"].split(" (")[0]): (p["lat"], p["lon"]) for p in geo}
     centre_pts.update(CMHC_EXTRA_CENTRES)
 
     places = []
+    pending_estimates = []  # BC towns with no rent survey: estimated from the 2021 census after the loop
     for p in geo:
         pid = "csd-" + p["dguid"][-7:]
         old = prev.get(pid, {})
@@ -278,8 +309,15 @@ def main():
                 if k in old.get("extra", {}):
                     extra[k] = old["extra"][k]
 
-        # --- CMHC rent + vacancy: own centre, else the CMA/CA core within 30 km
+        # --- rent: the town's own survey first (its own CMHC centre, else Alberta's survey for that town),
+        # then its CMA or a CMHC centre within 30 km, then (BC) a census-based estimate after the loop.
+        # Only real CMHC values are ever carried over from the previous run; the others are rebuilt from
+        # extra.json every time, so their flags and updates can't get lost.
         rent_keys = ("rent", "vacancy")
+        cmhc_extras = ("rent_1bed", "rent_source", "rent_grade")
+        x = xtra.get(p["dguid"], {})
+        ab = x.get("rent_ab")
+        old_is_cmhc = str(old.get("prov", {}).get("rent", "")).startswith("CMHC")
         if rents is not None:
             key = norm(p["name"].split(" (")[0])
             hit, src = rents.get(key), p["name"]
@@ -296,6 +334,9 @@ def main():
                             best = (d, k, v)
                 if best:
                     hit, src = best[2], best[1].title() + " area"
+            if hit and hit.get("bed2") and src != p["name"] and ab:
+                extra["rent_neighbour"] = [src, hit["bed2"]]  # shown on the card; the town's own survey wins
+                hit = None
             if hit and hit.get("bed2"):
                 vals["rent"] = hit["bed2"]
                 prov["rent"] = "CMHC " + rent_period
@@ -305,20 +346,42 @@ def main():
                 if hit.get("vacancy") is not None:
                     vals["vacancy"] = hit["vacancy"]
                     prov["vacancy"] = "CMHC " + rent_period
-            elif old.get("values", {}).get("rent") is not None:
-                keep_old(rent_keys, "CMHC")  # centre missing from this response: keep last known value
+            elif old_is_cmhc and not ab:
+                keep_old(rent_keys + cmhc_extras, "CMHC")  # centre missing from this response: keep last known value
                 extra["rent_stale"] = True
-        else:
-            keep_old(rent_keys + ("rent_1bed", "rent_source", "rent_grade"), "CMHC")
+        elif old_is_cmhc:
+            keep_old(rent_keys + cmhc_extras, "CMHC")  # CMHC unreachable this run: keep last known value
+            extra["rent_kept"] = True
+        elif ab:
+            keep_old(("rent_neighbour",), "CMHC")
 
-        # --- land proxy (unverified)
+        # --- Alberta's own rent survey for towns CMHC doesn't publish
+        if "rent" not in vals and ab:
+            vals["rent"] = ab["bed2"]
+            prov["rent"] = "Government of Alberta rental survey, " + ab["period"]
+            extra["rent_1bed"] = ab.get("bed1")
+            extra["rent_small_sample"] = ab.get("small_sample")
+            vals.pop("vacancy", None)
+            if ab.get("vacancy") is not None:
+                vals["vacancy"] = ab["vacancy"]
+                prov["vacancy"] = "Government of Alberta rental survey, " + ab["period"]
+        if "rent" not in vals and x.get("census_rent_2021"):
+            pending_estimates.append((p["dguid"], x["census_rent_2021"]))
+        if p["name"] in RENT_NOTES:
+            extra["rent_note"] = RENT_NOTES[p["name"]]
+
+        # --- rural property values within an hour's drive (assessed, unverified as land for sale)
+        r = x.get("rural")
+        if r:
+            for k, ptype in (("rural_house", "house"), ("rural_land", "land")):
+                if r.get(ptype) is not None:
+                    vals[k] = r[ptype]
+                    prov[k] = "StatCan CHSP %s assessments, rural areas within 1 h" % r["year"]
+                    if ptype == "house" and r.get("house_est_pct"):
+                        prov[k] += "; %d%% ESTIMATED from 2021 census values (no StatCan figure for %s)" % (
+                            r["house_est_pct"], ", ".join(r.get("house_est_areas", [])))
+            extra["rural"] = {k: v for k, v in r.items() if v not in (None, [], "")}
         vals["home_value"] = c.get("sd_median_value")
-        rs = rural.get(p["cd"], [])
-        if rs:
-            hh = sum(v["sd_households"] for v in rs)
-            vals["rural_u300"] = round(100 * sum(v.get("sd_under_300k", 0) for v in rs) / hh, 1)
-            extra["rural_avg_of_medians"] = round(sum(v["sd_median_value"] * v["sd_households"] for v in rs) / hh, -3)
-            extra["rural_areas"] = [v["name"] for v in rs]
         vals["forest"] = p.get("forest_60km_pct")
 
         # --- social
@@ -389,6 +452,41 @@ def main():
             "prov": prov,
         })
 
+    # BC towns with no rent survey: 2021 census median renter shelter cost x the median ratio of
+    # (CMHC 2-bed average / same census figure) in BC towns that have their OWN CMHC centre. Leave out
+    # census metropolitan areas (their CMHC figure covers many municipalities) and identical values
+    # (one centre shared by two towns).
+    by_dguid = {q["dguid"]: q for q in places}
+    calib = [q for q in places
+             if q["province"] == "British Columbia" and q["values"].get("rent")
+             and q["extra"].get("rent_source") == q["name"] and q["prov"].get("rent", "").startswith("CMHC")
+             and norm(q["name"]) not in BC_CMA_CORES and xtra.get(q["dguid"], {}).get("census_rent_2021")]
+    shared = {v for v in [q["values"]["rent"] for q in calib] if [q["values"]["rent"] for q in calib].count(v) > 1}
+    ratios = sorted(q["values"]["rent"] / xtra[q["dguid"]]["census_rent_2021"] for q in calib if q["values"]["rent"] not in shared)
+    rent_ratio = statistics.median(ratios) if ratios else None
+    q1, q3 = (statistics.quantiles(ratios, n=4)[0], statistics.quantiles(ratios, n=4)[2]) if len(ratios) >= 4 else (None, None)
+    for g, census_rent in pending_estimates:
+        q = by_dguid[g]
+        if rent_ratio:
+            q["values"]["rent"] = int(round(census_rent * rent_ratio, -1))
+            q["prov"]["rent"] = "ESTIMATE: 2021 census renter cost x %.2f (median CMHC/census ratio in %d BC towns)" % (rent_ratio, len(ratios))
+            q["extra"].update({"rent_estimate": True, "rent_census_2021": int(census_rent),
+                               "rent_source": "estimate from the 2021 census",
+                               "rent_why": RENT_WHY.get(q["name"], "No rent survey covers this town.")})
+            if q1:  # middle half and full spread of the comparison towns' ratios
+                q["extra"]["rent_range"] = [int(round(census_rent * q1, -1)), int(round(census_rent * q3, -1))]
+                q["extra"]["rent_range_wide"] = [int(round(census_rent * ratios[0], -1)), int(round(census_rent * ratios[-1], -1))]
+    for q in places:  # an estimate must always travel with its flag
+        assert not q["prov"].get("rent", "").startswith("ESTIMATE") or q["extra"].get("rent_estimate"), q["name"]
+
+    # every value says where it came from
+    default_prov = {"forest": "NRCan land cover 2020", "growth": "Census 2016-2021", "home_value": "Census 2021 (owner estimates)",
+                    "backup_jobs": "Census 2021 (2020 incomes)", "ai": "Hand-set scenario on 2021 census occupations",
+                    "diversity": "Census 2021 (industries)"}
+    for q in places:
+        for k in q["values"]:
+            q["prov"].setdefault(k, default_prov.get(k, "Census 2021"))
+
     # names that appear twice (Langley City + Township, North Vancouver City + District) get their type
     counts = {}
     for p in places:
@@ -404,13 +502,22 @@ def main():
                             "reference_period": biz_period or (prev_meta.get("business_counts") or {}).get("reference_period")},
         "census": {"label": "Statistics Canada, 2021 Census of Population", "reference_period": "May 2021 (income: calendar 2020)"},
         "landcover": {"label": "Natural Resources Canada, 2020 Land Cover of Canada", "reference_period": "2020"},
+        "chsp": {"label": "Statistics Canada, Canadian Housing Statistics Program: median assessed value of single-detached "
+                          "houses and vacant land by rural area (table 46-10-0093, from BC Assessment and Alberta municipal rolls)",
+                 "reference_period": "%s assessment rolls; rural areas reachable within %d min by road (OSRM; in BC, no ferries); "
+                                     "partly-reachable areas adjusted with 2021 census home values"
+                                     % (max([(v.get("rural") or {}).get("year", "") for v in xtra.values()] + [""]), xtra_doc.get("rural_minutes", 60))},
+        "ab_rent": {"label": "Government of Alberta, Apartment Vacancy and Rental Cost Survey (towns CMHC doesn't cover)",
+                    "reference_period": next((v["rent_ab"]["period"] for v in xtra.values() if v.get("rent_ab")), "")},
+        "bc_rent_estimate": {"label": "BC towns with no rent survey: 2021 census median renter shelter cost (BC Stats) x CMHC/census ratio",
+                             "reference_period": "census May 2021; ratio from the latest CMHC survey" + (" (x%.2f)" % rent_ratio if rent_ratio else "")},
         "routing": {"label": "OSRM / OpenStreetMap routing, calibrated x%.2f against typical Google Maps times" % OSRM_CALIBRATION,
                     "reference_period": "built Nov 2026"},
     }
     out = {
         "criteria": [dict(key=k, label=l, unit=u, better=b, defaultWeight=w, hint=h, group=g)
                      for k, l, u, b, w, h, g in CRITERIA],
-        "budgets": {"rent": 2000, "airportHours": 1.0, "farFromVancouverHours": FAR_FROM_VANCOUVER_H},
+        "budgets": {"rent": 2000, "airportHours": 1.0, "farFromVancouverHours": FAR_FROM_VANCOUVER_H, "land": LAND_BUDGET},
         "sourceMeta": source_meta,
         "places": places,
     }

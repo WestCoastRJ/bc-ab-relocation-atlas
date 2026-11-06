@@ -2,7 +2,7 @@
  *
  * Two separate steps:
  *  1. Budget checks (feasibility): rent within budget, airport access when far from Vancouver,
- *     rural land (always "unverified": no free parcel data). Fail = optionally hidden.
+ *     rural land (always "unverified": assessed values, not parcels for sale). Fail = optionally hidden.
  *  2. Preference score: each factor becomes a percentile rank across ALL towns in the atlas
  *     (a fixed comparison group, so toggling layers never changes a town's score).
  *     A missing value counts as the 25th percentile (assumed below average) and is flagged.
@@ -46,6 +46,10 @@
     if (c.unit === "%") return n + "%";
     return c.unit ? n + " " + c.unit : n;
   }
+  function ordinal(n) {
+    var t = n % 100, u = n % 10;
+    return n + (t >= 11 && t <= 13 ? "th" : u === 1 ? "st" : u === 2 ? "nd" : u === 3 ? "rd" : "th");
+  }
   function esc(s) { return String(s).replace(/[&<>"]/g, function (ch) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[ch]; }); }
 
   // ---- AI scenario -----------------------------------------------------------
@@ -61,21 +65,49 @@
 
   function checks(p) {
     var e = p.extra || {}, b = state.budgets, out = {};
-    var rent = p.values.rent;
-    if (typeof rent !== "number") out.rent = { s: "unknown", t: "No CMHC rent survey for this town" };
+    var rent = p.values.rent, est = isEstimate(p), rr = e.rent_range;
+    if (typeof rent !== "number") out.rent = { s: "unknown", t: "No rent survey or estimate for this town" };
+    else if (est) {
+      var wide = e.rent_range_wide, top = wide ? wide[1] : rr ? rr[1] : rent;
+      var rng = rr ? " (if it compares like the middle half of other BC towns: " + money(rr[0]) + " to " + money(rr[1]) +
+        (wide ? "; full spread " + money(wide[0]) + " to " + money(wide[1]) : "") + ")" : "";
+      var why = " " + (e.rent_why || "No rent survey covers this town.") + (e.rent_note ? " Local figures on the card run higher." : "");
+      if (rent > b.rent && (!rr || rr[0] > b.rent))
+        out.rent = { s: "fail", t: "Estimated 2-bed about " + money(rent) + rng + " is over " + money(b.rent) + "." + why };
+      else
+        out.rent = { s: "unverified", t: "Estimated 2-bed about " + money(rent) + rng +
+          (rent > b.rent ? ": over your " + money(b.rent) + ", though the range reaches below it" : top > b.rent ? ": could exceed your " + money(b.rent) : ": estimate under your " + money(b.rent)) + "." + why };
+    }
     else if (rent <= b.rent) out.rent = { s: "pass", t: "2-bed avg " + money(rent) + " within " + money(b.rent) };
     else if (typeof e.rent_1bed === "number" && e.rent_1bed <= b.rent)
       out.rent = { s: "pass", t: "1-bed avg " + money(e.rent_1bed) + " within budget (2-bed " + money(rent) + " is not)" };
     else out.rent = { s: "fail", t: "Avg rent " + money(rent) + " is over " + money(b.rent) };
     if (e.rent_grade && /poor/.test(e.rent_grade) && out.rent.s === "pass") out.rent.t += " (CMHC: poor reliability)";
 
-    out.land = { s: "unverified", t: "No free data on actual land parcels for sale within 20-60 min" };
+    var r = e.rural || {}, lb = b.land || 300000;
+    if (typeof r.house === "number") {
+      var estd = r.house_est_pct >= 25;
+      var rough = r.house_props < 100;
+      var t = "Typical rural house around town " + (estd || rough ? "about " : "") + money(r.house) + (estd ? ", partly estimated" : rough ? ", a rough figure from few properties" : " assessed") +
+        " (" + (r.house <= lb ? "under" : "over") + " your " + money(lb) + ")";
+      if (estd) t += "; " + r.house_est_pct + "% of it rests on census estimates for " + (r.house_est_areas || []).join(", ") +
+        " (no StatCan figure)" + (typeof r.house_no_est === "number" ? ", " + money(r.house_no_est) + " without them" : "");
+      if (r.cheapest) t += "; cheapest nearby area " + r.cheapest[1] + " " + money(r.cheapest[0]) + (r.house_est_pct ? " (not counting estimates)" : "");
+      out.land = { s: "unverified", t: t + ". Assessed values, not listings" };
+    } else if (typeof r.land === "number") {
+      out.land = { s: "unverified", t: "No rural house figure nearby; typical vacant lot " + money(r.land) + " assessed (" + (r.land <= lb ? "under" : "over") + " your " + money(lb) + ")" };
+    } else if (r.none_within) out.land = { s: "unverified", t: "No rural area within an hour by road (scored as worst)" + (r.nearest_beyond ? "; nearest is " + r.nearest_beyond[0] + ", about " + r.nearest_beyond[1] + " min" : "") };
+    else out.land = { s: "unverified", t: "No rural property figure for this town" + (r.note ? ". " + r.note : "") };
 
     if (!e.far_from_vancouver) out.airport = { s: "na", t: "Within ~8 h of Vancouver: airport not needed" };
     else if (typeof e.airport_h !== "number") out.airport = { s: "unknown", t: "Airport access unknown" };
     else if (e.airport_h <= b.airportHours) out.airport = { s: "pass", t: e.airport + ", about " + e.airport_h + " h" };
     else out.airport = { s: "fail", t: e.airport + " is about " + e.airport_h + " h away" };
     return out;
+  }
+
+  function isEstimate(p) {
+    return !!((p.extra && p.extra.rent_estimate) || /^ESTIMATE/.test((p.prov && p.prov.rent) || ""));
   }
 
   function fails(p) {
@@ -85,8 +117,14 @@
 
   // ---- scoring ----------------------------------------------------------------
 
+  // An estimated rent is ranked at the top of its middle range (it is an estimate, and local figures run higher)
+  function rankValue(p, key) {
+    if (key === "rent" && isEstimate(p) && p.extra && p.extra.rent_range) return p.extra.rent_range[1];
+    return p.values[key];
+  }
+
   function percentileRanks(places, key, better) {
-    var vals = places.map(function (p) { return { id: p.id, v: p.values[key] }; })
+    var vals = places.map(function (p) { return { id: p.id, v: rankValue(p, key) }; })
       .filter(function (x) { return typeof x.v === "number" && !Number.isNaN(x.v); })
       .sort(function (a, b) { return a.v - b.v; });
     var out = {}, n = vals.length, i = 0;
@@ -111,10 +149,11 @@
         var w = state.weights[c.key] || 0;
         if (!w) return;
         wtotal += w;
-        var r = ranks[c.key][p.id];
+        var r = ranks[c.key][p.id], none = false;
+        if (r === undefined && /^rural_/.test(c.key) && p.extra && p.extra.rural && p.extra.rural.none_within) { r = 0; none = true; }
         if (r === undefined) { r = MISSING_RANK; wmissing += w; missing.push(c.label); }
         sum += w * r;
-        parts.push({ key: c.key, label: c.label, rank: r, weight: w, missing: ranks[c.key][p.id] === undefined });
+        parts.push({ key: c.key, label: c.label, rank: r, weight: w, none: none, missing: !none && ranks[c.key][p.id] === undefined });
       });
       scores[p.id] = { score: wtotal ? sum / wtotal : null, coverage: wtotal ? 1 - wmissing / wtotal : 1, parts: parts, missing: missing };
     });
@@ -245,6 +284,8 @@
     }
     var periods = [];
     if (meta.cmhc) periods.push("rents " + meta.cmhc.reference_period);
+    if (meta.ab_rent && meta.ab_rent.reference_period) periods.push("Alberta small-town rents " + meta.ab_rent.reference_period);
+    if (meta.chsp) periods.push("rural property assessments " + String(meta.chsp.reference_period).split(" ")[0]);
     if (meta.business_counts) periods.push("business counts " + meta.business_counts.reference_period);
     periods.push("census May 2021 (income 2020)");
     lines.push("Data periods: " + periods.join(", ") + ". These sources publish once or twice a year.");
@@ -276,25 +317,63 @@
   }
 
   function showDetail(p) {
+    var el0 = $("detail"), sameTown = state.selected === p.id && !el0.hidden;
+    var ruralOpen = sameTown && el0.querySelector("details.rural") && el0.querySelector("details.rural").open;
+    var keepScroll = sameTown ? el0.scrollTop : 0;
     state.selected = p.id;
     var s = state.scores[p.id], e = p.extra || {}, ch = checks(p), rr = state.rankRange[p.id] || {};
     var crit = state.data.criteria;
     var rows = crit.map(function (c) {
       var part = s.parts.filter(function (x) { return x.key === c.key; })[0];
-      var pct = !state.weights[c.key] ? "off" : part && part.missing ? "assumed 25th" : part ? Math.round(part.rank * 100) + "th pct" : "";
-      return '<tr class="' + (state.weights[c.key] ? "" : "off") + '"><td>' + esc(c.label) + '</td><td class="num">' + fmt(p.values[c.key], c) +
+      var pct = !state.weights[c.key] ? "off" : part && part.none ? "worst" : part && part.missing ? "assumed 25th" : part ? ordinal(Math.round(part.rank * 100)) + " pct" : "";
+      var src = p.prov && p.prov[c.key] ? '<div class="src">' + esc(p.prov[c.key]) +
+        (c.key === "rent" && rankValue(p, "rent") !== p.values.rent ? "; ranked as " + money(rankValue(p, "rent")) + ", the top of its middle range" : "") + "</div>" : "";
+      var none = /^rural_/.test(c.key) && p.values[c.key] === undefined && e.rural && e.rural.none_within;
+      return '<tr class="' + (state.weights[c.key] ? "" : "off") + '"><td>' + esc(c.label) + src + '</td><td class="num">' + (none ? "none within 1 h" : fmt(p.values[c.key], c)) +
+        (c.key === "rent" && isEstimate(p) ? ' <span class="warnText">est.</span>' : "") +
         '</td><td class="num muted">' + pct + "</td></tr>";
     }).join("");
     var lines = [];
     if (e.drive_vancouver_h !== undefined) lines.push("About " + e.drive_vancouver_h + " h drive from Vancouver (estimate)");
     if (e.airport) lines.push("Nearest airport: " + esc(e.airport) + ", about " + e.airport_h + " h" + (e.airport_note ? " (" + esc(e.airport_note) + ")" : ""));
     if (typeof p.values.rent === "number") {
-      lines.push("CMHC average rent: " + money(e.rent_1bed) + " 1-bed, " + money(p.values.rent) + " 2-bed" +
-        (e.rent_source && e.rent_source !== p.name ? " (" + esc(e.rent_source) + ")" : "") +
-        (e.rent_grade ? ", reliability " + esc(e.rent_grade) : "") +
-        (typeof p.values.vacancy === "number" ? ", vacancy " + p.values.vacancy + "%" : "") + ". Asking rents for newcomers are usually higher.");
-    } else lines.push("Rent: no CMHC survey for this town");
-    lines.push("Rural land: unverified. " + (e.rural_areas ? "Census proxy pools " + e.rural_areas.length + " rural area(s): " + e.rural_areas.map(esc).join(", ") + " (may be far from town)." : "No census proxy for the surrounding area."));
+      var rentSrc = (p.prov && p.prov.rent) || "";
+      if (isEstimate(p)) {
+        lines.push("<strong>Rent: estimate only.</strong> " + esc(e.rent_why || "No rent survey covers this town.") + " " +
+          (e.rent_census_2021 ? "2021 census median renter cost " + money(e.rent_census_2021) + " a month, scaled to a 2-bed today the way it compares in other BC towns: about " + money(p.values.rent) : "Estimated 2-bed about " + money(p.values.rent)) +
+          (e.rent_range ? " (scaled like the middle half of those towns: " + money(e.rent_range[0]) + " to " + money(e.rent_range[1]) +
+            (e.rent_range_wide ? "; like any of them: " + money(e.rent_range_wide[0]) + " to " + money(e.rent_range_wide[1]) : "") + ")" : "") +
+          ". Asking rents for newcomers are usually higher.");
+      } else {
+        lines.push((/Alberta/.test(rentSrc) ? "Alberta rent survey" : "CMHC") + " average rent: " + money(e.rent_1bed) + " 1-bed, " + money(p.values.rent) + " 2-bed" +
+          (e.rent_source && e.rent_source !== p.name ? " (" + esc(e.rent_source) + ")" : "") +
+          (e.rent_grade ? ", reliability " + esc(e.rent_grade) : "") +
+          (typeof p.values.vacancy === "number" ? ", vacancy " + p.values.vacancy + "%" : "") +
+          (e.rent_small_sample ? " (fewer than 30 units surveyed)" : "") +
+          " [" + esc(rentSrc) + "]" + (e.rent_stale ? " (CMHC left this town out of its latest release: last known value)" : "") +
+          (e.rent_kept ? " (CMHC couldn't be reached on the last refresh: last known value)" : "") +
+          ". Asking rents for newcomers are usually higher.");
+      }
+      if (e.rent_neighbour) lines.push("CMHC's nearest centre (" + esc(e.rent_neighbour[0]) + ") averages " + money(e.rent_neighbour[1]) + " for a 2-bed; this town's own Alberta survey is used instead.");
+    } else lines.push("Rent: no rent survey covers this town");
+    if (e.rent_note) lines.push("Rent cross-check: " + esc(e.rent_note));
+    var r = e.rural || {};
+    var ruralExtras = (r.ferry_only && r.ferry_only.length ? " Left out because they need a ferry: " + r.ferry_only.map(esc).join(", ") + "." : "") +
+      (r.no_data && r.no_data.length ? " No StatCan figure for: " + r.no_data.map(esc).join(", ") + "." : "") +
+      (r.too_few && r.too_few.length ? " Too few properties for a reliable median (under 50): " + r.too_few.map(esc).join(", ") + "." : "") +
+      (r.note ? " " + esc(r.note) : "");
+    if (typeof r.house === "number" || typeof r.land === "number") {
+      lines.push("Rural property around town (" + esc(r.year) + " assessed values, StatCan): typical house " + money(r.house) +
+        (r.house_range && r.house_range[0] !== r.house_range[1] ? " (areas range " + money(r.house_range[0]) + " to " + money(r.house_range[1]) + ")" : "") +
+        ", typical vacant lot " + money(r.land) + ". From " + (r.areas || []).filter(function (a) { return !(a[5] && a[5].unused); }).length +
+        " rural area(s) with at least 10% of their homes within an hour by road from the town centre, weighted by how many" +
+        ((r.areas || []).some(function (a) { return a[5] && a[5].f; }) ? "; house medians of areas only partly within the hour are adjusted to that part where census values allow" : "") + "." +
+        (r.house_est_pct ? " " + r.house_est_pct + "% of the house figure rests on census estimates for areas with no StatCan figure (marked est. in the table)" +
+          (typeof r.house_no_est === "number" ? "; without them it would be " + money(r.house_no_est) : "") + "." : "") + ruralExtras);
+    } else {
+      lines.push((r.none_within ? "Rural property: no rural area within an hour by road, so this factor counts as the worst" : "Rural property: no figure") +
+        (r.nearest_beyond ? "; nearest by road is " + esc(r.nearest_beyond[0]) + " (about " + r.nearest_beyond[1] + " min, typical house " + money(r.nearest_beyond[2]) + ")" : "") + "." + ruralExtras);
+    }
     if (e.median_income_2020) lines.push("Median employment income (2020): " + money(e.median_income_2020));
     if (e.top_industries) lines.push("Top industries: " + e.top_industries.map(function (t) { return (INDUSTRY[t[0]] || t[0]) + " " + Math.round(t[1]) + "%"; }).join(", "));
     if (e.hands_on_pct !== undefined) lines.push("Hands-on jobs " + e.hands_on_pct + "%, desk/office jobs " + e.desk_pct + "%. AI scenario score " +
@@ -312,9 +391,41 @@
       "<div style='margin-top:6px'><strong>Preference score: " + (s.score === null ? "n/a" : Math.round(s.score * 100) + "/100") + "</strong>" +
       (s.missing.length ? ' <span class="small warnText">missing: ' + s.missing.map(esc).join(", ") + " (counted as below average)</span>" : "") +
       '</div><ul class="extras">' + lines.map(function (l) { return "<li>" + l + "</li>"; }).join("") + "</ul>" +
-      "<table>" + rows + "</table>";
+      "<table>" + rows + "</table>" + ruralTable(r);
     el.hidden = false;
+    el.scrollTop = keepScroll;
+    if (ruralOpen && el.querySelector("details.rural")) el.querySelector("details.rural").open = true;
     el.querySelector(".close").onclick = function () { el.hidden = true; state.selected = null; };
+  }
+
+  function ruralTable(r) {
+    if (!r.areas || !r.areas.length) return "";
+    function house(a) {
+      var info = a[5] || {};
+      if (!a[3][0]) return "n/a";
+      var tip = info.est ? "No StatCan figure: 2021 census home value " + money(info.census) + " x " + info.ratio + " (assessed/census ratio of the province's rural areas)"
+        : info.f ? "Whole-area median " + money(info.raw) + ", x" + info.f + " for the part within the hour (2021 census home values)" +
+          (info.cap ? "; capped: census values put that part even further from the whole-area figure" : "")
+        : info.unused ? "Median for the whole area. Under half of it is within the hour and census values can't tell what that part is worth, so it isn't used"
+        : info.whole ? "Median for the whole area: too few census values for the part within the hour to adjust it" : "";
+      return '<span title="' + esc(tip) + '">' + money(a[3][0]) + (info.est ? ' <span class="warnText">est.</span>' : info.f ? ' <span class="muted">adj.</span>' :
+        info.unused ? ' <span class="warnText">not used</span>' : info.whole ? ' <span class="muted">whole</span>' : "") + "</span>" +
+        (info.est ? "" : ' <span class="muted cnt">(' + a[3][1].toLocaleString() + ")</span>");
+    }
+    return '<details class="rural"><summary>Rural areas around town (' + r.areas.length + ")</summary>" +
+      '<div class="tablewrap"><table><tr><th>Area</th><th class="num">Nearest homes</th><th class="num">Homes in 1 h</th><th class="num">Typical house</th><th class="num">Vacant lot</th></tr>' +
+      r.areas.map(function (a) {
+        return "<tr" + (a[5] && a[5].unused ? ' class="unusedRow"' : "") + "><td>" + esc(a[0]) + '</td><td class="num">' + a[1] + " min</td>" + '<td class="num">' + a[2] + "%</td>" +
+          '<td class="num">' + house(a) + "</td>" +
+          '<td class="num">' + (a[4][0] ? money(a[4][0]) + ' <span class="muted cnt">(' + a[4][1].toLocaleString() + ")</span>" : "n/a") + "</td></tr>";
+      }).join("") + "</table></div>" +
+      '<p class="small muted">Median ' + esc(r.year || "") + ' assessed value (number of properties). "Nearest homes" is the drive from the town centre to the area\'s closest homes; ' +
+      '"Homes in 1 h" is the share of its homes you can reach within an hour by road (in BC, without a ferry). ' +
+      "adj.: the area is only partly within the hour, so its house median is scaled by how 2021 census home values there compare with the whole area. " +
+      "whole: only partly within the hour, but too few census values there to adjust, so the figure is for the whole area. " +
+      "not used: the same, with under half the area within the hour, so it's left out of the town's figures. " +
+      "est.: no StatCan figure, estimated from 2021 census home values. Vacant-lot medians are for the whole area and include tiny and remote parcels. " +
+      "Assessed values usually trail sale prices.</p></details>";
   }
 
   function render() {
@@ -405,6 +516,11 @@
     state.status = status;
     var saved = null, savedB = null;
     try { saved = JSON.parse(localStorage.getItem(STORE_KEY)); savedB = JSON.parse(localStorage.getItem(BUDGET_KEY)); } catch (e) { /* ignore */ }
+    if (saved && saved.rural_u300 !== undefined) {  // the old census land proxy became the rural-house factor
+      if (saved.rural_house === undefined) saved.rural_house = saved.rural_u300;
+      delete saved.rural_u300;
+      localStorage.setItem(STORE_KEY, JSON.stringify(saved));
+    }
     state.weights = Object.assign(defaultWeights(), saved || {});
     state.budgets = Object.assign({}, data.budgets, savedB || {});
     state.aiMode = localStorage.getItem(MODE_KEY) === "fast" ? "fast" : "gradual";
@@ -412,7 +528,8 @@
 
     $("budgetRent").value = state.budgets.rent;
     $("budgetAir").value = state.budgets.airportHours;
-    [["budgetRent", "rent"], ["budgetAir", "airportHours"]].forEach(function (x) {
+    $("budgetLand").value = state.budgets.land || 300000;
+    [["budgetRent", "rent"], ["budgetAir", "airportHours"], ["budgetLand", "land"]].forEach(function (x) {
       $(x[0]).addEventListener("change", function (e) {
         var v = Number(e.target.value);
         if (v > 0) { state.budgets[x[1]] = v; localStorage.setItem(BUDGET_KEY, JSON.stringify(state.budgets)); render(); }
