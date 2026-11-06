@@ -73,7 +73,11 @@ RURAL_CODES = {"RDA", "MD", "SM", "SA"}
 # Electoral areas / specialized municipalities that are really urban: UBC lands, and the two Alberta
 # specialized municipalities the atlas already shows as towns (Sherwood Park, Fort McMurray)
 NOT_RURAL = {"Metro Vancouver A", "Strathcona County", "Wood Buffalo", "Jasper"}  # Jasper: the town, in a national park
-STRATHCONA_ACREAGES = (53.56, -113.12)  # roughly Ardrossan / Josephburg / Cooking Lake, for the note above
+# ...but their acreages and hamlets (Ardrossan, Josephburg, Cooking Lake; Saprae Creek, Anzac, Gregoire Lake) are real
+# rural land with no StatCan figure of their own: their DAs outside 2021 population centres form an extra area whose
+# value is estimated from census home values, like the Alberta counties StatCan has no figure for
+SPLIT_RURAL = {"Strathcona County": "Sherwood Park", "Wood Buffalo": "Fort McMurray"}  # CSD -> its urban centre
+PC_LAYER = "https://geo.statcan.gc.ca/geo_wa/rest/services/2021/Digital_boundary_files/MapServer/7/query"
 MIN_PROPERTIES = 50  # per property type per area; smaller areas give noisy medians
 CHSP_PID = "46100093"
 PTYPES = {"Single-detached house": "house", "Vacant land": "land"}
@@ -149,6 +153,17 @@ def chsp_bcab():
             unz.wait()
         os.replace(p + ".tmp", p)
     return p
+
+
+def population_centre_rings():
+    """rings of every 2021 Alberta population centre (StatCan boundary file)"""
+    p = os.path.join(WORK, "pc_ab.json")
+    if not os.path.exists(p):
+        q = urllib.parse.urlencode({"where": "PRUID='48'", "outFields": "DGUID,PCNAME", "returnGeometry": "true",
+                                    "outSR": "4326", "maxAllowableOffset": "0.0005", "f": "json"})
+        fs = json.loads(get(PC_LAYER + "?" + q, timeout=300))["features"]
+        save_json(p, [f["geometry"]["rings"] for f in fs if f.get("geometry", {}).get("rings")])
+    return json.load(open(p))
 
 
 def csd_shapes():
@@ -489,16 +504,33 @@ def main():
         rural[g] = rec
 
     pts, bpts, dw = da_points(), da_block_points(), da_dwellings()
-    area_dw, area_das = {}, {}
-    das = {}  # DA -> ([(lat, lon, weight)], area, area rings, dwellings): rural DAs with homes
+    split = {f["attributes"]["DGUID"]: f["attributes"]["CSDNAME"] for f in feats
+             if f["attributes"]["CSDNAME"] in SPLIT_RURAL and f["attributes"]["CSDTYPE"] in RURAL_CODES}
+    pc_rings = population_centre_rings()
+    area_of = {}  # DA -> rural area key (a CSD, or "<CSD>R" for the rural part of a split one)
     for da, (n, csd) in dw.items():
         if csd in rural_csds:
-            area_dw[csd] = area_dw.get(csd, 0) + n
+            area_of[da] = csd
+        elif csd in split:
+            # rural when most of the DA's home points (the same block points its homes are placed at) are outside
+            # every population centre: an edge DA with a big empty block can have its centre outside town
+            hp = bpts.get(da[-8:]) or ([(*pts[da], 1)] if da in pts else [])
+            if not hp or 2 * sum(q[2] for q in hp if not any(point_in_rings(q[:2], rg) for rg in pc_rings)) <= sum(q[2] for q in hp):
+                continue
+            area_of[da] = csd + "R"
+            csd_name[csd + "R"] = "%s outside %s" % (split[csd], SPLIT_RURAL[split[csd]])
+            shapes[csd + "R"] = shapes.get(csd, [])
+    area_dw, area_das = {}, {}
+    das = {}  # DA -> ([(lat, lon, weight)], area, area rings, dwellings): rural DAs with homes
+    for da, (n, _) in dw.items():
+        g = area_of.get(da)
+        if g:
+            area_dw[g] = area_dw.get(g, 0) + n
             if n > 0:
-                area_das.setdefault(csd, []).append(da)
+                area_das.setdefault(g, []).append(da)
                 dpts = bpts.get(da[-8:]) or ([(*pts[da], 1)] if da in pts else [])
                 if dpts:
-                    das[da] = (dpts, csd, shapes.get(csd, []), n)
+                    das[da] = (dpts, g, shapes.get(g, []), n)
     print("rural DAs with homes:", len(das), "in", len(area_dw), "rural areas", flush=True)
 
     # 2021 census home values by DA (owner estimates): used to scale each area's StatCan median to the
@@ -649,8 +681,8 @@ def main():
             o[k].sort()
         inc.sort(key=lambda x: x["near"])
         years = [rural[x["g"]]["year"] for x in inc if x["g"] in rural]
-        if years:
-            o["year"] = max(years)
+        if years or inc:  # an area estimated from census values uses the latest year's assessed/census ratio
+            o["year"] = max(years or [r["year"] for r in rural.values()])
         use = [x for x in inc if not x["info"].get("unused")]
         for ptype in PTYPES.values():
             pairs = [(x[ptype][0], x[ptype][1] * x["share"]) for x in use if ptype in x]
@@ -698,7 +730,6 @@ def main():
         #  - areas within the hour exist but StatCan has no usable figure for them (a data gap)
         #  - 10%+ of a rural area's homes are only a little over the hour (61-75 min) from the town centre
         #    point: a big municipality's other neighbourhoods may well be within it, so it's left as unknown
-        #  - Fort McMurray: its rural hamlets exist but have no separate StatCan figure
         gap = not use and bool(o["no_data"] or o["too_few"] or unused)
         nm = []
         if not inc and not gap:
@@ -718,7 +749,7 @@ def main():
                     nm.append((share_nm, g))
             nm.sort()
         near_miss = bool(nm)
-        o["none_within"] = not use and not gap and not near_miss and not p["name"].startswith("Fort McMurray")
+        o["none_within"] = not use and not gap and not near_miss
         if gap and (o["no_data"] or o["too_few"]):
             notes.append("The rural areas within the hour (%s) have no usable StatCan figure."
                          % ", ".join(o["no_data"] + o["too_few"]))
@@ -738,12 +769,10 @@ def main():
                             p["name"].split(" (")[0]))
         if p["name"].startswith("Lloydminster"):
             notes.append("Only the Alberta side is covered: Saskatchewan rural municipalities next to Lloydminster are not included.")
-        if p["name"].startswith("Fort McMurray"):
-            notes.append("Fort McMurray's rural hamlets (Saprae Creek, Anzac, Gregoire Lake) are inside Wood Buffalo, "
-                         "and StatCan publishes no rural-only figure for it.")
-        if km(pt, STRATHCONA_ACREAGES) <= 70:
-            notes.append("Strathcona County's acreages (Ardrossan, Josephburg, Cooking Lake) aren't included: StatCan "
-                         "publishes one figure for the whole county, and most of it is Sherwood Park itself.")
+        for x in use:
+            if x["g"][:-1] in split and x["info"].get("est"):
+                notes.append("StatCan's one figure for %s is mostly %s itself, so the rest of it (acreages and "
+                             "hamlets) is estimated from 2021 census home values." % (split[x["g"][:-1]], SPLIT_RURAL[split[x["g"][:-1]]]))
         if notes:
             o["note"] = " ".join(notes)
         out[p["dguid"]]["rural"] = o

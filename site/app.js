@@ -88,12 +88,12 @@
     if (typeof r.house === "number") {
       var estd = r.house_est_pct >= 25;
       var rough = r.house_props < 100;
-      var t = "Typical rural house around town " + (estd || rough ? "about " : "") + money(r.house) + (estd ? ", partly estimated" : rough ? ", a rough figure from few properties" : " assessed") +
+      var t = "Typical rural house around town " + (estd || rough ? "about " : "") + money(r.house) + (estd ? (r.house_est_pct >= 100 ? ", estimated" : ", partly estimated") : rough ? ", a rough figure from few properties" : " assessed") +
         " (" + (r.house <= lb ? "under" : "over") + " your " + money(lb) + ")";
-      if (estd) t += "; " + r.house_est_pct + "% of it rests on census estimates for " + (r.house_est_areas || []).join(", ") +
+      if (estd) t += "; " + (r.house_est_pct >= 100 ? "it rests" : r.house_est_pct + "% of it rests") + " on census estimates for " + (r.house_est_areas || []).join(", ") +
         " (no StatCan figure)" + (typeof r.house_no_est === "number" ? ", " + money(r.house_no_est) + " without them" : "");
       if (r.cheapest) t += "; cheapest nearby area " + r.cheapest[1] + " " + money(r.cheapest[0]) + (r.house_est_pct ? " (not counting estimates)" : "");
-      out.land = { s: "unverified", t: t + ". Assessed values, not listings" };
+      out.land = { s: "unverified", t: t + (r.house_est_pct >= 100 ? ". Census-based, not listings" : ". Assessed values, not listings") };
     } else if (typeof r.land === "number") {
       out.land = { s: "unverified", t: "No rural house figure nearby; typical vacant lot " + money(r.land) + " assessed (" + (r.land <= lb ? "under" : "over") + " your " + money(lb) + ")" };
     } else if (r.none_within) out.land = { s: "unverified", t: "No rural area within an hour by road (scored as worst)" + (r.nearest_beyond ? "; nearest is " + r.nearest_beyond[0] + ", about " + r.nearest_beyond[1] + " min" : "") };
@@ -363,7 +363,8 @@
       (r.too_few && r.too_few.length ? " Too few properties for a reliable median (under 50): " + r.too_few.map(esc).join(", ") + "." : "") +
       (r.note ? " " + esc(r.note) : "");
     if (typeof r.house === "number" || typeof r.land === "number") {
-      lines.push("Rural property around town (" + esc(r.year) + " assessed values, StatCan): typical house " + money(r.house) +
+      lines.push("Rural property around town (" + (r.house_est_pct >= 100 ? "estimated from 2021 census home values x the province's " + esc(r.year) + " assessed/census ratio" :
+        esc(r.year) + " assessed values, StatCan") + "): typical house " + money(r.house) +
         (r.house_range && r.house_range[0] !== r.house_range[1] ? " (areas range " + money(r.house_range[0]) + " to " + money(r.house_range[1]) + ")" : "") +
         ", typical vacant lot " + money(r.land) + ". From " + (r.areas || []).filter(function (a) { return !(a[5] && a[5].unused); }).length +
         " rural area(s) with at least 10% of their homes within an hour by road from the town centre, weighted by how many" +

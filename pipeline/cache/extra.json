@@ -8272,6 +8272,24 @@ null
 {}
 ],
 [
+"Strathcona County outside Sherwood Park",
+12,
+100,
+[
+592000,
+7778
+],
+[
+null,
+null
+],
+{
+"est": true,
+"census": 618021,
+"ratio": 0.96
+}
+],
+[
 "Camrose County",
 24,
 64,
@@ -8426,18 +8444,23 @@ null
 "no_data": [],
 "too_few": [],
 "year": "2024",
-"house": 494000,
+"house": 516000,
 "house_range": [
 312000,
-571000
+592000
 ],
-"house_props": 26996,
+"house_props": 34774,
 "land": 106000,
 "land_range": [
 17300,
 209000
 ],
 "land_props": 5522,
+"house_est_pct": 22,
+"house_est_areas": [
+"Strathcona County outside Sherwood Park"
+],
+"house_no_est": 494000,
 "cheapest": [
 312000,
 "Lamont County",
@@ -8446,7 +8469,7 @@ null
 27
 ],
 "none_within": false,
-"note": "Only a small part of Thorhild County is within the hour, and census values can't tell what that part is worth, so it is listed but not used. Strathcona County's acreages (Ardrossan, Josephburg, Cooking Lake) aren't included: StatCan publishes one figure for the whole county, and most of it is Sherwood Park itself."
+"note": "Only a small part of Thorhild County is within the hour, and census values can't tell what that part is worth, so it is listed but not used. StatCan's one figure for Strathcona County is mostly Sherwood Park itself, so the rest of it (acreages and hamlets) is estimated from 2021 census home values."
 }
 },
 "2021A00054802034": {
@@ -8766,6 +8789,24 @@ null
 }
 ],
 [
+"Strathcona County outside Sherwood Park",
+39,
+81,
+[
+606000,
+7778
+],
+[
+null,
+null
+],
+{
+"est": true,
+"census": 633400,
+"ratio": 0.96
+}
+],
+[
 "Lacombe County",
 50,
 17,
@@ -8804,18 +8845,23 @@ null
 "no_data": [],
 "too_few": [],
 "year": "2024",
-"house": 388000,
+"house": 455000,
 "house_range": [
 267000,
-600000
+606000
 ],
-"house_props": 12778,
+"house_props": 19056,
 "land": 81800,
 "land_range": [
 8600,
 209000
 ],
 "land_props": 2929,
+"house_est_pct": 33,
+"house_est_areas": [
+"Strathcona County outside Sherwood Park"
+],
+"house_no_est": 388000,
 "cheapest": [
 267000,
 "Flagstaff County",
@@ -8824,7 +8870,7 @@ null
 47
 ],
 "none_within": false,
-"note": "Strathcona County's acreages (Ardrossan, Josephburg, Cooking Lake) aren't included: StatCan publishes one figure for the whole county, and most of it is Sherwood Park itself."
+"note": "StatCan's one figure for Strathcona County is mostly Sherwood Park itself, so the rest of it (acreages and hamlets) is estimated from 2021 census home values."
 }
 },
 "2021A00054806017": {
@@ -8980,6 +9026,24 @@ null
 "2021A00054811061": {
 "rural": {
 "areas": [
+[
+"Strathcona County outside Sherwood Park",
+15,
+100,
+[
+592000,
+7778
+],
+[
+null,
+null
+],
+{
+"est": true,
+"census": 618021,
+"ratio": 0.96
+}
+],
 [
 "Parkland County",
 20,
@@ -9147,20 +9211,21 @@ null
 "no_data": [],
 "too_few": [],
 "year": "2024",
-"house": 479000,
+"house": 502000,
 "house_range": [
 224000,
-571000
+592000
 ],
-"house_props": 28541,
+"house_props": 36319,
 "land": 104000,
 "land_range": [
 17300,
 209000
 ],
 "land_props": 5636,
-"house_est_pct": 3,
+"house_est_pct": 23,
 "house_est_areas": [
+"Strathcona County outside Sherwood Park",
 "Westlock County"
 ],
 "house_no_est": 484000,
@@ -9172,7 +9237,7 @@ null
 41
 ],
 "none_within": false,
-"note": "Strathcona County's acreages (Ardrossan, Josephburg, Cooking Lake) aren't included: StatCan publishes one figure for the whole county, and most of it is Sherwood Park itself."
+"note": "StatCan's one figure for Strathcona County is mostly Sherwood Park itself, so the rest of it (acreages and hamlets) is estimated from 2021 census home values."
 }
 },
 "2021A00054811056": {
@@ -9191,6 +9256,24 @@ null
 595
 ],
 {}
+],
+[
+"Strathcona County outside Sherwood Park",
+10,
+100,
+[
+592000,
+7778
+],
+[
+null,
+null
+],
+{
+"est": true,
+"census": 618021,
+"ratio": 0.96
+}
 ],
 [
 "Lamont County",
@@ -9383,20 +9466,21 @@ null
 "no_data": [],
 "too_few": [],
 "year": "2024",
-"house": 486000,
+"house": 512000,
 "house_range": [
 139000,
-587000
+592000
 ],
-"house_props": 25145,
+"house_props": 32923,
 "land": 96900,
 "land_range": [
 11600,
 209000
 ],
 "land_props": 4586,
-"house_est_pct": 4,
+"house_est_pct": 27,
 "house_est_areas": [
+"Strathcona County outside Sherwood Park",
 "Westlock County"
 ],
 "house_no_est": 496000,
@@ -9408,7 +9492,7 @@ null
 21
 ],
 "none_within": false,
-"note": "Strathcona County's acreages (Ardrossan, Josephburg, Cooking Lake) aren't included: StatCan publishes one figure for the whole county, and most of it is Sherwood Park itself."
+"note": "StatCan's one figure for Strathcona County is mostly Sherwood Park itself, so the rest of it (acreages and hamlets) is estimated from 2021 census home values."
 }
 },
 "2021A00054819012": {
@@ -9736,6 +9820,24 @@ null
 }
 ],
 [
+"Strathcona County outside Sherwood Park",
+23,
+99,
+[
+592000,
+7778
+],
+[
+null,
+null
+],
+{
+"est": true,
+"census": 618774,
+"ratio": 0.96
+}
+],
+[
 "Camrose County",
 28,
 59,
@@ -9856,18 +9958,23 @@ null
 "no_data": [],
 "too_few": [],
 "year": "2024",
-"house": 493000,
+"house": 514000,
 "house_range": [
 351000,
-571000
+592000
 ],
-"house_props": 28440,
+"house_props": 36124,
 "land": 107000,
 "land_range": [
 55500,
 209000
 ],
 "land_props": 5946,
+"house_est_pct": 21,
+"house_est_areas": [
+"Strathcona County outside Sherwood Park"
+],
+"house_no_est": 493000,
 "cheapest": [
 351000,
 "Beaver County",
@@ -9876,7 +9983,7 @@ null
 55
 ],
 "none_within": false,
-"note": "Only a small part of Brazeau County is within the hour, and census values can't tell what that part is worth, so it is listed but not used. Strathcona County's acreages (Ardrossan, Josephburg, Cooking Lake) aren't included: StatCan publishes one figure for the whole county, and most of it is Sherwood Park itself."
+"note": "Only a small part of Brazeau County is within the hour, and census values can't tell what that part is worth, so it is listed but not used. StatCan's one figure for Strathcona County is mostly Sherwood Park itself, so the rest of it (acreages and hamlets) is estimated from 2021 census home values."
 }
 },
 "2021A00054802012": {
@@ -10391,6 +10498,24 @@ null
 {}
 ],
 [
+"Strathcona County outside Sherwood Park",
+34,
+99,
+[
+592000,
+7778
+],
+[
+null,
+null
+],
+{
+"est": true,
+"census": 618774,
+"ratio": 0.96
+}
+],
+[
 "Westlock County",
 38,
 59,
@@ -10532,20 +10657,21 @@ null
 "no_data": [],
 "too_few": [],
 "year": "2024",
-"house": 474000,
+"house": 499000,
 "house_range": [
 218000,
-571000
+592000
 ],
-"house_props": 28949,
+"house_props": 36633,
 "land": 109000,
 "land_range": [
 17300,
 209000
 ],
 "land_props": 5346,
-"house_est_pct": 5,
+"house_est_pct": 25,
 "house_est_areas": [
+"Strathcona County outside Sherwood Park",
 "Westlock County"
 ],
 "house_no_est": 483000,
@@ -10557,7 +10683,7 @@ null
 23
 ],
 "none_within": false,
-"note": "Only small parts of Brazeau County and Thorhild County are within the hour, and census values can't tell what those parts are worth, so they are listed but not used. Strathcona County's acreages (Ardrossan, Josephburg, Cooking Lake) aren't included: StatCan publishes one figure for the whole county, and most of it is Sherwood Park itself."
+"note": "Only small parts of Brazeau County and Thorhild County are within the hour, and census values can't tell what those parts are worth, so they are listed but not used. StatCan's one figure for Strathcona County is mostly Sherwood Park itself, so the rest of it (acreages and hamlets) is estimated from 2021 census home values."
 }
 },
 "2021A00054811062": {
@@ -10590,6 +10716,24 @@ null
 2530
 ],
 {}
+],
+[
+"Strathcona County outside Sherwood Park",
+23,
+100,
+[
+592000,
+7778
+],
+[
+null,
+null
+],
+{
+"est": true,
+"census": 618021,
+"ratio": 0.96
+}
 ],
 [
 "Lac Ste. Anne County",
@@ -10750,20 +10894,21 @@ null
 "no_data": [],
 "too_few": [],
 "year": "2024",
-"house": 473000,
+"house": 498000,
 "house_range": [
 191000,
-571000
+592000
 ],
-"house_props": 29202,
+"house_props": 36980,
 "land": 102000,
 "land_range": [
 17300,
 209000
 ],
 "land_props": 5444,
-"house_est_pct": 6,
+"house_est_pct": 26,
 "house_est_areas": [
+"Strathcona County outside Sherwood Park",
 "Westlock County"
 ],
 "house_no_est": 485000,
@@ -10775,7 +10920,7 @@ null
 73
 ],
 "none_within": false,
-"note": "Strathcona County's acreages (Ardrossan, Josephburg, Cooking Lake) aren't included: StatCan publishes one figure for the whole county, and most of it is Sherwood Park itself."
+"note": "StatCan's one figure for Strathcona County is mostly Sherwood Park itself, so the rest of it (acreages and hamlets) is estimated from 2021 census home values."
 }
 },
 "2021A00054811002": {
@@ -10873,24 +11018,47 @@ null
 "raw": 520000,
 "f": 1.41
 }
+],
+[
+"Strathcona County outside Sherwood Park",
+46,
+45,
+[
+663000,
+7778
+],
+[
+null,
+null
+],
+{
+"est": true,
+"census": 692503,
+"ratio": 0.96
+}
 ]
 ],
 "ferry_only": [],
 "no_data": [],
 "too_few": [],
 "year": "2024",
-"house": 457000,
+"house": 486000,
 "house_range": [
 348000,
 732000
 ],
-"house_props": 18629,
+"house_props": 22165,
 "land": 101000,
 "land_range": [
 61500,
 209000
 ],
 "land_props": 4509,
+"house_est_pct": 16,
+"house_est_areas": [
+"Strathcona County outside Sherwood Park"
+],
+"house_no_est": 457000,
 "cheapest": [
 348000,
 "Camrose County",
@@ -10899,7 +11067,7 @@ null
 94
 ],
 "none_within": false,
-"note": "Strathcona County's acreages (Ardrossan, Josephburg, Cooking Lake) aren't included: StatCan publishes one figure for the whole county, and most of it is Sherwood Park itself."
+"note": "StatCan's one figure for Strathcona County is mostly Sherwood Park itself, so the rest of it (acreages and hamlets) is estimated from 2021 census home values."
 }
 },
 "2021A00054815035": {
@@ -12026,6 +12194,24 @@ null
 }
 ],
 [
+"Strathcona County outside Sherwood Park",
+34,
+98,
+[
+593000,
+7778
+],
+[
+null,
+null
+],
+{
+"est": true,
+"census": 619584,
+"ratio": 0.96
+}
+],
+[
 "Lamont County",
 43,
 44,
@@ -12117,21 +12303,22 @@ null
 "no_data": [],
 "too_few": [],
 "year": "2024",
-"house": 467000,
+"house": 496000,
 "house_range": [
 188000,
 594000
 ],
-"house_props": 26268,
+"house_props": 33898,
 "land": 101000,
 "land_range": [
 17300,
 209000
 ],
 "land_props": 4630,
-"house_est_pct": 9,
+"house_est_pct": 29,
 "house_est_areas": [
 "Westlock County",
+"Strathcona County outside Sherwood Park",
 "Athabasca County"
 ],
 "house_no_est": 486000,
@@ -12143,7 +12330,7 @@ null
 77
 ],
 "none_within": false,
-"note": "Strathcona County's acreages (Ardrossan, Josephburg, Cooking Lake) aren't included: StatCan publishes one figure for the whole county, and most of it is Sherwood Park itself."
+"note": "StatCan's one figure for Strathcona County is mostly Sherwood Park itself, so the rest of it (acreages and hamlets) is estimated from 2021 census home values."
 }
 },
 "2021A00054806012": {
@@ -12469,6 +12656,24 @@ null
 }
 ],
 [
+"Strathcona County outside Sherwood Park",
+39,
+94,
+[
+596000,
+7778
+],
+[
+null,
+null
+],
+{
+"est": true,
+"census": 623117,
+"ratio": 0.96
+}
+],
+[
 "Westlock County",
 43,
 33,
@@ -12542,20 +12747,21 @@ null
 "no_data": [],
 "too_few": [],
 "year": "2024",
-"house": 476000,
+"house": 501000,
 "house_range": [
 223000,
-571000
+596000
 ],
-"house_props": 27801,
+"house_props": 35135,
 "land": 110000,
 "land_range": [
 52200,
 209000
 ],
 "land_props": 5268,
-"house_est_pct": 3,
+"house_est_pct": 23,
 "house_est_areas": [
+"Strathcona County outside Sherwood Park",
 "Westlock County"
 ],
 "house_no_est": 482000,
@@ -12567,7 +12773,7 @@ null
 25
 ],
 "none_within": false,
-"note": "Only a small part of Brazeau County is within the hour, and census values can't tell what that part is worth, so it is listed but not used. Strathcona County's acreages (Ardrossan, Josephburg, Cooking Lake) aren't included: StatCan publishes one figure for the whole county, and most of it is Sherwood Park itself."
+"note": "Only a small part of Brazeau County is within the hour, and census values can't tell what that part is worth, so it is listed but not used. StatCan's one figure for Strathcona County is mostly Sherwood Park itself, so the rest of it (acreages and hamlets) is estimated from 2021 census home values."
 }
 },
 "2021A00054805018": {
@@ -13089,6 +13295,24 @@ null
 "rural": {
 "areas": [
 [
+"Strathcona County outside Sherwood Park",
+5,
+100,
+[
+592000,
+7778
+],
+[
+null,
+null
+],
+{
+"est": true,
+"census": 618021,
+"ratio": 0.96
+}
+],
+[
 "Sturgeon County",
 19,
 100,
@@ -13278,20 +13502,21 @@ null
 "no_data": [],
 "too_few": [],
 "year": "2024",
-"house": 485000,
+"house": 509000,
 "house_range": [
 191000,
-571000
+592000
 ],
-"house_props": 27105,
+"house_props": 34883,
 "land": 99500,
 "land_range": [
 17300,
 209000
 ],
 "land_props": 5208,
-"house_est_pct": 3,
+"house_est_pct": 24,
 "house_est_areas": [
+"Strathcona County outside Sherwood Park",
 "Westlock County"
 ],
 "house_no_est": 491000,
@@ -13303,17 +13528,47 @@ null
 73
 ],
 "none_within": false,
-"note": "Strathcona County's acreages (Ardrossan, Josephburg, Cooking Lake) aren't included: StatCan publishes one figure for the whole county, and most of it is Sherwood Park itself."
+"note": "StatCan's one figure for Strathcona County is mostly Sherwood Park itself, so the rest of it (acreages and hamlets) is estimated from 2021 census home values."
 }
 },
 "2021A00054816037": {
 "rural": {
-"areas": [],
+"areas": [
+[
+"Wood Buffalo outside Fort McMurray",
+10,
+63,
+[
+480000,
+1163
+],
+[
+null,
+null
+],
+{
+"est": true,
+"census": 501715,
+"ratio": 0.96
+}
+]
+],
 "ferry_only": [],
 "no_data": [],
 "too_few": [],
+"year": "2024",
+"house": 480000,
+"house_range": [
+480000,
+480000
+],
+"house_props": 732,
+"house_est_pct": 100,
+"house_est_areas": [
+"Wood Buffalo outside Fort McMurray"
+],
 "none_within": false,
-"note": "Fort McMurray's rural hamlets (Saprae Creek, Anzac, Gregoire Lake) are inside Wood Buffalo, and StatCan publishes no rural-only figure for it."
+"note": "StatCan's one figure for Wood Buffalo is mostly Fort McMurray itself, so the rest of it (acreages and hamlets) is estimated from 2021 census home values."
 }
 }
 }
