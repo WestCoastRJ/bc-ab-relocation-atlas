@@ -2,8 +2,9 @@ name: Refresh data and deploy map
 
 on:
   schedule:
-    - cron: "0 13 * * *"   # ~6 am Pacific
-    - cron: "0 1 * * *"    # ~6 pm Pacific
+    # off the top of the hour: GitHub documents more delays/drops for minute-0 schedules
+    - cron: "17 13 * * *"   # ~6 am Pacific
+    - cron: "17 1 * * *"    # ~6 pm Pacific
   push:
     branches: [main]
   workflow_dispatch:
@@ -20,19 +21,26 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    outputs:
+      degraded: ${{ steps.health.outputs.degraded }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Rebuild places.json from live sources
+      - name: Rebuild places.json + status.json from live sources (validated)
         run: python pipeline/build.py
       - name: Commit refreshed data
         run: |
           git config user.name "atlas-refresh-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add site/data/places.json
-          if git diff --cached --quiet; then echo "no data change"; else git commit -m "Refresh atlas data" && git push; fi
+          if git diff --cached --quiet; then echo "no data change"; else git commit -m "Refresh atlas data (new source release)" && git push; fi
+      - name: Read refresh health
+        id: health
+        run: |
+          python -c "import json; s=json.load(open('site/data/status.json')); print('degraded=' + ('true' if s['degraded'] else 'false'))" >> "$GITHUB_OUTPUT"
+          python -c "import json; s=json.load(open('site/data/status.json')); print('\n'.join(s['problems']) or 'all sources OK')"
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
@@ -46,3 +54,15 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
+  alert:
+    # Runs after the (degraded) site is deployed; a red run makes GitHub email the repo owner.
+    needs: [refresh, deploy]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fail if a live source failed validation or the refresh/deploy broke
+        run: |
+          if [ "${{ needs.refresh.result }}" != "success" ] || [ "${{ needs.deploy.result }}" != "success" ]; then echo "refresh or deploy failed"; exit 1; fi
+          if [ "${{ needs.refresh.outputs.degraded }}" = "true" ]; then echo "a live source failed; the map is showing older values"; exit 1; fi
+          echo "all good"

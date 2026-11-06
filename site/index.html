@@ -7,45 +7,55 @@
   <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-tab="map">
+  <nav id="tabs" aria-label="Views">
+    <button type="button" data-tab="map" class="on">Map</button>
+    <button type="button" data-tab="rank">Rankings</button>
+    <button type="button" data-tab="filters">Filters</button>
+  </nav>
+
   <aside id="panel">
     <header>
       <h1>BC + Alberta Relocation Atlas</h1>
-      <p class="muted" id="updated">Loading data…</p>
+      <p id="status" class="status">Loading data…</p>
+      <input id="search" list="townList" type="search" placeholder="Find a town…" autocomplete="off" aria-label="Find a town">
+      <datalist id="townList"></datalist>
     </header>
 
-    <section>
-      <h2>What matters to you</h2>
-      <p class="muted small">Drag a slider to 0 to ignore a factor. The map re-colours as you go.</p>
+    <section class="pane-rank">
+      <h2>Top matches</h2>
+      <p class="small muted">Only towns that pass your budget checks. Hover a badge for details. Land is always "?" because no free data shows real parcels for sale.</p>
+      <ol id="ranking"></ol>
+      <p id="rankNote" class="small muted"></p>
+    </section>
+
+    <section class="pane-filters">
+      <h2>1. Budget checks</h2>
+      <label class="field">Max monthly rent <input id="budgetRent" type="number" min="500" step="50"></label>
+      <label class="field">Max hours to an airport (only for towns more than ~8 h from Vancouver) <input id="budgetAir" type="number" min="0.25" step="0.25"></label>
+      <label class="check"><input type="checkbox" id="hideFails" checked> Hide towns that fail a budget check</label>
+      <label class="check"><input type="checkbox" id="showSmall" checked> Include 7,500 to 10,000 people towns (dashed)</label>
+      <label class="check"><input type="checkbox" id="hideMetroVan" checked> Hide Metro Vancouver</label>
+      <label class="field">Dot size shows <select id="sizeBy"><option value="score">match score</option><option value="pop">population</option></select></label>
+
+      <h2>2. AI scenario (a stress test, not a forecast)</h2>
+      <label class="check"><input type="radio" name="aiMode" value="gradual"> Gradual: office jobs erode over 10+ years</label>
+      <label class="check"><input type="radio" name="aiMode" value="fast"> Fast takeoff: most desk work automated within a few years, robots start on physical work</label>
+      <p class="small muted">Both are hand-set assumptions about broad occupation groups. Rankings show "AI-sensitive" when a town moves 5+ places between them. Turn up the AI slider if this matters more to you.</p>
+
+      <h2>3. What matters to you</h2>
+      <p class="small muted">Each factor is a percentile among all 106 towns. A missing value counts as below average (25th percentile). The % beside each group is its share of your total weight.</p>
       <div id="sliders"></div>
       <button id="reset" type="button">Reset weights</button>
-    </section>
 
-    <section>
-      <h2>How fast will AI hit jobs?</h2>
-      <label class="check"><input type="radio" name="aiMode" value="gradual"> Gradual: office jobs erode over 10+ years</label>
-      <label class="check"><input type="radio" name="aiMode" value="fast"> Fast takeoff: most desk work automated within a few years, robots start on physical work (AI factor counts 50% more)</label>
-    </section>
-
-    <section>
-      <label class="check"><input type="checkbox" id="showSmall"> Show 7,500 to 10,000 people as "maybe" towns</label>
-      <label class="check"><input type="checkbox" id="hideMetroVan" checked> Hide Metro Vancouver</label>
-    </section>
-
-    <section>
-      <h2>Top matches</h2>
-      <ol id="ranking"></ol>
-    </section>
-
-    <section>
       <h2>Data sources</h2>
       <ul id="sources" class="small muted"></ul>
-      <p class="small muted">Refreshes twice a day. Census figures are from 2021 (the latest census); rents and business counts update when CMHC and Statistics Canada publish new releases.</p>
+      <p class="small muted"><strong>Not covered by free data:</strong> land parcels for sale, current asking rents and listings, current job vacancies, commercial premises and property managers, sole-operator contractors, municipal renovation permits, heating/fuel/insurance costs.</p>
     </section>
   </aside>
 
   <main>
-    <div id="map" role="img" aria-label="Map of BC and Alberta towns coloured by match score"></div>
+    <div id="map" role="img" aria-label="Map of BC and Alberta towns coloured by preference score"></div>
     <div id="legend" class="legend"></div>
     <div id="detail" class="detail" hidden></div>
   </main>
