@@ -21,6 +21,8 @@ Land parcels for sale, current asking rents/listings, current job vacancies, com
 ## How it updates
 `.github/workflows/refresh-and-deploy.yml` runs at 13:17 and 01:17 UTC. `pipeline/build.py` checks CMHC (rent, reliability grade, vacancy) and StatCan business counts, validates coverage before using them, keeps each town's previous values if a source fails, and writes `site/data/status.json` (last checked, last successful fetch, reference period). `places.json` is only committed when the data actually changes. A failed source makes the run red, so GitHub emails the repo owner; the map also shows a warning banner if a refresh failed or none has run in 18 h.
 
+If GitHub Pages times out or cancels a deploy, re-running that workflow (or dispatching it again) won't help: Pages keys each deployment on the commit, so it reports that commit as cancelled every time. The next commit to `main` deploys normally.
+
 Static inputs, rebuilt rarely:
 - `pipeline/census_extract.py` → `pipeline/cache/census.json` (2021 Census tables from Statistics Canada)
 - `pipeline/geo_extract.py` → `pipeline/cache/geo.json` (locations, drive times, airports, land cover)
