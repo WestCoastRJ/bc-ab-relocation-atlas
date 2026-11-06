@@ -20,7 +20,7 @@ OUT = os.path.join(ROOT, "site", "data", "places.json")
 STATUS = os.path.join(ROOT, "site", "data", "status.json")
 LIVE_STATUS_URL = "https://westcoastrj.github.io/bc-ab-relocation-atlas/data/status.json"
 UA = {"User-Agent": "bc-ab-relocation-atlas/1.0 (github.com/WestCoastRJ/bc-ab-relocation-atlas)"}
-TOP_PICKS = {"Prince Rupert": "Your own top pick"}
+TOP_PICKS = {"Prince George": "Your own top pick"}
 
 # ------------------------------------------------------------------ AI scenario assumptions
 # Share of each NOC 2021 broad occupation group we ASSUME is hard to automate. These are hand-set
