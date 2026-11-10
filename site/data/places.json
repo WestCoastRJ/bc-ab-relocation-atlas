@@ -187,7 +187,6 @@
 "people_25_44":42160.0,
 "rent_1bed":1278.0,
 "rent_grade":"very good",
-"rent_kept":true,
 "rent_source":"Abbotsford",
 "rural":{
 "areas":[
@@ -399,7 +398,6 @@ null
 "people_25_44":79605.0,
 "rent_1bed":1807.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Vancouver CMA",
 "rural":{
 "areas":[
@@ -560,7 +558,6 @@ null
 "people_25_44":8100.0,
 "rent_1bed":1282.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Campbell River",
 "rural":{
 "areas":[
@@ -765,7 +762,6 @@ null
 "people_25_44":2075.0,
 "rent_1bed":904.0,
 "rent_grade":"good",
-"rent_kept":true,
 "rent_source":"Trail area",
 "rural":{
 "areas":[
@@ -1007,7 +1003,6 @@ null
 "people_25_44":23660.0,
 "rent_1bed":1222.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Chilliwack",
 "rural":{
 "areas":[
@@ -1215,7 +1210,6 @@ null
 "people_25_44":5150.0,
 "rent_1bed":1624.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Victoria CMA",
 "rural":{
 "areas":[
@@ -1409,7 +1403,6 @@ null
 "people_25_44":41045.0,
 "rent_1bed":1807.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Vancouver CMA",
 "rural":{
 "areas":[
@@ -1547,7 +1540,6 @@ null
 "people_25_44":6575.0,
 "rent_1bed":1459.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Courtenay",
 "rural":{
 "areas":[
@@ -1796,7 +1788,6 @@ null
 "people_25_44":4980.0,
 "rent_1bed":1052.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Cranbrook",
 "rural":{
 "areas":[
@@ -1965,7 +1956,6 @@ null
 "people_25_44":3825.0,
 "rent_1bed":959.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Dawson Creek",
 "rural":{
 "areas":[
@@ -2140,7 +2130,6 @@ null
 "people_25_44":24945.0,
 "rent_1bed":1807.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Vancouver CMA",
 "rural":{
 "nearest_beyond":[
@@ -2231,7 +2220,6 @@ null
 "people_25_44":7745.0,
 "rent_1bed":917.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Fort St. John",
 "rural":{
 "areas":[
@@ -2406,7 +2394,6 @@ null
 "people_25_44":26645.0,
 "rent_1bed":1345.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Kamloops",
 "rural":{
 "areas":[
@@ -2678,7 +2665,6 @@ null
 "people_25_44":39460.0,
 "rent_1bed":1597.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Kelowna",
 "rural":{
 "areas":[
@@ -2896,7 +2882,6 @@ null
 "people_25_44":2060.0,
 "rent_1bed":1052.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Cranbrook area",
 "rural":{
 "areas":[
@@ -3069,7 +3054,6 @@ null
 "people_25_44":15305.0,
 "rent_1bed":1624.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Victoria CMA",
 "rural":{
 "areas":[
@@ -3297,7 +3281,6 @@ null
 "people_25_44":8785.0,
 "rent_1bed":1807.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Vancouver CMA",
 "rural":{
 "areas":[
@@ -3500,7 +3483,6 @@ null
 "people_25_44":23955.0,
 "rent_1bed":1807.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Vancouver CMA",
 "rural":{
 "areas":[
@@ -3687,7 +3669,6 @@ null
 "people_25_44":11115.0,
 "rent_1bed":1278.0,
 "rent_grade":"very good",
-"rent_kept":true,
 "rent_source":"Mission",
 "rural":{
 "areas":[
@@ -3881,7 +3862,6 @@ null
 "people_25_44":25405.0,
 "rent_1bed":1527.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Nanaimo",
 "rural":{
 "areas":[
@@ -4234,7 +4214,6 @@ null
 "people_25_44":3385.0,
 "rent_1bed":1159.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Nelson",
 "rural":{
 "areas":[
@@ -4477,7 +4456,6 @@ null
 "people_25_44":27340.0,
 "rent_1bed":1807.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Vancouver CMA",
 "rural":{
 "areas":[
@@ -4631,7 +4609,6 @@ null
 "people_25_44":18845.0,
 "rent_1bed":1807.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Vancouver CMA",
 "rural":{
 "areas":[
@@ -4760,7 +4737,6 @@ null
 "people_25_44":2075.0,
 "rent_1bed":1546.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Parksville",
 "rural":{
 "areas":[
@@ -5092,7 +5068,6 @@ null
 "people_25_44":8095.0,
 "rent_1bed":1197.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Penticton",
 "rural":{
 "areas":[
@@ -5338,7 +5313,6 @@ null
 "people_25_44":4900.0,
 "rent_1bed":1807.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Vancouver CMA",
 "rural":{
 "areas":[
@@ -5543,7 +5517,6 @@ null
 "people_25_44":4035.0,
 "rent_1bed":994.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Port Alberni",
 "rural":{
 "areas":[
@@ -5800,7 +5773,6 @@ null
 "people_25_44":17055.0,
 "rent_1bed":1807.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Vancouver CMA",
 "rural":{
 "areas":[
@@ -5956,7 +5928,6 @@ null
 "people_25_44":9090.0,
 "rent_1bed":1807.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Vancouver CMA",
 "rural":{
 "areas":[
@@ -6117,7 +6088,6 @@ null
 "people_25_44":2710.0,
 "rent_1bed":957.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Powell River",
 "rural":{
 "areas":[
@@ -6274,7 +6244,6 @@ null
 "people_25_44":21740.0,
 "rent_1bed":1214.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Prince George",
 "rural":{
 "areas":[
@@ -6489,7 +6458,6 @@ null
 "people_25_44":3360.0,
 "rent_1bed":1143.0,
 "rent_grade":"very good",
-"rent_kept":true,
 "rent_source":"Prince Rupert",
 "rural":{
 "ferry_only":[
@@ -6582,7 +6550,6 @@ null
 "people_25_44":2250.0,
 "rent_1bed":889.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Quesnel",
 "rural":{
 "areas":[
@@ -6941,7 +6908,6 @@ null
 "people_25_44":57345.0,
 "rent_1bed":1807.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Vancouver CMA",
 "rural":{
 "nearest_beyond":[
@@ -7032,7 +6998,6 @@ null
 "people_25_44":3815.0,
 "rent_1bed":1151.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Salmon Arm",
 "rural":{
 "areas":[
@@ -7281,7 +7246,6 @@ null
 "people_25_44":162525.0,
 "rent_1bed":1807.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Vancouver CMA",
 "rural":{
 "areas":[
@@ -7442,7 +7406,6 @@ null
 "median_income_2020":51200.0,
 "people_25_44":3405.0,
 "rent_grade":"poor - use with caution",
-"rent_kept":true,
 "rent_source":"Terrace",
 "rural":{
 "areas":[
@@ -7580,7 +7543,6 @@ null
 "people_25_44":1825.0,
 "rent_1bed":904.0,
 "rent_grade":"good",
-"rent_kept":true,
 "rent_source":"Trail",
 "rural":{
 "areas":[
@@ -7828,7 +7790,6 @@ null
 "people_25_44":238785.0,
 "rent_1bed":1807.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Vancouver",
 "rural":{
 "areas":[
@@ -7954,7 +7915,6 @@ null
 "people_25_44":10135.0,
 "rent_1bed":1234.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Vernon",
 "rural":{
 "areas":[
@@ -8217,7 +8177,6 @@ null
 "people_25_44":31240.0,
 "rent_1bed":1624.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Victoria",
 "rural":{
 "areas":[
@@ -8414,7 +8373,6 @@ null
 "people_25_44":8875.0,
 "rent_1bed":1597.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Kelowna CMA",
 "rural":{
 "areas":[
@@ -8663,7 +8621,6 @@ null
 "people_25_44":3665.0,
 "rent_1bed":1807.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Vancouver CMA",
 "rural":{
 "areas":[
@@ -8784,7 +8741,6 @@ null
 "people_25_44":2815.0,
 "rent_1bed":1082.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Williams Lake",
 "rural":{
 "areas":[
@@ -8974,7 +8930,6 @@ null
 "people_25_44":3695.0,
 "rent_1bed":1624.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Victoria CMA",
 "rural":{
 "areas":[
@@ -9178,7 +9133,6 @@ null
 "people_25_44":2110.0,
 "rent_1bed":1234.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Vernon area",
 "rural":{
 "areas":[
@@ -9424,7 +9378,6 @@ null
 "people_25_44":5530.0,
 "rent_1bed":1624.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Victoria CMA",
 "rural":{
 "areas":[
@@ -9766,7 +9719,6 @@ null
 "people_25_44":4025.0,
 "rent_1bed":1597.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Kelowna CMA",
 "rural":{
 "areas":[
@@ -10004,7 +9956,6 @@ null
 "people_25_44":34450.0,
 "rent_1bed":1807.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Vancouver CMA",
 "rural":{
 "areas":[
@@ -10207,7 +10158,6 @@ null
 "people_25_44":6500.0,
 "rent_1bed":1283.0,
 "rent_grade":"very good",
-"rent_kept":true,
 "rent_source":"Duncan area",
 "rural":{
 "areas":[
@@ -10492,7 +10442,6 @@ null
 "people_25_44":1930.0,
 "rent_1bed":1624.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Victoria CMA",
 "rural":{
 "areas":[
@@ -10700,7 +10649,6 @@ null
 "people_25_44":19640.0,
 "rent_1bed":1807.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Vancouver CMA",
 "rural":{
 "areas":[
@@ -10829,7 +10777,6 @@ null
 "people_25_44":2640.0,
 "rent_1bed":1624.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Victoria CMA",
 "rural":{
 "areas":[
@@ -11029,7 +10976,6 @@ null
 "people_25_44":28915.0,
 "rent_1bed":1624.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Victoria CMA",
 "rural":{
 "areas":[
@@ -11410,7 +11356,6 @@ null
 "people_25_44":3805.0,
 "rent_1bed":1624.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Victoria CMA",
 "rural":{
 "areas":[
@@ -11625,7 +11570,6 @@ null
 "people_25_44":8870.0,
 "rent_1bed":1626.0,
 "rent_grade":"very good",
-"rent_kept":true,
 "rent_source":"Squamish",
 "rural":{
 "areas":[
@@ -11749,7 +11693,6 @@ null
 "people_25_44":2280.0,
 "rent_1bed":1349.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Summerland",
 "rural":{
 "areas":[
@@ -11994,7 +11937,6 @@ null
 "people_25_44":7155.0,
 "rent_1bed":1807.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Vancouver CMA",
 "rural":{
 "areas":[
@@ -12272,7 +12214,6 @@ null
 "people_25_44":2790.0,
 "rent_1bed":1459.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Courtenay area",
 "rural":{
 "areas":[
@@ -12524,7 +12465,6 @@ null
 "people_25_44":1830.0,
 "rent_1bed":1527.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Nanaimo area",
 "rural":{
 "areas":[
@@ -12857,7 +12797,6 @@ null
 "people_25_44":880.0,
 "rent_1bed":1546.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Parksville area",
 "rural":{
 "areas":[
@@ -13203,7 +13142,6 @@ null
 "people_25_44":1920.0,
 "rent_1bed":1624.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Victoria CMA",
 "rural":{
 "areas":[
@@ -13410,7 +13348,6 @@ null
 "people_25_44":3150.0,
 "rent_1bed":1624.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Victoria CMA",
 "rural":{
 "areas":[
@@ -13604,7 +13541,6 @@ null
 "people_25_44":24400.0,
 "rent_1bed":1581.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Calgary CMA",
 "rural":{
 "areas":[
@@ -13837,7 +13773,6 @@ null
 "people_25_44":6560.0,
 "rent_1bed":1301.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Edmonton CMA",
 "rural":{
 "areas":[
@@ -14135,7 +14070,6 @@ null
 "people_25_44":4420.0,
 "rent_1bed":1176.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Brooks",
 "rural":{
 "areas":[
@@ -14311,7 +14245,6 @@ null
 "people_25_44":405190.0,
 "rent_1bed":1581.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Calgary",
 "rural":{
 "areas":[
@@ -14515,7 +14448,6 @@ null
 "people_25_44":4570.0,
 "rent_1bed":1228.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Camrose",
 "rural":{
 "areas":[
@@ -14776,7 +14708,6 @@ null
 "people_25_44":6120.0,
 "rent_1bed":1581.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Calgary CMA",
 "rural":{
 "areas":[
@@ -14962,7 +14893,6 @@ null
 "people_25_44":5720.0,
 "rent_1bed":1092.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Cold Lake",
 "rural":{
 "areas":[
@@ -15086,7 +15016,6 @@ null
 "people_25_44":325450.0,
 "rent_1bed":1301.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Edmonton",
 "rural":{
 "areas":[
@@ -15383,7 +15312,6 @@ null
 "people_25_44":8810.0,
 "rent_1bed":1301.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Edmonton CMA",
 "rural":{
 "areas":[
@@ -15718,7 +15646,6 @@ null
 "people_25_44":22325.0,
 "rent_1bed":1223.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Grande Prairie",
 "rural":{
 "areas":[
@@ -15917,7 +15844,6 @@ null
 "people_25_44":3365.0,
 "rent_1bed":1157.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Lacombe",
 "rural":{
 "areas":[
@@ -16154,7 +16080,6 @@ null
 "people_25_44":10515.0,
 "rent_1bed":1301.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Edmonton CMA",
 "rural":{
 "areas":[
@@ -16449,7 +16374,6 @@ null
 "people_25_44":27450.0,
 "rent_1bed":1370.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Lethbridge",
 "rural":{
 "areas":[
@@ -16658,7 +16582,6 @@ null
 "people_25_44":5650.0,
 "rent_1bed":1130.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Lloydminster",
 "rural":{
 "areas":[
@@ -16817,7 +16740,6 @@ null
 "people_25_44":15975.0,
 "rent_1bed":1120.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Medicine Hat",
 "rural":{
 "areas":[
@@ -16975,7 +16897,6 @@ null
 "people_25_44":29395.0,
 "rent_1bed":1220.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Red Deer",
 "rural":{
 "areas":[
@@ -17218,7 +17139,6 @@ null
 "people_25_44":11615.0,
 "rent_1bed":1301.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Edmonton CMA",
 "rural":{
 "areas":[
@@ -17549,7 +17469,6 @@ null
 "people_25_44":16140.0,
 "rent_1bed":1301.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Edmonton CMA",
 "rural":{
 "areas":[
@@ -17866,7 +17785,6 @@ null
 "people_25_44":2945.0,
 "rent_1bed":984.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Wetaskiwin",
 "rural":{
 "areas":[
@@ -18217,7 +18135,6 @@ null
 "median_income_2020":53600.0,
 "people_25_44":3970.0,
 "rent_grade":"very good",
-"rent_kept":true,
 "rent_source":"Blackfalds",
 "rural":{
 "areas":[
@@ -18477,7 +18394,6 @@ null
 "people_25_44":5000.0,
 "rent_1bed":1858.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Canmore",
 "rural":{
 "areas":[
@@ -18618,7 +18534,6 @@ null
 "people_25_44":9175.0,
 "rent_1bed":1581.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Calgary CMA",
 "rural":{
 "areas":[
@@ -18790,7 +18705,6 @@ null
 "people_25_44":2315.0,
 "rent_1bed":1370.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Lethbridge area",
 "rural":{
 "areas":[
@@ -19454,7 +19368,6 @@ null
 "people_25_44":3200.0,
 "rent_1bed":1106.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"High River",
 "rural":{
 "areas":[
@@ -19879,7 +19792,6 @@ null
 "people_25_44":3155.0,
 "rent_1bed":1301.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Edmonton CMA",
 "rural":{
 "areas":[
@@ -20198,7 +20110,6 @@ null
 "median_income_2020":55200.0,
 "people_25_44":7320.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Okotoks",
 "rural":{
 "areas":[
@@ -20596,7 +20507,6 @@ null
 "people_25_44":4595.0,
 "rent_1bed":1301.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Edmonton CMA",
 "rural":{
 "areas":[
@@ -20873,7 +20783,6 @@ null
 "people_25_44":3665.0,
 "rent_1bed":1283.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Strathmore",
 "rural":{
 "areas":[
@@ -21071,7 +20980,6 @@ null
 "people_25_44":4940.0,
 "rent_1bed":1355.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Sylvan Lake",
 "rural":{
 "areas":[
@@ -21690,7 +21598,6 @@ null
 "people_25_44":23800.0,
 "rent_1bed":1301.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Edmonton CMA",
 "rural":{
 "areas":[
@@ -22010,7 +21917,6 @@ null
 "people_25_44":27035.0,
 "rent_1bed":1199.0,
 "rent_grade":"excellent",
-"rent_kept":true,
 "rent_source":"Wood Buffalo area",
 "rural":{
 "areas":[
